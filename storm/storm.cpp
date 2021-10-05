@@ -55,7 +55,6 @@ public: treeNode(int a)
 	{
 		if (root == nullvalue)
 		{
-			//cout << root->nodeKey << endl;
 			return;
 		}
 		else
@@ -64,7 +63,7 @@ public: treeNode(int a)
 			postOrderTraversalDelete(root->rightNode,deleteTree);
 			if (deleteTree == true)
 			{
-				//cout << root->nodeKey << endl;
+				cout << root->nodeKey << endl;
 				free(root);
 			}
 			else
@@ -77,24 +76,87 @@ public: treeNode(int a)
 };
 
 //	2. Max-Heap:
+class heapNode
+{
+public:
+	int nodeKey;
+	heapNode *leftNode;
+	heapNode *rightNode;
+private:
+	static int returnLeft(int currentIndex)
+	{
+		return((2 * currentIndex) + 1); // return (2i) location, we add + 1 since we start at 0 index.
+	}
+
+	static int returnRight(int currentIndex)
+	{
+		return((2 * currentIndex) + 2); //return (2i+1) location, we add + 1 since we start at 0 index.
+	}
+
+public:
+	static heapNode* maxHeapify(int inputArray[], int violatingNodeIndex, int heapSize)
+	{
+		heapNode *result;
+		//Get the left and right index values, below the violating node.
+		int leftIndex = returnLeft(violatingNodeIndex);
+		int rightIndex = returnRight(violatingNodeIndex);
+		int largest = 0; // setting the largest to 0, this needs to be run to make sure, setting to 0 does not break the code.
+		int tempStorage = 0;
+
+		//Decide if the leftIndex has the larger element.
+		if (leftIndex <= heapSize && inputArray[leftIndex] > inputArray[violatingNodeIndex])
+		{
+			largest = leftIndex;
+		}
+		else
+		{
+			largest = violatingNodeIndex;
+		}
+
+		//Decide if the rightIndex has the larger element.
+		if (rightIndex <= heapSize && inputArray[rightIndex] > inputArray[largest])
+		{
+			largest = rightIndex;
+		}
+		
+		//Only make the swap, it either the left or right indexes are bigger than the violating node index.
+		//This information has already been tracked in the larges variable:
+		if (largest != violatingNodeIndex)
+		{
+			tempStorage = inputArray[violatingNodeIndex];
+			inputArray[violatingNodeIndex] = inputArray[largest];
+			inputArray[largest] = tempStorage;
+		}
+
+		//Once the swap is done, we need to recurse down the heap, to ensure, lower sub-trees are still heaps.
+		result = maxHeapify(inputArray, largest, heapSize);
+
+		return result;
+	}
+	
+};
 
 int main()
 {
 	//int a[] = { 1,5,11,4,6,9,8};
-	//int a[] = { 1,2,3,4,5 };
+	int a[] = { 1,2,3,4,5 };
 	//int a[] = { 8,3,10,1,6,14,4,7,13 };
 	//int a[] = { 4,12,10,18,24,22,15,31,44,35,66,90,70,50,25 };
-	int a[] = { 25,15,50,10,22,35,70,4,12,18,24,31,44,66,90 };
+	//int a[] = { 25,15,50,10,22,35,70,4,12,18,24,31,44,66,90 };
 	treeNode *root = nullvalue; //set root of BST to null.
 	
+	//Building a BST
 	for (int i = 0; i < sizeof(a) / sizeof(a[0]); i++)
 	{
 		treeNode *newNode = new treeNode(a[i]);
 		root = root->buildBinarySearchTree(newNode,root);
 	}
 
-	root->postOrderTraversal(root,true);
+	//Post-order Traversal of the tree,
+	root->postOrderTraversalDelete(root,true);
 
+
+	//MaxHeapify
 
 }
 
