@@ -27,5 +27,13 @@
     <ClCompile Include="storm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="defns.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="defns.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

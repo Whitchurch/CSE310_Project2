@@ -151,9 +151,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="defns.cpp" />
     <ClCompile Include="Scratchpad_of_DataStructures.cpp" />
     <ClCompile Include="storm.cpp" />
     <ClCompile Include="storm_old.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="defns.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
