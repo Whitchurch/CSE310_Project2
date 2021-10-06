@@ -156,7 +156,8 @@ public:
 public: 
 	nodeForLinkedList()
 	{
-
+		this->key = 0;
+		this->nextNodeAddress = nullptr;
 	}
 	nodeForLinkedList(int key)
 	{
@@ -177,12 +178,12 @@ public:
 	}
 public:
 	//Function to build HashTable
-	 nodeForLinkedList* buildHashTable()
+	nodeForLinkedList* buildHashTable()
 	{
 		
 		//Create an array of pointers. Each pointer can point to a nodeForLinkedListObject;
-		nodeForLinkedList *ptr = new nodeForLinkedList[this->sizeofTable];
-		return ptr;
+		nodeForLinkedList *headptr = new nodeForLinkedList[this->sizeofTable];
+		return headptr;
 	}
 
 	//Function for hashing the value to a location in the hashTable
@@ -191,11 +192,52 @@ public:
 		return(value%this->sizeofTable);
 	}
 
+	//Function to traverse linkedlist 
+	//void displayList(int index)
+	//{
+	//	nodeForLinkedList *temp;
+
+	//	// Return if list is empty 
+	//	if (headptr[index].nextNodeAddress == NULL)
+	//	{
+	//		printf("List is empty.");
+	//		return;
+	//	}
+
+	//	temp = &headptr[index];
+	//	while (temp->nextNodeAddress != NULL)
+	//	{
+	//		printf("Data = %d\n", temp->key); // Print data of current node
+	//		temp = temp->nextNodeAddress;                 // Move to next node
+	//	}
+
+	//}
+
 	//Function Insert items into the hash table
-	void insertKey(int key)
+	nodeForLinkedList* insertKey(int key)
 	{
 		int index = this->hashTheValue(key);
-		this->headptr[index] = nodeForLinkedList(key);
+		if (headptr[index].key == nullvalue)
+		{
+			cout << "The hash index is empty, adding the first item" << endl;
+			this->headptr[index] = nodeForLinkedList(key);
+		}
+		else
+		{
+			//No need to traverse the length of the linkedlist.
+			//We insert the new item in the beginning of the list, as the new first item:
+
+			//Create newNode to insert
+			nodeForLinkedList newItem = nodeForLinkedList(key);
+			nodeForLinkedList oldItem = this->headptr[index];
+
+			//point newNode nextAddress to current first item in the linkedlist:
+			newItem.nextNodeAddress = &oldItem;
+
+			//now point the headpointer to the new item:
+			this->headptr[index] = newItem;
+		}
+		return headptr;
 	}
 };
 
@@ -238,18 +280,11 @@ int main()
 	
 	//Build the array of node pointers inside the hash table. 
 	h1->headptr = h1->buildHashTable();
-	h1->insertKey(15);
-	h1->insertKey(5);
-	h1->insertKey(1);
-	h1->insertKey(17);
-
-	for (int i = 0; i < 8; i++)
-	{
-		cout << h1->headptr[i].key << endl;
-	}
-	
-
-
+	h1->headptr = h1->insertKey(15);
+	h1->headptr = h1->insertKey(23);
+	h1->headptr[7];
+	h1->headptr[0];
+	h1->headptr[7];
 
 }
 
