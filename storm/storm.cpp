@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	{
 		string currentLineRead;
 		getline(fileInputStream, currentLineRead);	
-		//Get the total lines in the file:
+		//Get the total lines in the file
 		readLineCount++;
 	}
 
