@@ -30,10 +30,16 @@
     <ClCompile Include="defns.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="treeNode_BST.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="defns.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="treeNode_BST.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
