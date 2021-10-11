@@ -16,29 +16,53 @@
     <Filter Include="ScratchpadCode">
       <UniqueIdentifier>{551d944f-89fd-4b0a-81d4-86e24a83de9b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{bff5be1a-6b56-4f88-968c-51b15ce3083a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HelperFunctions">
+      <UniqueIdentifier>{d97d05c5-1dd6-4eb1-9b86-87717d3c41ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LegacyCode">
+      <UniqueIdentifier>{706912b9-d653-44c1-885a-5d03c76a7018}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scratchpad_of_DataStructures.cpp">
       <Filter>ScratchpadCode</Filter>
     </ClCompile>
-    <ClCompile Include="storm_old.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="storm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="defns.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="treeNode_BST.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="defns.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="storm_old.cpp">
+      <Filter>LegacyCode</Filter>
+    </ClCompile>
+    <ClCompile Include="Helper_functions.cpp">
+      <Filter>HelperFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="treeNode_BST_StormEvents.cpp">
+      <Filter>Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="defns.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="treeNode_BST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="defns.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Helper_functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="treeNode_BST_StormEvents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,6 +1,5 @@
 #pragma once
-//Constant definition:
-const int nullvalue = 0;
+
 class treeNode_BST
 {
 	//Keeping the members public for ease of access.
@@ -15,4 +14,7 @@ public: treeNode_BST(int a);
 	static treeNode_BST* buildBinarySearchTree(treeNode_BST *t1, treeNode_BST *root);
 	static void postOrderTraversalDelete(treeNode_BST *root, bool deleteTree);
 };
+
+
+
 

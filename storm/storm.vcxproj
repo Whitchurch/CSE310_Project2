@@ -152,14 +152,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="defns.cpp" />
+    <ClCompile Include="Helper_functions.cpp" />
     <ClCompile Include="Scratchpad_of_DataStructures.cpp" />
     <ClCompile Include="storm.cpp" />
     <ClCompile Include="storm_old.cpp" />
     <ClCompile Include="treeNode_BST.cpp" />
+    <ClCompile Include="treeNode_BST_StormEvents.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="defns.h" />
+    <ClInclude Include="Helper_functions.h" />
     <ClInclude Include="treeNode_BST.h" />
+    <ClInclude Include="treeNode_BST_StormEvents.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -3,10 +3,15 @@
 #include<math.h>
 #include<string>
 #include<cstring>
+#include "Constants.h"
 #include "defns.h"
 #include "treeNode_BST.h"
+#include "treeNode_BST_StormEvents.h"
+#include "Helper_functions.h"
 
 using namespace std;
+
+
 int main(int argc, char *argv[])
 {
 
@@ -99,25 +104,26 @@ int main(int argc, char *argv[])
 
 	fileInputStream.close();
 
-	//Step 4: Construct a BST for handling the range information:
-		//int a[] = { 1,5,11,4,6,9,8};
-	int a[] = { 1,2,3,4,5 };
-	//int a[] = { 8,3,10,1,6,14,4,7,13 };
-	//int a[] = { 4,12,10,18,24,22,15,31,44,35,66,90,70,50,25 };
-	//int a[] = { 25,15,50,10,22,35,70,4,12,18,24,31,44,66,90 };
-	treeNode_BST *root = nullvalue; //set root of BST to null.
-	
+	treeNode_BST_StormEvents *root = nullvalue; //Set root of BST to null
+
+
+
 	//Building a BST
-	for (int i = 0; i < sizeof(a) / sizeof(a[0]); i++)
+	for (int i = 0; i < 3; i++)
 	{
-		treeNode_BST *newNode = new treeNode_BST(a[i]);
-		root = root->buildBinarySearchTree(newNode,root);
+		treeNode_BST_StormEvents *newNode = new treeNode_BST_StormEvents(events[i]); //We Pass by value the events.
+		root = root->buildBinarySearchTree(newNode, root);
 	}
+
+	//Since we passed by value, we can do some memory house keeping, by removing the event that was made a new node:
+	delete[] events;
+
 
 	//Post-order Traversal of the tree,
 	root->postOrderTraversalDelete(root,true);
 
-
+	
+	
 
 	
 }
