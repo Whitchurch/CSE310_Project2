@@ -109,22 +109,20 @@ int main(int argc, char *argv[])
 
 
 
-	//Building a BST
+	//Building a BST, to act an overlay memory-map over the underlying events array.
 	for (int i = 0; i < LineCount; i++)
 	{
 		treeNode_BST_StormEvents *newNode = new treeNode_BST_StormEvents(events[i]); //We Pass by value the events.
 		root = root->buildBinarySearchTree(newNode, root);
 	}
 
-	//Since we passed by value, we can do some memory house keeping, by removing the event that was made a new node:
-	delete[] events;
-
 
 	//Post-order Traversal of the tree,
 	root->postOrderTraversalDelete(root,true);
 
-	
-	
+	//Remove the underlying events array, to free up the memory.:
+	delete[] events;
+
 
 	
 }

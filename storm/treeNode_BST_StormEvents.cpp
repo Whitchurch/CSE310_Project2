@@ -69,19 +69,12 @@ void treeNode_BST_StormEvents::postOrderTraversalDelete(treeNode_BST_StormEvents
 		postOrderTraversalDelete(root->rightNode, deleteTree);
 		if (deleteTree == true)
 		{
-			cout << root->event_index << endl;
-			cout << root->event_id << endl;
-			cout << root->State << endl;
-			cout << root->Year << endl;
-			
+			DisplayCurrentNode(root);
 			free(root);
 		}
 		else
 		{
-			cout << root->event_index << endl;
-			cout << root->event_id << endl;
-			cout << root->State << endl;
-			cout << root->Year << endl;
+			DisplayCurrentNode(root);
 		}
 
 	}
@@ -89,5 +82,27 @@ void treeNode_BST_StormEvents::postOrderTraversalDelete(treeNode_BST_StormEvents
 
 void treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents * root, int lowRange, int highRange)
 {
+	if (root == nullvalue)
+	{
+		return;
+	}
+	else
+	{
+		inorderRangeQueryDisplay(root->leftNode,lowRange,highRange);
+		DisplayCurrentNode(root);
+		inorderRangeQueryDisplay(root->rightNode,lowRange,highRange);
 
+	}
+}
+
+void treeNode_BST_StormEvents::DisplayCurrentNode(treeNode_BST_StormEvents * root)
+{
+	cout << root->event_index << endl;
+	cout << root->event_id << endl;
+	cout << root->State << endl;
+	cout << root->Year << endl;
+	cout << root->month_name << endl;
+	cout << root->event_type << endl;
+	cout << root->cz_name << endl;
+	cout << root->cz_type << endl;
 }
