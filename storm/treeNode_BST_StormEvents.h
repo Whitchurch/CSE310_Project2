@@ -10,8 +10,16 @@ class treeNode_BST_StormEvents
 	//Keeping the members public for ease of access.
 	//I may move these to private and implement a getter/setter in the future to make the code cleaner.
 public:
+	int event_index;
 	int event_id;
 	string State;
+	int Year;
+	char month_name[MONTH_LEN]; // Month of event
+	char event_type[EVENT_LEN];
+	char cz_type; // Where event happened, C, Z, or M
+	char cz_name[COUNTY_LEN]; // Name of county/zone
+
+	
 	treeNode_BST_StormEvents *leftNode;
 	treeNode_BST_StormEvents *rightNode;
 

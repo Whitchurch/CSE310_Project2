@@ -69,6 +69,8 @@ int main(int argc, char *argv[])
 				i++;
 			}
 
+			//Enter the event_index:
+			events[LineCount - 1].event_index = LineCount - 1;
 
 			//Enter the extracted tokens into their respective fields:
 			events[LineCount - 1].event_id = stoi(token[0]);

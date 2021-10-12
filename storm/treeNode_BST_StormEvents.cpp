@@ -7,8 +7,14 @@ using namespace std;
 
 treeNode_BST_StormEvents::treeNode_BST_StormEvents(storm_event event)
 {
+	this->event_index = event.event_index;
 	this->event_id = event.event_id;
 	this->State = event.state;
+	this->Year = event.year;
+	strcpy_s(this->month_name, event.month_name);
+	strcpy_s(this->event_type, event.event_type);
+	strcpy_s(this->cz_name, event.cz_name);
+	this->cz_type, event.cz_type;
 	this->leftNode = nullvalue;
 	this->rightNode = nullvalue;
 }
@@ -63,14 +69,19 @@ void treeNode_BST_StormEvents::postOrderTraversalDelete(treeNode_BST_StormEvents
 		postOrderTraversalDelete(root->rightNode, deleteTree);
 		if (deleteTree == true)
 		{
-			cout << root->State << endl;
+			cout << root->event_index << endl;
 			cout << root->event_id << endl;
+			cout << root->State << endl;
+			cout << root->Year << endl;
+			
 			free(root);
 		}
 		else
 		{
-			cout << root->State << endl;
+			cout << root->event_index << endl;
 			cout << root->event_id << endl;
+			cout << root->State << endl;
+			cout << root->Year << endl;
 		}
 
 	}
