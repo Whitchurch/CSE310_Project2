@@ -86,3 +86,8 @@ void treeNode_BST_StormEvents::postOrderTraversalDelete(treeNode_BST_StormEvents
 
 	}
 }
+
+void treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents * root, int lowRange, int highRange)
+{
+
+}

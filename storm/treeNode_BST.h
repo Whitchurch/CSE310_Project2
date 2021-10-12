@@ -13,6 +13,7 @@ public: treeNode_BST(int a);
 
 	static treeNode_BST* buildBinarySearchTree(treeNode_BST *t1, treeNode_BST *root);
 	static void postOrderTraversalDelete(treeNode_BST *root, bool deleteTree);
+	static void inOrderTraversal(treeNode_BST *root);
 };
 
 

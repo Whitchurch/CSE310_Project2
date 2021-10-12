@@ -59,5 +59,20 @@ void treeNode_BST::postOrderTraversalDelete(treeNode_BST * root, bool deleteTree
 	}
 }
 
+void treeNode_BST::inOrderTraversal(treeNode_BST * root)
+{
+	if (root == nullvalue)
+	{
+		return;
+	}
+	else
+	{
+		inOrderTraversal(root->leftNode);
+		cout << root->nodeKey << endl;
+		inOrderTraversal(root->rightNode);
+
+	}
+}
+
 
 
