@@ -4,6 +4,6 @@
 using namespace std;
 
 void Display_StormEvents_Head(storm_event *events);
-double Normalize_Scale(string cost);
+int Normalize_Scale(string cost);
 
 

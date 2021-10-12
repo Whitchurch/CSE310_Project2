@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
 	//Step 1: Read in the command line parameters
 	string yearParam = argv[1]; // We assume the inputs are not going to have errors: AS per P2-ilestone definition
-	int noOfYears = (int)argv[2]; // We assume the inputs are not going to have errors: AS per P2-ilestone definition
+	int noOfYears = atoi(argv[2]); // We assume the inputs are not going to have errors: AS per P2-ilestone definition
 
 	//Step 2: Create an array  of structure_annual storms:
 	annual_storms *annualStormArray = new annual_storms[noOfYears];
@@ -92,10 +92,9 @@ int main(int argc, char *argv[])
 			events[LineCount - 1].injuries_indirect = stoi(token[8]);
 			events[LineCount - 1].deaths_direct = stoi(token[9]);
 			events[LineCount - 1].deaths_indirect = stoi(token[10]);
-			events[LineCount - 1].damage_property = stoi(token[11]);
-			events[LineCount - 1].damage_crops = stoi(token[12]);
+			events[LineCount - 1].damage_property = Normalize_Scale(token[11]);
+			events[LineCount - 1].damage_crops = Normalize_Scale(token[12]);
 
-			int result = Normalize_Scale(token[11]);
 		}
 		LineCount++;
 

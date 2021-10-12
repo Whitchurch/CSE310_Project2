@@ -1,4 +1,5 @@
 #include "Helper_functions.h"
+#include<math.h>
 #include<iostream>
 #include<string>
 
@@ -13,19 +14,38 @@ void Display_StormEvents_Head(storm_event *events)
 	}
 }
 
-double Normalize_Scale(string cost)
+int Normalize_Scale(string cost)
 {
 	int units = 0;
+	int numberOnly = 0;
 
-	//We can extract the last character to find out what we are multiplying against.
-	//K implies we multiply with 1000.
-	if (cost.back() == 'K')
+	if (cost.empty()||cost == "0")
 	{
-		units = 1000;
+		return 0;
+	}
+	else
+	{
+		//We can extract the last character to find out what we are multiplying against.
+		//K implies we multiply with 1000.
+		if (cost.back() == 'K')
+		{
+			units = 1000;
+		}
+
+		if (cost.length() == 1) //If only a single digit is passed without a unit of K
+		{
+			numberOnly = stod(cost);
+			return numberOnly;
+		}
+		else
+		{
+			int length = cost.length();
+			cost = cost.substr(0, length - 1);
+			numberOnly = stod(cost)*units;
+			return numberOnly;
+		}
+
 	}
 
-	int length = cost.length();
-	cost = cost.substr(0, length);
-	cout << cost.substr(0, cost.length())<<endl;
-	return 0;
+
 }
