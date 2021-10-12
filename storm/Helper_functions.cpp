@@ -1,5 +1,6 @@
 #include "Helper_functions.h"
 #include<iostream>
+#include<string>
 
 using namespace std;
 //Function to display first few entries of storm_event
@@ -12,7 +13,7 @@ void Display_StormEvents_Head(storm_event *events)
 	}
 }
 
-int Normalize_Scale(string cost)
+double Normalize_Scale(string cost)
 {
 	int units = 0;
 
@@ -23,4 +24,8 @@ int Normalize_Scale(string cost)
 		units = 1000;
 	}
 
+	int length = cost.length();
+	cost = cost.substr(0, length);
+	cout << cost.substr(0, cost.length())<<endl;
+	return 0;
 }

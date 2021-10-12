@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
 			events[LineCount - 1].damage_property = stoi(token[11]);
 			events[LineCount - 1].damage_crops = stoi(token[12]);
 
-
+			int result = Normalize_Scale(token[11]);
 		}
 		LineCount++;
 
