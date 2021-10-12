@@ -80,7 +80,7 @@ void treeNode_BST_StormEvents::postOrderTraversalDelete(treeNode_BST_StormEvents
 	}
 }
 
-void treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents * root, int lowRange, int highRange)
+void treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents * root, string field_type,string lowRange, string highRange)
 {
 	if (root == nullvalue)
 	{
@@ -88,9 +88,9 @@ void treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents
 	}
 	else
 	{
-		inorderRangeQueryDisplay(root->leftNode,lowRange,highRange);
+		inorderRangeQueryDisplay(root->leftNode,field_type,lowRange,highRange);
 		DisplayCurrentNode(root);
-		inorderRangeQueryDisplay(root->rightNode,lowRange,highRange);
+		inorderRangeQueryDisplay(root->rightNode,field_type,lowRange,highRange);
 
 	}
 }

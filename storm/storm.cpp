@@ -118,7 +118,13 @@ int main(int argc, char *argv[])
 
 
 	//Post-order Traversal of the tree,
-	root->postOrderTraversalDelete(root,true);
+	//cout << "------------------------POST ORDER TRAVERSAL---------------------------------------------------" << endl;
+	//root->postOrderTraversalDelete(root,true);
+	//cout << "-------------------------END OF TRAVERSAL------------------------------------------------------" << endl;
+
+	cout << "------------------------IN ORDER TRAVERSAL---------------------------------------------------" << endl;
+	root->inorderRangeQueryDisplay(root,"month_name" ,"January","January");
+	cout << "-------------------------END OF TRAVERSAL------------------------------------------------------" << endl;
 
 	//Remove the underlying events array, to free up the memory.:
 	delete[] events;
