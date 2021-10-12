@@ -11,3 +11,16 @@ void Display_StormEvents_Head(storm_event *events)
 		cout << events[i].event_type << endl;
 	}
 }
+
+int Normalize_Scale(string cost)
+{
+	int units = 0;
+
+	//We can extract the last character to find out what we are multiplying against.
+	//K implies we multiply with 1000.
+	if (cost.back() == 'K')
+	{
+		units = 1000;
+	}
+
+}

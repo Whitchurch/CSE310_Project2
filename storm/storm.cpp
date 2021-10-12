@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 
 
 
-		if (LineCount > 0 && LineCount < 4) //This condition skips the first line, with the headings and stars recording from the second line
+		if (LineCount > 0) //This condition skips the first line, with the headings and stars recording from the second line
 		{
 			int i = 0;
 			string delimiter = ",";
@@ -109,7 +109,7 @@ int main(int argc, char *argv[])
 
 
 	//Building a BST
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < LineCount; i++)
 	{
 		treeNode_BST_StormEvents *newNode = new treeNode_BST_StormEvents(events[i]); //We Pass by value the events.
 		root = root->buildBinarySearchTree(newNode, root);
