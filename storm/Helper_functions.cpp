@@ -85,10 +85,16 @@ int Normalize_Scale(string cost)
 
 bool checkMonth(string month_name,string lowRange,string highRange)
 {
+	int lowerBound = changeMonthToValue(lowRange);
+	int higherBound = changeMonthToValue(highRange);
+	int monthValue = changeMonthToValue(month_name);
+
 	//Spreading it out month-wise for ease of reading.
 	if (month_name == January || month_name == Jan || month_name == February || month_name == Feb || month_name == March || month_name == Mar || month_name == April || month_name == Apr|| month_name == May|| month_name == June || month_name == Jun)
 	{
-		if (lowRange == month_name || highRange == month_name)
+
+
+		if (lowerBound >= monthValue && monthValue <= higherBound)
 		{
 			return true;
 		}
@@ -101,7 +107,7 @@ bool checkMonth(string month_name,string lowRange,string highRange)
 
 	else if (month_name == July || month_name == Jul)
 	{
-		if (lowRange == month_name || highRange == month_name|| month_name == August || month_name == Aug||month_name == September || month_name == Sept || month_name == Sep)
+		if (lowerBound >= monthValue && monthValue <= higherBound)
 		{
 			return true;
 		}
@@ -113,7 +119,7 @@ bool checkMonth(string month_name,string lowRange,string highRange)
 
 	else if (month_name == October || month_name == November || month_name == December|| month_name == Oct || month_name == Nov || month_name == Dec)
 	{
-		if (lowRange == month_name || highRange == month_name)
+		if (lowerBound >= monthValue && monthValue <= higherBound)
 		{
 			return true;
 		}
@@ -124,7 +130,7 @@ bool checkMonth(string month_name,string lowRange,string highRange)
 	}
 	else if (month_name == Oct || month_name == Nov || month_name == Dec)
 	{
-		if (lowRange == month_name || highRange == month_name)
+		if (lowerBound >= monthValue && monthValue <= higherBound)
 		{
 			return true;
 		}
@@ -132,6 +138,69 @@ bool checkMonth(string month_name,string lowRange,string highRange)
 		{
 			return false;
 		}
+	}
+
+}
+
+int changeMonthToValue(string month_name)
+{
+	if (month_name == "January"||month_name == "Jan")
+	{
+		return 1;
+	}
+
+	if (month_name == "February" || month_name == "Feb")
+	{
+		return 2;
+	}
+
+	if (month_name == "March" || month_name == "Mar")
+	{
+		return 3;
+	}
+
+	if (month_name == "April" || month_name == "Apr")
+	{
+		return 4;
+	}
+
+	if (month_name == "May")
+	{
+		return 5;
+	}
+
+	if (month_name == "June"||month_name=="Jun")
+	{
+		return 6;
+	}
+
+	if (month_name == "July" || month_name == "Jul")
+	{
+		return 7;
+	}
+
+	if (month_name == "August"||month_name == "Aug")
+	{
+		return 8;
+	}
+
+	if (month_name == "September"||month_name == "Sept"||month_name == "Sep")
+	{
+		return 9;
+	}
+	if (month_name == "October" || month_name == "Oct")
+	{
+		return 10;
+	}
+
+	if (month_name == "November" || month_name == "Nov")
+	{
+		return 11;
+	}
+
+	if (month_name == "December" || month_name == "Dec")
+	{
+		return 11;
 	}
 
 }
