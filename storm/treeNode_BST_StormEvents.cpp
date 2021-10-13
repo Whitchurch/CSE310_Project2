@@ -81,13 +81,13 @@ void treeNode_BST_StormEvents::postOrderTraversalDelete(treeNode_BST_StormEvents
 	}
 }
 
-void treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents * root, string field_type,string lowRange, string highRange)
+bool treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents * root, string field_type,string lowRange, string highRange)
 {
 	static bool eventFound = false; // Initially starts out being set to false;
 	
 	if (root == nullvalue)
 	{
-		return;
+		return false;
 	}
 	else
 	{
@@ -112,10 +112,7 @@ void treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents
 
 	}
 
-	if (eventFound == false)
-	{
-		cout << "No storm events found for the given range" << endl;
-	}
+	return eventFound;
 }
 
 

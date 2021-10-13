@@ -123,7 +123,10 @@ int main(int argc, char *argv[])
 	//cout << "-------------------------END OF TRAVERSAL------------------------------------------------------" << endl;
 
 	cout << "------------------------IN ORDER TRAVERSAL---------------------------------------------------" << endl;
-	root->inorderRangeQueryDisplay(root,"month_name" ,"January","January");
+	if (!root->inorderRangeQueryDisplay(root, "month_name", "JAX", "JAX"))
+	{
+			cout << "No storm events found for the given range" << endl;
+	}
 	cout << "-------------------------END OF TRAVERSAL------------------------------------------------------" << endl;
 
 	//Remove the underlying events array, to free up the memory.:
