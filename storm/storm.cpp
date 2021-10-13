@@ -123,7 +123,7 @@ int main(int argc, char *argv[])
 	//cout << "-------------------------END OF TRAVERSAL------------------------------------------------------" << endl;
 
 	cout << "------------------------IN ORDER TRAVERSAL---------------------------------------------------" << endl;
-	if (!root->inorderRangeQueryDisplay(root, "month_name", "JAX", "JAX"))
+	if (!root->inorderRangeQueryDisplay(root, "month_name", "January", "February"))
 	{
 			cout << "No storm events found for the given range" << endl;
 	}

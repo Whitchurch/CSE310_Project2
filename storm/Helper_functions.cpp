@@ -90,6 +90,11 @@ bool checkMonth(string month_name,string lowRange,string highRange)
 	int monthValue = changeMonthToValue(month_name);
 	bool result = false;
 
+	if (lowerBound == 0 || higherBound == 0 || monthValue == 0)
+	{
+		return result;
+	}
+
 	//Spreading it out month-wise for ease of reading.
 	if (month_name == January || month_name == Jan || month_name == February || month_name == Feb || month_name == March || month_name == Mar || month_name == April || month_name == Apr|| month_name == May|| month_name == June || month_name == Jun)
 	{
