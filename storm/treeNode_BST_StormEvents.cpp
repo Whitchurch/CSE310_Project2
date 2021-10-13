@@ -95,7 +95,7 @@ void treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents
 		//Show only items that fall between the low and high.
 		if (field_type == "month_name")
 		{
-			if (checkMonth(root->month_name))
+			if (checkMonth(root->month_name,lowRange,highRange))
 			{
 				eventFound = true;
 				DisplayCurrentNode(root);

@@ -1,11 +1,43 @@
 #include "Helper_functions.h"
 #include<math.h>
+#include"Constants.h"
 #include<iostream>
 #include<string>
-#include "Constants.h"
+
 
 using namespace std;
 //Function to display first few entries of storm_event
+
+//A better approach is to use enum's with ordinality, or struct for months with ordinal meta-data.
+//Decided to not overdesign for the time being, and stick with constants.
+string January = "January";
+string February = "February";
+string March = "March";
+string April = "April";
+string May = "May";
+string June = "June";
+string July = "July";
+string August = "August";
+string September = "September";
+string October = "October";
+string November = "November";
+string December = "December";
+
+//Abbreviation of months
+string Jan = "Jan";
+string Feb = "Feb";
+string Mar = "Mar";
+string Apr = "Apr";
+string Jun = "Jun";
+string Jul = "Jul";
+string Aug = "Aug";
+string Sep = "Sep";
+string Sept = "Sept";
+string Oct = "Oct";
+string Nov = "Nov";
+string Dec = "Dec";
+
+
 void Display_StormEvents_Head(storm_event *events)
 {
 	for (int i = 0; i < 3; i++)
@@ -51,55 +83,55 @@ int Normalize_Scale(string cost)
 
 }
 
-bool checkMonth(string month_name)
+bool checkMonth(string month_name,string lowRange,string highRange)
 {
 	//Spreading it out month-wise for ease of reading.
-	if (month_name == January || month_name == Jan)
+	if (month_name == January || month_name == Jan || month_name == February || month_name == Feb || month_name == March || month_name == Mar || month_name == April || month_name == Apr|| month_name == May|| month_name == June || month_name == Jun)
 	{
-		return true;
+		if (lowRange == month_name || highRange == month_name)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		
 	}
-	else if (month_name == February || month_name == Feb)
-	{
-		return true;
-	}
-	else if (month_name == March || month_name == Mar)
-	{
-		return true;
-	}
-	else if (month_name == April || month_name == Apr)
-	{
-		return true;
-	}
-	else if (month_name == May)
-	{
-		return true;
-	}
-	else if (month_name == June || month_name == Jun)
-	{
-		return true;
-	}
+
 	else if (month_name == July || month_name == Jul)
 	{
-		return true;
+		if (lowRange == month_name || highRange == month_name|| month_name == August || month_name == Aug||month_name == September || month_name == Sept || month_name == Sep)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
-	else if (month_name == August || month_name == Aug)
+
+	else if (month_name == October || month_name == November || month_name == December|| month_name == Oct || month_name == Nov || month_name == Dec)
 	{
-		return true;
-	}
-	else if (month_name == September || month_name == Sept || month_name == Sep)
-	{
-		return true;
-	}
-	else if (month_name == October || month_name == November || month_name == December)
-	{
-		return true;
+		if (lowRange == month_name || highRange == month_name)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 	else if (month_name == Oct || month_name == Nov || month_name == Dec)
 	{
-		return true;
+		if (lowRange == month_name || highRange == month_name)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
-	else
-	{
-		return false;
-	}
+
 }
