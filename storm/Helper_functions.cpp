@@ -2,6 +2,7 @@
 #include<math.h>
 #include<iostream>
 #include<string>
+#include "Constants.h"
 
 using namespace std;
 //Function to display first few entries of storm_event
@@ -48,4 +49,57 @@ int Normalize_Scale(string cost)
 	}
 
 
+}
+
+bool checkMonth(string month_name)
+{
+	//Spreading it out month-wise for ease of reading.
+	if (month_name == January || month_name == Jan)
+	{
+		return true;
+	}
+	else if (month_name == February || month_name == Feb)
+	{
+		return true;
+	}
+	else if (month_name == March || month_name == Mar)
+	{
+		return true;
+	}
+	else if (month_name == April || month_name == Apr)
+	{
+		return true;
+	}
+	else if (month_name == May)
+	{
+		return true;
+	}
+	else if (month_name == June || month_name == Jun)
+	{
+		return true;
+	}
+	else if (month_name == July || month_name == Jul)
+	{
+		return true;
+	}
+	else if (month_name == August || month_name == Aug)
+	{
+		return true;
+	}
+	else if (month_name == September || month_name == Sept || month_name == Sep)
+	{
+		return true;
+	}
+	else if (month_name == October || month_name == November || month_name == December)
+	{
+		return true;
+	}
+	else if (month_name == Oct || month_name == Nov || month_name == Dec)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }

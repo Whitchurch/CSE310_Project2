@@ -24,7 +24,6 @@ const string Jan = "Jan";
 const string Feb = "Feb";
 const string Mar = "Mar";
 const string Apr = "Apr";
-const string May = "May";
 const string Jun = "Jun";
 const string Jul = "Jul";
 const string Aug = "Aug";

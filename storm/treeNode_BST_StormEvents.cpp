@@ -2,6 +2,7 @@
 #include "Constants.h"
 #include "defns.h"
 #include<iostream>
+#include "Helper_functions.h"
 
 using namespace std;
 
@@ -82,6 +83,8 @@ void treeNode_BST_StormEvents::postOrderTraversalDelete(treeNode_BST_StormEvents
 
 void treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents * root, string field_type,string lowRange, string highRange)
 {
+	static bool eventFound = false; // Initially starts out being set to false;
+	
 	if (root == nullvalue)
 	{
 		return;
@@ -92,18 +95,29 @@ void treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents
 		//Show only items that fall between the low and high.
 		if (field_type == "month_name")
 		{
-			if(root->month_name )
-			DisplayCurrentNode(root);
+			if (checkMonth(root->month_name))
+			{
+				eventFound = true;
+				DisplayCurrentNode(root);
+			}
+
 		}
 		else if(field_type == "state")
 		{
+			eventFound = true;
 			DisplayCurrentNode(root);
 		}
 		
 		inorderRangeQueryDisplay(root->rightNode,field_type,lowRange,highRange);
 
 	}
+
+	if (eventFound == false)
+	{
+		cout << "No storm events found for the given range" << endl;
+	}
 }
+
 
 void treeNode_BST_StormEvents::DisplayCurrentNode(treeNode_BST_StormEvents * root)
 {
