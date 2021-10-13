@@ -153,58 +153,62 @@ int changeMonthToValue(string month_name)
 		return 1;
 	}
 
-	if (month_name == February || month_name == Feb)
+	else if (month_name == February || month_name == Feb)
 	{
 		return 2;
 	}
 
-	if (month_name == March || month_name == Mar)
+	else if (month_name == March || month_name == Mar)
 	{
 		return 3;
 	}
 
-	if (month_name == April || month_name == Apr)
+	else if (month_name == April || month_name == Apr)
 	{
 		return 4;
 	}
 
-	if (month_name == May)
+	else if (month_name == May)
 	{
 		return 5;
 	}
 
-	if (month_name == June||month_name==Jun)
+	else if (month_name == June||month_name==Jun)
 	{
 		return 6;
 	}
 
-	if (month_name == July || month_name == Jul)
+	else if (month_name == July || month_name == Jul)
 	{
 		return 7;
 	}
 
-	if (month_name == August||month_name == Aug)
+	else if (month_name == August||month_name == Aug)
 	{
 		return 8;
 	}
 
-	if (month_name == September||month_name == Sept||month_name == Sep)
+	else if (month_name == September||month_name == Sept||month_name == Sep)
 	{
 		return 9;
 	}
-	if (month_name == October || month_name == Oct)
+	else if (month_name == October || month_name == Oct)
 	{
 		return 10;
 	}
 
-	if (month_name == November || month_name == Nov)
+	else if (month_name == November || month_name == Nov)
 	{
 		return 11;
 	}
 
-	if (month_name == December || month_name == Dec)
+	else if (month_name == December || month_name == Dec)
 	{
 		return 12;
+	}
+	else
+	{
+		return 0;
 	}
 
 
