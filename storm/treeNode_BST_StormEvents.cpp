@@ -104,8 +104,29 @@ bool treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents
 		}
 		else if(field_type == "state")
 		{
-			eventFound = true;
-			DisplayCurrentNode(root);
+			if (lowRange == highRange) //We check if the Range covers only one State
+			{
+				int stringLengthtoCompare = lowRange.length();
+				string subString = root->State.substr(0, stringLengthtoCompare);
+
+				if (subString == lowRange)
+				{
+					eventFound = true;
+					DisplayCurrentNode(root);
+				}
+
+			}
+			else if (lowRange < highRange)
+			{
+				int stringLengthtoCompare = lowRange.length();
+				string subString = root->State.substr(0, stringLengthtoCompare);
+				if (lowRange <= subString && subString <= highRange)
+				{
+					eventFound = true;
+					DisplayCurrentNode(root);
+				}
+			}
+
 		}
 		
 		inorderRangeQueryDisplay(root->rightNode,field_type,lowRange,highRange);
