@@ -165,58 +165,66 @@ int main(int argc, char *argv[])
 
 				if (query_token[0] == "range")
 				{
-					cout << "Building a BST" << endl;
-				}
+					//Step 5: Create the BST for storing the map, to the underlying events array.
+					treeNode_BST_StormEvents *root = nullvalue; //Set root of BST to null
 
-				if (query_token[1] == "all")
-				{
-					cout << "for all years" << endl;
-				}
 
-				if (query_token[1] != "all")
-				{
-					cout << "for the given year" << endl;
-				}
+					//Step 6: Construct BST either for all years or just for given year.
+					if (query_token[1] == "all")
+					{
+						for (int year = 0; year < noOfYears; year++) //Go one year at a time
+						{
 
-				if (query_token[2] == "month_name")
-				{
-					cout << "for the months" << endl;
-				}
+							for (int eventIndex = 0; eventIndex < annualStormArray[year].eventCount; eventIndex++) //Go through all the events, in the current year and insert them into the BST. 
+							{
+								treeNode_BST_StormEvents *newNode = new treeNode_BST_StormEvents(annualStormArray[year].events[eventIndex]); //We Pass by value the events.
+								//Step 7: Decide the BST tree construction, based on the field_name passed in: either month_name or state
+								if (query_token[2] == "month_name")
+								{
+									root = root->buildBinarySearchTree(newNode, root);
+								}
+								else
+								{
+									root = root->buildBinarySearchTree(newNode, root);
+								}
+								
+							}
+						}
+					}
+					else if (query_token[1] != "all")
+					{
+						int year = stoi(query_token[1]);
 
-				if (query_token[2] == "state")
-				{
-					cout << "for the given states" << endl;
+							for (int eventIndex = 0; eventIndex < annualStormArray[year].eventCount; eventIndex++) //Go through all the events, in the current year and insert them into the BST. 
+							{
+								treeNode_BST_StormEvents *newNode = new treeNode_BST_StormEvents(annualStormArray[year].events[eventIndex]); //We Pass by value the events.
+								//Step 7: Decide the BST tree construction, based on the field_name passed in: either month_name or state
+								if (query_token[2] == "month_name")
+								{
+									root = root->buildBinarySearchTree(newNode, root);
+								}
+								else
+								{
+									root = root->buildBinarySearchTree(newNode, root);
+								}
+							}
+						
+					}
+					
 				}
-
 
 			
 		}
-
-
-
-
-		
-
-
-		
+	
 
 
 	}
 
 	
-	//Step 5: Create the BST for storing the map, to the underlying events array.
-	treeNode_BST_StormEvents *root = nullvalue; //Set root of BST to null
 
 
-	for (int year = 0; year < noOfYears; year++) //Go one year at a time
-	{
-		
-		for (int eventIndex = 0; eventIndex < annualStormArray[year].eventCount; eventIndex++) //Go through all the events, in the current year and insert them into the BST. 
-		{
-			treeNode_BST_StormEvents *newNode = new treeNode_BST_StormEvents(annualStormArray[year].events[eventIndex]); //We Pass by value the events.
-			root = root->buildBinarySearchTree(newNode, root);
-		}
-	}
+
+
 
 
 
@@ -225,12 +233,12 @@ int main(int argc, char *argv[])
 	//root->postOrderTraversalDelete(root,true);
 	//cout << "-------------------------END OF TRAVERSAL------------------------------------------------------" << endl;
 
-	cout << "------------------------IN ORDER TRAVERSAL---------------------------------------------------" << endl;
-	if (!root->inorderRangeQueryDisplay(root, "state", "A", "O"))
-	{
-			cout << "No storm events found for the given range" << endl;
-	}
-	cout << "-------------------------END OF TRAVERSAL------------------------------------------------------" << endl;
+	//cout << "------------------------IN ORDER TRAVERSAL---------------------------------------------------" << endl;
+	//if (!root->inorderRangeQueryDisplay(root, "state", "A", "O"))
+	//{
+	//		cout << "No storm events found for the given range" << endl;
+	//}
+	//cout << "-------------------------END OF TRAVERSAL------------------------------------------------------" << endl;
 
 	//Remove the underlying events array, to free up the memory.:
 	delete[] events;
