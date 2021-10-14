@@ -160,15 +160,42 @@ int main(int argc, char *argv[])
 				}
 
 
+				//Step 5: Construct the Data Structure based on the query passed in:
+				//Data Structures are: Range == BST
+
+				if (query_token[0] == "range")
+				{
+					cout << "Building a BST" << endl;
+				}
+
+				if (query_token[1] == "all")
+				{
+					cout << "for all years" << endl;
+				}
+
+				if (query_token[1] != "all")
+				{
+					cout << "for the given year" << endl;
+				}
+
+				if (query_token[2] == "month_name")
+				{
+					cout << "for the months" << endl;
+				}
+
+				if (query_token[2] == "state")
+				{
+					cout << "for the given states" << endl;
+				}
 
 
 			
 		}
 
 
-		//Step 5: Construct the Data Structure based on the query passed in:
-		//Data Structures are: Range == BST
 
+
+		
 
 
 		
