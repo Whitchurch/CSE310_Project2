@@ -52,15 +52,14 @@ int main(int argc, char *argv[])
 			//Get the total lines in the file
 			readLineCount++;
 		}
-
-
-
 		fileInputStream.close();
 
 		annualStormArray[i].year = year;
-		
+		annualStormArray[i].eventCount = readLineCount - 1;
 		annualStormArray[i].events = events = new storm_event[readLineCount - 1]; // we subtract 1, since we don't need space for the column headings
-		fileInputStream.open("details-" + yearParam + ".csv");
+		
+		
+		fileInputStream.open("details-" + yearInput + ".csv");
 		
 		string token[13];
 		LineCount = 0;
@@ -75,15 +74,15 @@ int main(int argc, char *argv[])
 
 			if (LineCount > 0) //This condition skips the first line, with the headings and stars recording from the second line
 			{
-				int i = 0;
+				int i_token = 0;
 				string delimiter = ",";
 
-				while (i < 13)
+				while (i_token < 13)
 				{
 
-					token[i] = currentLineRead.substr(0, currentLineRead.find(delimiter));
+					token[i_token] = currentLineRead.substr(0, currentLineRead.find(delimiter));
 					currentLineRead = currentLineRead.erase(0, currentLineRead.find(delimiter) + delimiter.length());
-					i++;
+					i_token++;
 				}
 
 				//Enter the event_index:
@@ -125,18 +124,21 @@ int main(int argc, char *argv[])
 
 	}
 	
-
-
+	//Step 4: Create the BST for storing the map, to the underlying events array.
 	treeNode_BST_StormEvents *root = nullvalue; //Set root of BST to null
 
 
-
-	//Building a BST, to act an overlay memory-map over the underlying events array.
-	for (int i = 0; i < LineCount; i++)
+	for (int year = 0; year < noOfYears; year++) //Go one year at a time
 	{
-		treeNode_BST_StormEvents *newNode = new treeNode_BST_StormEvents(events[i]); //We Pass by value the events.
-		root = root->buildBinarySearchTree(newNode, root);
+		
+		for (int eventIndex = 0; eventIndex < annualStormArray[year].eventCount; eventIndex++) //Go through all the events, in the current year and insert them into the BST. 
+		{
+			treeNode_BST_StormEvents *newNode = new treeNode_BST_StormEvents(annualStormArray[year].events[eventIndex]); //We Pass by value the events.
+			root = root->buildBinarySearchTree(newNode, root);
+		}
 	}
+
+
 
 
 	//Post-order Traversal of the tree,
