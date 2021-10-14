@@ -1,5 +1,308 @@
 3
 
 Query:range all month_name June July
+No storm events found for the given range
 
 Query:range 1952 state A C
+state: ALABAMA
+event_id: 9979429
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: TALLAPOOSA
+state: ALABAMA
+event_id: 9979430
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: TUSCALOOSA
+state: ALABAMA
+event_id: 9979431
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: FAYETTE
+state: ALABAMA
+event_id: 9979432
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: CULLMAN
+state: ALABAMA
+event_id: 9979433
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: BLOUNT
+state: ALABAMA
+event_id: 9979434
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: JEFFERSON
+state: ALABAMA
+event_id: 9979435
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: DEKALB
+state: ALABAMA
+event_id: 9979436
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: PICKENS
+state: ALABAMA
+event_id: 9979437
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: MORGAN
+state: ALABAMA
+event_id: 9979438
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: MOBILE
+state: ALABAMA
+event_id: 9979439
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: FAYETTE
+state: ALABAMA
+event_id: 9979440
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: FAYETTE
+state: ALABAMA
+event_id: 9979441
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: FAYETTE
+state: ARIZONA
+event_id: 9982822
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: YAVAPAI
+state: ARKANSAS
+event_id: 9983009
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: ARKANSAS
+state: ARKANSAS
+event_id: 9983010
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: ARKANSAS
+state: ARKANSAS
+event_id: 9983011
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: MISSISSIPPI
+state: ARKANSAS
+event_id: 9983012
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: LOGAN
+state: ARKANSAS
+event_id: 9983013
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: HOWARD
+state: ARKANSAS
+event_id: 9983014
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: SALINE
+state: ARKANSAS
+event_id: 9983015
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: WHITE
+state: ARKANSAS
+event_id: 9983016
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: FAULKNER
+state: ARKANSAS
+event_id: 9983017
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: LONOKE
+state: ARKANSAS
+event_id: 9983018
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: LONOKE
+state: ARKANSAS
+event_id: 9983019
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: PRAIRIE
+state: ARKANSAS
+event_id: 9983020
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: PRAIRIE
+state: ARKANSAS
+event_id: 9983021
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: WOODRUFF
+state: ARKANSAS
+event_id: 9983022
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: WOODRUFF
+state: ARKANSAS
+event_id: 9983023
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: JACKSON
+state: ARKANSAS
+event_id: 9983024
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: POINSETT
+state: ARKANSAS
+event_id: 9983025
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: CROSS
+state: ARKANSAS
+event_id: 9983026
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: POINSETT
+state: ARKANSAS
+event_id: 9983027
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: POINSETT
+state: ARKANSAS
+event_id: 9983028
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: MISSISSIPPI
+state: ARKANSAS
+event_id: 9983029
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: MISSISSIPPI
+state: ARKANSAS
+event_id: 9983030
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: COLUMBIA
+state: ARKANSAS
+event_id: 9983031
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: INDEPENDENCE
+state: ARKANSAS
+event_id: 9983032
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: LAWRENCE
+state: ARKANSAS
+event_id: 9983033
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: PULASKI
+state: ARKANSAS
+event_id: 9983034
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: MILLER
+state: ARKANSAS
+event_id: 9983035
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: MILLER
+state: ARKANSAS
+event_id: 9983036
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: POLK
+state: ARKANSAS
+event_id: 9983037
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: SCOTT
+state: CALIFORNIA
+event_id: 9990146
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: LOS ANGELES
+state: COLORADO
+event_id: 9991336
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: KIT CARSON
+state: COLORADO
+event_id: 9991337
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: WELD
+state: COLORADO
+event_id: 9991338
+year1952
+event_type: Tornado
+cz_type: C
+cz_name: WASHINGTON
+
+Query:range 1951 month_name January January
+month_name: January
+event_id: 9990145
+year1951
+event_type: Tornado
+cz_type: C
+cz_name: SANTA CLARA
+month_name: January
+event_id: 10032651
+year1951
+event_type: Tornado
+cz_type: C
+cz_name: RAPIDES
+month_name: January
+event_id: 10032652
+year1951
+event_type: Tornado
+cz_type: C
+cz_name: GRANT

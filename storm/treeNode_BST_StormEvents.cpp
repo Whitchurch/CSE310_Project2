@@ -15,7 +15,7 @@ treeNode_BST_StormEvents::treeNode_BST_StormEvents(storm_event event)
 	strcpy_s(this->month_name, event.month_name);
 	strcpy_s(this->event_type, event.event_type);
 	strcpy_s(this->cz_name, event.cz_name);
-	this->cz_type, event.cz_type;
+	this->cz_type = event.cz_type;
 	this->leftNode = nullvalue;
 	this->rightNode = nullvalue;
 }
@@ -117,12 +117,12 @@ void treeNode_BST_StormEvents::postOrderTraversalDelete(treeNode_BST_StormEvents
 		postOrderTraversalDelete(root->rightNode, deleteTree);
 		if (deleteTree == true)
 		{
-			DisplayCurrentNode(root);
+			//DisplayCurrentNode(root);
 			free(root);
 		}
 		else
 		{
-			DisplayCurrentNode(root);
+			//DisplayCurrentNode(root);
 		}
 
 	}
@@ -142,10 +142,10 @@ bool treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents
 		//Show only items that fall between the low and high.
 		if (field_type == "month_name")
 		{
-			if (checkMonth(root->month_name,lowRange,highRange)!=0)
+			if (checkMonthLexographical(root->month_name,lowRange,highRange)!=0)
 			{
 				eventFound = true;
-				DisplayCurrentNode(root);
+				DisplayCurrentNode(root,field_type);
 			}
 
 		}
@@ -159,7 +159,7 @@ bool treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents
 				if (subString == lowRange)
 				{
 					eventFound = true;
-					DisplayCurrentNode(root);
+					DisplayCurrentNode(root,field_type);
 				}
 
 			}
@@ -170,7 +170,7 @@ bool treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents
 				if (lowRange <= subString && subString <= highRange)
 				{
 					eventFound = true;
-					DisplayCurrentNode(root);
+					DisplayCurrentNode(root,field_type);
 				}
 			}
 
@@ -184,14 +184,43 @@ bool treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents
 }
 
 
-void treeNode_BST_StormEvents::DisplayCurrentNode(treeNode_BST_StormEvents * root)
+void treeNode_BST_StormEvents::DisplayCurrentNode(treeNode_BST_StormEvents * root, string field_type)
 {
-	cout << root->event_index << endl;
-	cout << root->event_id << endl;
-	cout << root->State << endl;
-	cout << root->Year << endl;
-	cout << root->month_name << endl;
-	cout << root->event_type << endl;
-	cout << root->cz_name << endl;
-	cout << root->cz_type << endl;
+	if (field_type == "month_name")
+	{
+		//Sample Output:
+		//month_name: July
+		//event_id : 9983034
+		//year : 1952
+		//event_type : Tornado
+		//cz_type : C
+		//cz_name : MILLER
+		
+		cout << "month_name: "<<root->month_name << endl;
+		cout << "event_id: "<<root->event_id << endl;
+		cout << "year"<<root->Year << endl;
+		cout << "event_type: "<<root->event_type << endl;
+		cout << "cz_type: "<<root->cz_type << endl;
+		cout << "cz_name: "<<root->cz_name << endl;
+		
+	}
+
+	if (field_type == "state")
+	{
+		//Sample Output:
+		//state: ALABAMA
+		//event_id : 9979429
+		//year : 1952
+		//event_type : Tornado
+		//cz_type : C
+		//cz_name : TALLAPOOSA
+
+		cout << "state: "<<root->State << endl;
+		cout << "event_id: " << root->event_id << endl;
+		cout << "year" << root->Year << endl;
+		cout << "event_type: " << root->event_type << endl;
+		cout << "cz_type: " << root->cz_type << endl;
+		cout << "cz_name: " << root->cz_name << endl;
+	}
+
 }

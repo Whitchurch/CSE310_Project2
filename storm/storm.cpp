@@ -28,8 +28,7 @@ int main(int argc, char *argv[])
 	annual_storms *annualStormArray = new annual_storms[noOfYears];
 
 
-
-	//Step 3: Read the details-YYYY.csv files based on the year passed in:
+//Step 3: Read the details-YYYY.csv files based on the year passed in: ////////////////////////////////////////////////////////////////////
 	//Create a file  input stream object:
 
 	
@@ -126,7 +125,9 @@ int main(int argc, char *argv[])
 	string inputQueries;
 	bool stringFirstLine = false;
 	int noOfQueries = 0; //Read total query number
-	//Step 4: Get the user input queries.
+
+
+//Step 4: Get the user input queries: ////////////////////////////////////////////////////////////////////////////////////////////////////////
 	while (getline(cin, inputQueries))
 	{
 		
@@ -165,7 +166,9 @@ int main(int argc, char *argv[])
 				//OUTPUT LINE 2:
 				cout << "\n"<<"Query:" + query_token[0] + " " + query_token[1] + " " + query_token[2] + " " + query_token[3] + " " + query_token[4]<<endl;
 
-				//Step 5: Construct the Data Structure based on the query passed in:
+
+
+//Step 5: Construct the Data Structure based on the query passed in: //////////////////////////////////////////////////////////////////////
 				//Data Structures are: Range == BST
 
 				if (query_token[0] == "range")
@@ -217,8 +220,24 @@ int main(int argc, char *argv[])
 							}
 						
 					}
-					
+
+
+					//Step 6: Do a in-order traversal to print out the contents of the BST for the current query: ////////////////////////////////////////////
+					if (!root->inorderRangeQueryDisplay(root, query_token[2], query_token[3], query_token[4]))
+					{
+						cout << "No storm events found for the given range" << endl;
+					}
+
+					//Step 7: Do a post-order traversal to destroy/obliterate the BST for the current query: ////////////////////////////////////////////////
+					root->postOrderTraversalDelete(root, true);
 				}
+
+
+
+
+
+
+
 
 			
 		}
@@ -247,7 +266,7 @@ int main(int argc, char *argv[])
 	//}
 	//cout << "-------------------------END OF TRAVERSAL------------------------------------------------------" << endl;
 
-	//Remove the underlying events array, to free up the memory.:
+//Step 8: Remove the underlying events array, to free up the memory :  ///////////////////////////////////////////////////////////////////
 	delete[] events;
 
 

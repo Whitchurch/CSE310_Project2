@@ -83,6 +83,65 @@ int Normalize_Scale(string cost)
 
 }
 
+bool checkMonthLexographical(string month_name, string lowRange, string highRange)
+{
+
+	bool result = false;
+
+	//Spreading it out month-wise for ease of reading.
+	if (month_name == January || month_name == Jan || month_name == February || month_name == Feb || month_name == March || month_name == Mar || month_name == April || month_name == Apr || month_name == May || month_name == June || month_name == Jun)
+	{
+
+
+		if (lowRange <= month_name && month_name <= highRange)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+
+	}
+
+	else if (month_name == July || month_name == Jul || month_name == August || month_name == Aug || month_name == September || month_name == Sept || month_name == Sep)
+	{
+		if (lowRange <= month_name && month_name <= highRange)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	else if (month_name == October || month_name == November || month_name == December || month_name == Oct || month_name == Nov || month_name == Dec)
+	{
+		if (lowRange <= month_name && month_name <= highRange)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else if (month_name == Oct || month_name == Nov || month_name == Dec)
+	{
+		if (lowRange <= month_name && month_name <= highRange)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	return result;
+
+}
 bool checkMonth(string month_name,string lowRange,string highRange)
 {
 	int lowerBound = changeMonthToValue(lowRange);
