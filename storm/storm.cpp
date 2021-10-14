@@ -134,6 +134,9 @@ int main(int argc, char *argv[])
 		{
 			noOfQueries = stoi(inputQueries);
 			stringFirstLine = true; // Set to true to begin processing incoming queries
+			
+			//OUTPUT LINE 1:
+			cout << noOfQueries<<endl;
 		}
 		else if (stringFirstLine == true)  //Check gating bool, before allowing query processing
 		{
@@ -159,6 +162,8 @@ int main(int argc, char *argv[])
 					query_token_index++;
 				}
 
+				//OUTPUT LINE 2:
+				cout << "\n"<<"Query:" + query_token[0] + " " + query_token[1] + " " + query_token[2] + " " + query_token[3] + " " + query_token[4]<<endl;
 
 				//Step 5: Construct the Data Structure based on the query passed in:
 				//Data Structures are: Range == BST
@@ -193,7 +198,9 @@ int main(int argc, char *argv[])
 					}
 					else if (query_token[1] != "all")
 					{
-						int year = stoi(query_token[1]);
+						int year = stoi(query_token[1]); //Get the year.
+						int baseYear = stoi(yearParam);
+						year = year % baseYear;
 
 							for (int eventIndex = 0; eventIndex < annualStormArray[year].eventCount; eventIndex++) //Go through all the events, in the current year and insert them into the BST. 
 							{
