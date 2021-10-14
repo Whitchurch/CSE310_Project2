@@ -181,11 +181,11 @@ int main(int argc, char *argv[])
 								//Step 7: Decide the BST tree construction, based on the field_name passed in: either month_name or state
 								if (query_token[2] == "month_name")
 								{
-									root = root->buildBinarySearchTree(newNode, root);
+									root = root->buildBinarySearchTree(newNode, root,query_token[2]);
 								}
 								else
 								{
-									root = root->buildBinarySearchTree(newNode, root);
+									root = root->buildBinarySearchTree(newNode, root,query_token[2]);
 								}
 								
 							}
@@ -201,11 +201,11 @@ int main(int argc, char *argv[])
 								//Step 7: Decide the BST tree construction, based on the field_name passed in: either month_name or state
 								if (query_token[2] == "month_name")
 								{
-									root = root->buildBinarySearchTree(newNode, root);
+									root = root->buildBinarySearchTree(newNode, root,query_token[2]);
 								}
 								else
 								{
-									root = root->buildBinarySearchTree(newNode, root);
+									root = root->buildBinarySearchTree(newNode, root,query_token[2]);
 								}
 							}
 						

@@ -25,7 +25,7 @@ public:
 
 public: treeNode_BST_StormEvents(storm_event event);
 
-		static treeNode_BST_StormEvents* buildBinarySearchTree(treeNode_BST_StormEvents *t1, treeNode_BST_StormEvents *root);
+		static treeNode_BST_StormEvents* buildBinarySearchTree(treeNode_BST_StormEvents *t1, treeNode_BST_StormEvents *root, string treeType);
 		static void postOrderTraversalDelete(treeNode_BST_StormEvents *root, bool deleteTree);
 		static bool inorderRangeQueryDisplay(treeNode_BST_StormEvents *root, string field_type,string lowRange, string highRange);
 		static void DisplayCurrentNode(treeNode_BST_StormEvents *root);

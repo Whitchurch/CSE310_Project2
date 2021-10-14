@@ -20,39 +20,84 @@ treeNode_BST_StormEvents::treeNode_BST_StormEvents(storm_event event)
 	this->rightNode = nullvalue;
 }
 
-treeNode_BST_StormEvents * treeNode_BST_StormEvents::buildBinarySearchTree(treeNode_BST_StormEvents * t1, treeNode_BST_StormEvents * root)
+treeNode_BST_StormEvents * treeNode_BST_StormEvents::buildBinarySearchTree(treeNode_BST_StormEvents * t1, treeNode_BST_StormEvents * root, string treeType)
 {
-	if (root == nullvalue)
-	{
-		root = t1;
-	}
-	else
-	{
-		if (t1->State != root->State)
-		{
-			if (t1->State > root->State)
-			{
-				root->rightNode = buildBinarySearchTree(t1, root->rightNode);
-			}
-			else if (t1->State < root->State)
-			{
-				root->leftNode = buildBinarySearchTree(t1, root->leftNode);
-			}
-			
-		}
+	// I could have built the BST into 2 separate functions, one for State, one fot Month.  
+	//But for this small scale project,  I decided to put them both in the same Build function.
+	//Having 2 different functions is the better design approach, as it offers encapuslation, each function does it's own thing.
+	//I am aware of that, bit for this small project I decided to put both types of tree construction in the same function.
+	//If more types of queries come in the future, I will encapsulate each part of the if else logic in it's own function and call it 
+	//form here.
 
-		else if (t1->State == root->State)
+	if (treeType == "state") //Build BST Using State as the first Key to check, before breaking equalizer with even_id
+	{
+		if (root == nullvalue)
 		{
-			if (t1->event_id > root->event_id)
+			root = t1;
+		}
+		else
+		{
+			if (t1->State != root->State)
 			{
-				root->rightNode = buildBinarySearchTree(t1, root->rightNode);
+				if (t1->State > root->State)
+				{
+					root->rightNode = buildBinarySearchTree(t1, root->rightNode, treeType);
+				}
+				else if (t1->State < root->State)
+				{
+					root->leftNode = buildBinarySearchTree(t1, root->leftNode, treeType);
+				}
+
 			}
-			else if (t1->event_id < root->event_id)
+
+			else if (t1->State == root->State)
 			{
-				root->leftNode = buildBinarySearchTree(t1, root->leftNode);
+				if (t1->event_id > root->event_id)
+				{
+					root->rightNode = buildBinarySearchTree(t1, root->rightNode, treeType);
+				}
+				else if (t1->event_id < root->event_id)
+				{
+					root->leftNode = buildBinarySearchTree(t1, root->leftNode, treeType);
+				}
 			}
 		}
 	}
+	else if (treeType == "month_name")
+	{
+		if (root == nullvalue)
+		{
+			root = t1;
+		}
+		else
+		{
+			if (t1->month_name != root->month_name)
+			{
+				if (t1->month_name > root->month_name)
+				{
+					root->rightNode = buildBinarySearchTree(t1, root->rightNode, treeType);
+				}
+				else if (t1->month_name < root->month_name)
+				{
+					root->leftNode = buildBinarySearchTree(t1, root->leftNode, treeType);
+				}
+
+			}
+
+			else if (t1->month_name == root->month_name)
+			{
+				if (t1->event_id > root->event_id)
+				{
+					root->rightNode = buildBinarySearchTree(t1, root->rightNode, treeType);
+				}
+				else if (t1->event_id < root->event_id)
+				{
+					root->leftNode = buildBinarySearchTree(t1, root->leftNode, treeType);
+				}
+			}
+		}
+	}
+
 
 	return root;
 }
