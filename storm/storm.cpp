@@ -123,7 +123,58 @@ int main(int argc, char *argv[])
 
 
 	}
+	string inputQueries;
+	bool stringFirstLine = false;
+	int noOfQueries = 0; //Read total query number
 	//Step 4: Get the user input queries.
+	while (getline(cin, inputQueries))
+	{
+		
+		if (stringFirstLine == false)
+		{
+			noOfQueries = stoi(inputQueries);
+			stringFirstLine = true; // Set to true to begin processing incoming queries
+		}
+		else if (stringFirstLine == true)  //Check gating bool, before allowing query processing
+		{
+	
+				int query_token_index = 0;
+				string query_delimiter = " ";
+				string query_token[5];
+
+				//Read in ant tokenize.
+				while (query_token_index < 5)
+				{
+
+					query_token[query_token_index] = inputQueries.substr(0, inputQueries.find(query_delimiter));
+					if (query_token_index == 3 || query_token_index == 4)
+					{
+						//Remove the slashes in the 4th and 5th tokens,from the beginning and the end.
+						//Hard coding not interested in generalizing at the moment.
+						query_token[query_token_index] = query_token[query_token_index].erase(0, 1);
+						query_token[query_token_index] = query_token[query_token_index].erase(query_token[query_token_index].length() - 1, 1);
+					}
+
+					inputQueries = inputQueries.erase(0, inputQueries.find(query_delimiter) + query_delimiter.length());
+					query_token_index++;
+				}
+
+
+
+
+			
+		}
+
+
+		//Step 5: Construct the Data Structure based on the query passed in:
+		//Data Structures are: Range == BST
+
+
+
+		
+
+
+	}
 
 	
 	//Step 5: Create the BST for storing the map, to the underlying events array.
