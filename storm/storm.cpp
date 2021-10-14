@@ -123,8 +123,10 @@ int main(int argc, char *argv[])
 
 
 	}
+	//Step 4: Get the user input queries.
+
 	
-	//Step 4: Create the BST for storing the map, to the underlying events array.
+	//Step 5: Create the BST for storing the map, to the underlying events array.
 	treeNode_BST_StormEvents *root = nullvalue; //Set root of BST to null
 
 
@@ -137,7 +139,6 @@ int main(int argc, char *argv[])
 			root = root->buildBinarySearchTree(newNode, root);
 		}
 	}
-
 
 
 
