@@ -72,21 +72,23 @@ treeNode_BST_StormEvents * treeNode_BST_StormEvents::buildBinarySearchTree(treeN
 		else
 		{
 			//Downgraded to make the months lexographical.
-			
-			if (*t1->month_name != *root->month_name)
+			int newEntry = changeMonthToValue(t1->month_name);
+			int oldEntry = changeMonthToValue(root->month_name);
+
+			if (newEntry != oldEntry)
 			{
-				if (*t1->month_name > *root->month_name)
+				if (newEntry > oldEntry)
 				{
 					root->rightNode = buildBinarySearchTree(t1, root->rightNode, treeType);
 				}
-				else if (*t1->month_name < *root->month_name)
+				else if (newEntry < oldEntry)
 				{
 					root->leftNode = buildBinarySearchTree(t1, root->leftNode, treeType);
 				}
 
 			}
 
-			else if (*t1->month_name == *root->month_name)
+			else if (newEntry == oldEntry)
 			{
 				if (t1->event_id > root->event_id)
 				{

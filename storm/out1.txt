@@ -3,13 +3,6 @@
 Query:range 2000 month_name January October
 
 
-        month_name: April
-        event_id: 3
-        year: 2000
-        event_type: Tornado
-        cz_type: C
-        cz_name: LEHIGH
-
         month_name: January
         event_id: 1
         year: 2000
@@ -24,12 +17,12 @@ Query:range 2000 month_name January October
         cz_type: C
         cz_name: COMANCHE
 
-        month_name: October
-        event_id: 5
+        month_name: April
+        event_id: 3
         year: 2000
         event_type: Tornado
         cz_type: C
-        cz_name: CRAWFORD
+        cz_name: LEHIGH
 
         month_name: September
         event_id: 4
@@ -37,6 +30,13 @@ Query:range 2000 month_name January October
         event_type: Tornado
         cz_type: C
         cz_name: DAUPHIN
+
+        month_name: October
+        event_id: 5
+        year: 2000
+        event_type: Tornado
+        cz_type: C
+        cz_name: CRAWFORD
 
 
 Query:range 2000 state A A
@@ -49,7 +49,7 @@ Query:range 2000 state A A
         cz_type: C
         cz_name: CRAWFORD
 
-        state: ARIZONA
+        state: ALASKA
         event_id: 1
         year: 2000
         event_type: Tornado
