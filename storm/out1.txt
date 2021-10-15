@@ -1,9 +1,1558 @@
 3
 
 Query:range all month_name June July
-No storm events found for the given range
+
+
+        month_name: June
+        event_id: 9979425
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: MADISON
+
+        month_name: June
+        event_id: 9983032
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: LAWRENCE
+
+        month_name: June
+        event_id: 9983033
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: PULASKI
+
+        month_name: July
+        event_id: 9983034
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: MILLER
+
+        month_name: July
+        event_id: 9983035
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: MILLER
+
+        month_name: July
+        event_id: 9985763
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: HILLSBOROUGH
+
+        month_name: July
+        event_id: 9986148
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: MIDDLESEX
+
+        month_name: July
+        event_id: 9986149
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: FAIRFIELD
+
+        month_name: July
+        event_id: 9991325
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: WELD
+
+        month_name: June
+        event_id: 9991332
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: LINCOLN
+
+        month_name: June
+        event_id: 9991333
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: EL PASO
+
+        month_name: June
+        event_id: 9991334
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: CROWLEY
+
+        month_name: June
+        event_id: 9991335
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: SEDGWICK
+
+        month_name: June
+        event_id: 9991338
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: WASHINGTON
+
+        month_name: June
+        event_id: 9991453
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: PINELLAS
+
+        month_name: June
+        event_id: 9991454
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: PINELLAS
+
+        month_name: June
+        event_id: 10001431
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: CARROLL
+
+        month_name: June
+        event_id: 10001432
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: DE KALB
+
+        month_name: June
+        event_id: 10001433
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: LAMAR
+
+        month_name: July
+        event_id: 10004028
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: ST. JOSEPH
+
+        month_name: July
+        event_id: 10004029
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: FOUNTAIN
+
+        month_name: July
+        event_id: 10004030
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: ALLEN
+
+        month_name: June
+        event_id: 10004032
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: PULASKI
+
+        month_name: June
+        event_id: 10004033
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: FULTON
+
+        month_name: July
+        event_id: 10004034
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: HOWARD
+
+        month_name: June
+        event_id: 10009714
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: CARROLL
+
+        month_name: July
+        event_id: 10009715
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: LIVINGSTON
+
+        month_name: June
+        event_id: 10009721
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: LOGAN
+
+        month_name: June
+        event_id: 10009722
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: LOGAN
+
+        month_name: July
+        event_id: 10009729
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: MERCER
+
+        month_name: June
+        event_id: 10017011
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: STORY
+
+        month_name: July
+        event_id: 10017012
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: BUCHANAN
+
+        month_name: June
+        event_id: 10017013
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: MARSHALL
+
+        month_name: June
+        event_id: 10017014
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: LYON
+
+        month_name: June
+        event_id: 10017015
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: HANCOCK
+
+        month_name: July
+        event_id: 10017016
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: O'BRIEN
+
+        month_name: June
+        event_id: 10017020
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: GRUNDY
+
+        month_name: June
+        event_id: 10017021
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: CHEROKEE
+
+        month_name: July
+        event_id: 10017022
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: LYON
+
+        month_name: June
+        event_id: 10025119
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: GREENWOOD
+
+        month_name: June
+        event_id: 10025120
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: MORTON
+
+        month_name: June
+        event_id: 10025121
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: STEVENS
+
+        month_name: June
+        event_id: 10025122
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: TREGO
+
+        month_name: June
+        event_id: 10025123
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: ELLIS
+
+        month_name: July
+        event_id: 10025124
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: FORD
+
+        month_name: July
+        event_id: 10025336
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: ROOKS
+
+        month_name: July
+        event_id: 10025337
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: CLOUD
+
+        month_name: June
+        event_id: 10025360
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: SUMNER
+
+        month_name: June
+        event_id: 10025361
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: LEAVENWORTH
+
+        month_name: June
+        event_id: 10025362
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: PHILLIPS
+
+        month_name: June
+        event_id: 10025363
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: NORTON
+
+        month_name: July
+        event_id: 10025364
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: DECATUR
+
+        month_name: July
+        event_id: 10025365
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: CHEYENNE
+
+        month_name: July
+        event_id: 10025366
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: SHERMAN
+
+        month_name: June
+        event_id: 10027596
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: RICE
+
+        month_name: June
+        event_id: 10027597
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: MCPHERSON
+
+        month_name: June
+        event_id: 10028460
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: WICHITA
+
+        month_name: June
+        event_id: 10028461
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: SEDGWICK
+
+        month_name: June
+        event_id: 10028462
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: GRAHAM
+
+        month_name: July
+        event_id: 10028463
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: RILEY
+
+        month_name: July
+        event_id: 10028464
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: DICKINSON
+
+        month_name: July
+        event_id: 10028673
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: SCOTT
+
+        month_name: July
+        event_id: 10028674
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: MARSHALL
+
+        month_name: July
+        event_id: 10028675
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: ALLEN
+
+        month_name: June
+        event_id: 10028715
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: REPUBLIC
+
+        month_name: June
+        event_id: 10028716
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: GRANT
+
+        month_name: June
+        event_id: 10028717
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: TREGO
+
+        month_name: June
+        event_id: 10028718
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: PRATT
+
+        month_name: June
+        event_id: 10028719
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: PRATT
+
+        month_name: June
+        event_id: 10028720
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: PRATT
+
+        month_name: June
+        event_id: 10028721
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: PRATT
+
+        month_name: June
+        event_id: 10028722
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: GRANT
+
+        month_name: June
+        event_id: 10028723
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: OSBORNE
+
+        month_name: June
+        event_id: 10028724
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: BUTLER
+
+        month_name: June
+        event_id: 10028725
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: COFFEY
+
+        month_name: June
+        event_id: 10028726
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: DOUGLAS
+
+        month_name: June
+        event_id: 10028727
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: SHAWNEE
+
+        month_name: June
+        event_id: 10028728
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: HAMILTON
+
+        month_name: June
+        event_id: 10028729
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: GOVE
+
+        month_name: June
+        event_id: 10028730
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: GOVE
+
+        month_name: June
+        event_id: 10028731
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: FRANKLIN
+
+        month_name: June
+        event_id: 10028732
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: COMANCHE
+
+        month_name: June
+        event_id: 10028733
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: THOMAS
+
+        month_name: June
+        event_id: 10028734
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: WICHITA
+
+        month_name: June
+        event_id: 10028735
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: OSBORNE
+
+        month_name: June
+        event_id: 10028736
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: RUSH
+
+        month_name: June
+        event_id: 10039191
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: EATON
+
+        month_name: June
+        event_id: 10039192
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: MIDLAND
+
+        month_name: July
+        event_id: 10039193
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: WASHTENAW
+
+        month_name: June
+        event_id: 10047281
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: SHARKEY
+
+        month_name: July
+        event_id: 10047290
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: COVINGTON
+
+        month_name: June
+        event_id: 10050384
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: ATTALA
+
+        month_name: June
+        event_id: 10052051
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: WILKIN
+
+        month_name: June
+        event_id: 10052052
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: MCLEOD
+
+        month_name: June
+        event_id: 10052053
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: ANOKA
+
+        month_name: June
+        event_id: 10052054
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: MARTIN
+
+        month_name: July
+        event_id: 10052055
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: HENNEPIN
+
+        month_name: June
+        event_id: 10052056
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: SWIFT
+
+        month_name: June
+        event_id: 10052057
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: COTTONWOOD
+
+        month_name: June
+        event_id: 10052058
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: BROWN
+
+        month_name: June
+        event_id: 10052059
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: NICOLLET
+
+        month_name: June
+        event_id: 10052060
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: HENNEPIN
+
+        month_name: June
+        event_id: 10052061
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: LE SUEUR
+
+        month_name: June
+        event_id: 10052062
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: ANOKA
+
+        month_name: July
+        event_id: 10052063
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: GRANT
+
+        month_name: July
+        event_id: 10052064
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: AITKIN
+
+        month_name: July
+        event_id: 10052065
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: FREEBORN
+
+        month_name: June
+        event_id: 10063617
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: PULASKI
+
+        month_name: June
+        event_id: 10063618
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: SHELBY
+
+        month_name: July
+        event_id: 10063619
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: MORGAN
+
+        month_name: June
+        event_id: 10063622
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: PHELPS
+
+        month_name: July
+        event_id: 10063623
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: JASPER
+
+        month_name: July
+        event_id: 10063624
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: RAY
+
+        month_name: July
+        event_id: 10063625
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: HOWELL
+
+        month_name: July
+        event_id: 10063635
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: MONTGOMERY
+
+        month_name: July
+        event_id: 10072246
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: FALLON
+
+        month_name: July
+        event_id: 10072247
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: WIBAUX
+
+        month_name: June
+        event_id: 10073784
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: KNOX
+
+        month_name: June
+        event_id: 10073785
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: NUCKOLLS
+
+        month_name: July
+        event_id: 10073786
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: BURT
+
+        month_name: June
+        event_id: 10073792
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: SIOUX
+
+        month_name: June
+        event_id: 10073793
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: CHEYENNE
+
+        month_name: July
+        event_id: 10073794
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: PERKINS
+
+        month_name: July
+        event_id: 10073795
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: DEUEL
+
+        month_name: June
+        event_id: 10073801
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: HOLT
+
+        month_name: June
+        event_id: 10073802
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: SALINE
+
+        month_name: July
+        event_id: 10073803
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: DEUEL
+
+        month_name: July
+        event_id: 10077696
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: PITT
+
+        month_name: July
+        event_id: 10077697
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: CABARRUS
+
+        month_name: June
+        event_id: 10077699
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: FRANKLIN
+
+        month_name: June
+        event_id: 10077700
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: PENDER
+
+        month_name: July
+        event_id: 10077701
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: BRUNSWICK
+
+        month_name: July
+        event_id: 10077706
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: HALIFAX
+
+        month_name: July
+        event_id: 10080563
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: QUAY
+
+        month_name: June
+        event_id: 10080565
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: CHAVES
+
+        month_name: July
+        event_id: 10086809
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: VAN WERT
+
+        month_name: July
+        event_id: 10086810
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: ALLEN
+
+        month_name: June
+        event_id: 10086812
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: CUYAHOGA
+
+        month_name: June
+        event_id: 10086813
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: BUTLER
+
+        month_name: June
+        event_id: 10089655
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: CASS
+
+        month_name: June
+        event_id: 10089656
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: DIVIDE
+
+        month_name: June
+        event_id: 10089657
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: BURLEIGH
+
+        month_name: June
+        event_id: 10089659
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: GOLDEN VALLEY
+
+        month_name: June
+        event_id: 10089660
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: STARK
+
+        month_name: June
+        event_id: 10089661
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: WELLS
+
+        month_name: June
+        event_id: 10089662
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: MOUNTRAIL
+
+        month_name: July
+        event_id: 10089663
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: RICHLAND
+
+        month_name: July
+        event_id: 10089664
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: MCKENZIE
+
+        month_name: July
+        event_id: 10089665
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: BURLEIGH
+
+        month_name: July
+        event_id: 10089666
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: BURLEIGH
+
+        month_name: July
+        event_id: 10089667
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: GRAND FORKS
+
+        month_name: July
+        event_id: 10089668
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: GOLDEN VALLEY
+
+        month_name: July
+        event_id: 10089669
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: STUTSMAN
+
+        month_name: June
+        event_id: 10096237
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: KAY
+
+        month_name: July
+        event_id: 10098429
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: KINGFISHER
+
+        month_name: July
+        event_id: 10099559
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: ROGERS
+
+        month_name: July
+        event_id: 10099560
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: BEAVER
+
+        month_name: June
+        event_id: 10099729
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: TEXAS
+
+        month_name: June
+        event_id: 10099730
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: GREER
+
+        month_name: June
+        event_id: 10099731
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: GRADY
+
+        month_name: June
+        event_id: 10099732
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: TILLMAN
+
+        month_name: June
+        event_id: 10099733
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: ROGERS
+
+        month_name: June
+        event_id: 10099734
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: MUSKOGEE
+
+        month_name: June
+        event_id: 10099735
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: WASHITA
+
+        month_name: June
+        event_id: 10099736
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: KAY
+
+        month_name: June
+        event_id: 10099737
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: TILLMAN
+
+        month_name: June
+        event_id: 10099738
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: MAJOR
+
+        month_name: June
+        event_id: 10099739
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: CIMARRON
+
+        month_name: July
+        event_id: 10099740
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: KINGFISHER
+
+        month_name: July
+        event_id: 10099741
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: KINGFISHER
+
+        month_name: July
+        event_id: 10099742
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: KINGFISHER
+
+        month_name: July
+        event_id: 10099743
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: ELLIS
+
+        month_name: June
+        event_id: 10099763
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: ROGER MILLS
+
+        month_name: June
+        event_id: 10099764
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: BLAINE
+
+        month_name: June
+        event_id: 10099765
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: ROGER MILLS
+
+        month_name: June
+        event_id: 10099766
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: MAJOR
+
+        month_name: June
+        event_id: 10099767
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: TILLMAN
+
+        month_name: July
+        event_id: 10099768
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: CANADIAN
+
+        month_name: July
+        event_id: 10104927
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: LEHIGH
+
+        month_name: July
+        event_id: 10104928
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: DAUPHIN
+
+        month_name: July
+        event_id: 10104929
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: CRAWFORD
+
+        month_name: June
+        event_id: 10104935
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: ARMSTRONG
+
+        month_name: July
+        event_id: 10104936
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: BRADFORD
+
+        month_name: July
+        event_id: 10104941
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: ERIE
+
+        month_name: July
+        event_id: 10104942
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: MIFFLIN
+
+        month_name: July
+        event_id: 10110747
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: ROBERTS
+
+        month_name: July
+        event_id: 10110748
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: CODINGTON
+
+        month_name: June
+        event_id: 10110749
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: SANBORN
+
+        month_name: June
+        event_id: 10110750
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: HAAKON
+
+        month_name: June
+        event_id: 10110751
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: FAULK
+
+        month_name: June
+        event_id: 10110752
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: GREGORY
+
+        month_name: June
+        event_id: 10110753
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: HUTCHINSON
+
+        month_name: June
+        event_id: 10117454
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: BAMBERG
+
+        month_name: June
+        event_id: 10117457
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: BARNWELL
+
+        month_name: June
+        event_id: 10120418
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: WASHINGTON
+
+        month_name: June
+        event_id: 10120419
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: AUSTIN
+
+        month_name: June
+        event_id: 10120420
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: HARTLEY
+
+        month_name: June
+        event_id: 10121792
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: GRAYSON
+
+        month_name: June
+        event_id: 10123404
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: POTTER
+
+        month_name: June
+        event_id: 10123405
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: CARSON
+
+        month_name: June
+        event_id: 10123406
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: CARSON
+
+        month_name: June
+        event_id: 10123407
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: GRAY
+
+        month_name: June
+        event_id: 10123408
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: CHILDRESS
+
+        month_name: June
+        event_id: 10123409
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: TAYLOR
+
+        month_name: June
+        event_id: 10123410
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: JOHNSON
+
+        month_name: July
+        event_id: 10123411
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: LAMB
+
+        month_name: June
+        event_id: 10126268
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: DAVIDSON
+
+        month_name: June
+        event_id: 10146801
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: RUSK
+
+        month_name: June
+        event_id: 10146802
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: PRICE
+
+        month_name: June
+        event_id: 10146803
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: CLARK
+
+        month_name: June
+        event_id: 10146804
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: ONEIDA
+
+        month_name: June
+        event_id: 10146805
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: MARATHON
+
+        month_name: June
+        event_id: 10146806
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: GREEN LAKE
+
+        month_name: June
+        event_id: 10146807
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: DODGE
+
+        month_name: July
+        event_id: 10146808
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: RICHLAND
+
+        month_name: June
+        event_id: 10146814
+        year: 1952
+        event_type: Tornado
+        cz_type: C
+        cz_name: POLK
+
+        month_name: June
+        event_id: 10147654
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: WOOD
+
+        month_name: June
+        event_id: 10153061
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: RICHMOND (C)
+
+        month_name: June
+        event_id: 10153062
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: NEWPORT NEWS (C)
+
+        month_name: June
+        event_id: 10162814
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: NIOBRARA
+
+        month_name: June
+        event_id: 10162815
+        year: 1950
+        event_type: Tornado
+        cz_type: C
+        cz_name: WESTON
+
 
 Query:range 1952 state A C
+
 state: ALABAMA
 event_id: 9979429
 year1952
@@ -287,22 +1836,28 @@ event_type: Tornado
 cz_type: C
 cz_name: WASHINGTON
 
+
 Query:range 1951 month_name January January
-month_name: January
-event_id: 9990145
-year1951
-event_type: Tornado
-cz_type: C
-cz_name: SANTA CLARA
-month_name: January
-event_id: 10032651
-year1951
-event_type: Tornado
-cz_type: C
-cz_name: RAPIDES
-month_name: January
-event_id: 10032652
-year1951
-event_type: Tornado
-cz_type: C
-cz_name: GRANT
+
+
+        month_name: January
+        event_id: 9990145
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: SANTA CLARA
+
+        month_name: January
+        event_id: 10032651
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: RAPIDES
+
+        month_name: January
+        event_id: 10032652
+        year: 1951
+        event_type: Tornado
+        cz_type: C
+        cz_name: GRANT
+

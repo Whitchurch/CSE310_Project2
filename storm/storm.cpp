@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 
 	//Step 2: Create an array  of structure_annual storms:
 	annual_storms *annualStormArray = new annual_storms[noOfYears];
-
+	int *eventCount = new int[noOfYears];
 
 //Step 3: Read the details-YYYY.csv files based on the year passed in: ////////////////////////////////////////////////////////////////////
 	//Create a file  input stream object:
@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 		fileInputStream.close();
 
 		annualStormArray[i].year = year;
-		annualStormArray[i].eventCount = readLineCount - 1;
+	    eventCount[i] = readLineCount - 1;
 		annualStormArray[i].events = events = new storm_event[readLineCount - 1]; // we subtract 1, since we don't need space for the column headings
 		
 		
@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
 				}
 
 				//Enter the event_index:
-				events[LineCount - 1].event_index = LineCount - 1;
+				//events[LineCount - 1].event_index = LineCount - 1;
 
 				//Enter the extracted tokens into their respective fields:
 				events[LineCount - 1].event_id = stoi(token[0]);
@@ -164,7 +164,7 @@ int main(int argc, char *argv[])
 				}
 
 				//OUTPUT LINE 2:
-				cout << "\n"<<"Query:" + query_token[0] + " " + query_token[1] + " " + query_token[2] + " " + query_token[3] + " " + query_token[4]<<endl;
+				cout << "\n"<<"Query:" + query_token[0] + " " + query_token[1] + " " + query_token[2] + " " + query_token[3] + " " + query_token[4]+"\n"<<endl;
 
 
 
@@ -183,7 +183,7 @@ int main(int argc, char *argv[])
 						for (int year = 0; year < noOfYears; year++) //Go one year at a time
 						{
 
-							for (int eventIndex = 0; eventIndex < annualStormArray[year].eventCount; eventIndex++) //Go through all the events, in the current year and insert them into the BST. 
+							for (int eventIndex = 0; eventIndex < eventCount[year]; eventIndex++) //Go through all the events, in the current year and insert them into the BST. 
 							{
 								treeNode_BST_StormEvents *newNode = new treeNode_BST_StormEvents(annualStormArray[year].events[eventIndex]); //We Pass by value the events.
 								//Step 7: Decide the BST tree construction, based on the field_name passed in: either month_name or state
@@ -205,7 +205,7 @@ int main(int argc, char *argv[])
 						int baseYear = stoi(yearParam);
 						year = year % baseYear;
 
-							for (int eventIndex = 0; eventIndex < annualStormArray[year].eventCount; eventIndex++) //Go through all the events, in the current year and insert them into the BST. 
+							for (int eventIndex = 0; eventIndex < eventCount[year]; eventIndex++) //Go through all the events, in the current year and insert them into the BST. 
 							{
 								treeNode_BST_StormEvents *newNode = new treeNode_BST_StormEvents(annualStormArray[year].events[eventIndex]); //We Pass by value the events.
 								//Step 7: Decide the BST tree construction, based on the field_name passed in: either month_name or state
@@ -227,6 +227,8 @@ int main(int argc, char *argv[])
 					{
 						cout << "No storm events found for the given range" << endl;
 					}
+
+					cout << endl;
 
 					//Step 7: Do a post-order traversal to destroy/obliterate the BST for the current query: ////////////////////////////////////////////////
 					root->postOrderTraversalDelete(root, true);

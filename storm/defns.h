@@ -9,12 +9,11 @@
 
 struct annual_storms {
 	int year; // Year of storm events
-	int eventCount;
 	struct storm_event *events;  // Pointer to array of storm events for the given year
 };
 
 struct storm_event {
-	int event_index;
+	//int event_index;
 	int event_id; // Event id
 	char state[STATE_LEN]; // State name
 	int year; // Four digit year of event

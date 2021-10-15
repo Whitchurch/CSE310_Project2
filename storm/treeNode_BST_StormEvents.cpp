@@ -8,7 +8,7 @@ using namespace std;
 
 treeNode_BST_StormEvents::treeNode_BST_StormEvents(storm_event event)
 {
-	this->event_index = event.event_index;
+	//this->event_index = event.event_index;
 	this->event_id = event.event_id;
 	this->State = event.state;
 	this->Year = event.year;
@@ -142,7 +142,7 @@ bool treeNode_BST_StormEvents::inorderRangeQueryDisplay(treeNode_BST_StormEvents
 		//Show only items that fall between the low and high.
 		if (field_type == "month_name")
 		{
-			if (checkMonthLexographical(root->month_name,lowRange,highRange)!=0)
+			if (checkMonth(root->month_name,lowRange,highRange)!=0)
 			{
 				eventFound = true;
 				DisplayCurrentNode(root,field_type);
@@ -196,12 +196,13 @@ void treeNode_BST_StormEvents::DisplayCurrentNode(treeNode_BST_StormEvents * roo
 		//cz_type : C
 		//cz_name : MILLER
 		
-		cout << "month_name: "<<root->month_name << endl;
-		cout << "event_id: "<<root->event_id << endl;
-		cout << "year"<<root->Year << endl;
-		cout << "event_type: "<<root->event_type << endl;
-		cout << "cz_type: "<<root->cz_type << endl;
-		cout << "cz_name: "<<root->cz_name << endl;
+		cout << "\n";
+		cout << "        month_name: "<<root->month_name << endl;
+		cout << "        event_id: "<<root->event_id << endl;
+		cout << "        year: "<<root->Year << endl;
+		cout << "        event_type: "<<root->event_type << endl;
+		cout << "        cz_type: "<<root->cz_type << endl;
+		cout << "        cz_name: "<<root->cz_name << endl;
 		
 	}
 
