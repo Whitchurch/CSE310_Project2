@@ -216,12 +216,13 @@ void treeNode_BST_StormEvents::DisplayCurrentNode(treeNode_BST_StormEvents * roo
 		//cz_type : C
 		//cz_name : TALLAPOOSA
 
-		cout << "state: "<<root->State << endl;
-		cout << "event_id: " << root->event_id << endl;
-		cout << "year" << root->Year << endl;
-		cout << "event_type: " << root->event_type << endl;
-		cout << "cz_type: " << root->cz_type << endl;
-		cout << "cz_name: " << root->cz_name << endl;
+		cout << "\n";
+		cout << "        state: "<<root->State << endl;
+		cout << "        event_id: " << root->event_id << endl;
+		cout << "        year: " << root->Year << endl;
+		cout << "        event_type: " << root->event_type << endl;
+		cout << "        cz_type: " << root->cz_type << endl;
+		cout << "        cz_name: " << root->cz_name << endl;
 	}
 
 }
