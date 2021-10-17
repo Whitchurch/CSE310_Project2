@@ -1,0 +1,367 @@
+3
+
+Query:range all month_name "June" "July"
+
+
+        No storm events found for the given range
+
+
+Query:range 1952 state "A" "C"
+
+
+        State: ALABAMA
+        Event ID: 9979429
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: TALLAPOOSA
+
+        State: ALABAMA
+        Event ID: 9979430
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: TUSCALOOSA
+
+        State: ALABAMA
+        Event ID: 9979431
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: FAYETTE
+
+        State: ALABAMA
+        Event ID: 9979432
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: CULLMAN
+
+        State: ALABAMA
+        Event ID: 9979433
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: BLOUNT
+
+        State: ALABAMA
+        Event ID: 9979434
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: JEFFERSON
+
+        State: ALABAMA
+        Event ID: 9979435
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: DEKALB
+
+        State: ALABAMA
+        Event ID: 9979436
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: PICKENS
+
+        State: ALABAMA
+        Event ID: 9979437
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: MORGAN
+
+        State: ALABAMA
+        Event ID: 9979438
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: MOBILE
+
+        State: ALABAMA
+        Event ID: 9979439
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: FAYETTE
+
+        State: ALABAMA
+        Event ID: 9979440
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: FAYETTE
+
+        State: ALABAMA
+        Event ID: 9979441
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: FAYETTE
+
+        State: ARIZONA
+        Event ID: 9982822
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: YAVAPAI
+
+        State: ARKANSAS
+        Event ID: 9983009
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: ARKANSAS
+
+        State: ARKANSAS
+        Event ID: 9983010
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: ARKANSAS
+
+        State: ARKANSAS
+        Event ID: 9983011
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: MISSISSIPPI
+
+        State: ARKANSAS
+        Event ID: 9983012
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: LOGAN
+
+        State: ARKANSAS
+        Event ID: 9983013
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: HOWARD
+
+        State: ARKANSAS
+        Event ID: 9983014
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: SALINE
+
+        State: ARKANSAS
+        Event ID: 9983015
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: WHITE
+
+        State: ARKANSAS
+        Event ID: 9983016
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: FAULKNER
+
+        State: ARKANSAS
+        Event ID: 9983017
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: LONOKE
+
+        State: ARKANSAS
+        Event ID: 9983018
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: LONOKE
+
+        State: ARKANSAS
+        Event ID: 9983019
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: PRAIRIE
+
+        State: ARKANSAS
+        Event ID: 9983020
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: PRAIRIE
+
+        State: ARKANSAS
+        Event ID: 9983021
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: WOODRUFF
+
+        State: ARKANSAS
+        Event ID: 9983022
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: WOODRUFF
+
+        State: ARKANSAS
+        Event ID: 9983023
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: JACKSON
+
+        State: ARKANSAS
+        Event ID: 9983024
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: POINSETT
+
+        State: ARKANSAS
+        Event ID: 9983025
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: CROSS
+
+        State: ARKANSAS
+        Event ID: 9983026
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: POINSETT
+
+        State: ARKANSAS
+        Event ID: 9983027
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: POINSETT
+
+        State: ARKANSAS
+        Event ID: 9983028
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: MISSISSIPPI
+
+        State: ARKANSAS
+        Event ID: 9983029
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: MISSISSIPPI
+
+        State: ARKANSAS
+        Event ID: 9983030
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: COLUMBIA
+
+        State: ARKANSAS
+        Event ID: 9983031
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: INDEPENDENCE
+
+        State: ARKANSAS
+        Event ID: 9983032
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: LAWRENCE
+
+        State: ARKANSAS
+        Event ID: 9983033
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: PULASKI
+
+        State: ARKANSAS
+        Event ID: 9983034
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: MILLER
+
+        State: ARKANSAS
+        Event ID: 9983035
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: MILLER
+
+        State: ARKANSAS
+        Event ID: 9983036
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: POLK
+
+        State: ARKANSAS
+        Event ID: 9983037
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: SCOTT
+
+        State: CALIFORNIA
+        Event ID: 9990146
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: LOS ANGELES
+
+        State: COLORADO
+        Event ID: 9991336
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: KIT CARSON
+
+        State: COLORADO
+        Event ID: 9991337
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: WELD
+
+        State: COLORADO
+        Event ID: 9991338
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: WASHINGTON
+
+
+Query:range 1951 month_name "January" "January"
+
+
+        Month Name: January
+        Event ID: 9990145
+        Year: 1951
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: SANTA CLARA
+
+        Month Name: January
+        Event ID: 10032651
+        Year: 1951
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: RAPIDES
+
+        Month Name: January
+        Event ID: 10032652
+        Year: 1951
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: GRANT
+
+
+

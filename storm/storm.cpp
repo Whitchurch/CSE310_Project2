@@ -2,7 +2,7 @@
 #include<fstream>
 #include<math.h>
 #include<string>
-#include<cstring>
+//#include<cstring>
 #include "Constants.h"
 #include "defns.h"
 #include "treeNode_BST.h"
@@ -137,7 +137,7 @@ int main(int argc, char *argv[])
 			stringFirstLine = true; // Set to true to begin processing incoming queries
 			
 			//OUTPUT LINE 1:
-			cout << noOfQueries<<endl;
+			std::cout << noOfQueries<<endl;
 		}
 		else if (stringFirstLine == true)  //Check gating bool, before allowing query processing
 		{
@@ -164,7 +164,7 @@ int main(int argc, char *argv[])
 				}
 
 				//OUTPUT LINE 2:
-				cout << "\n"<<"Query:" + query_token[0] + " " + query_token[1] + " " + query_token[2] + " " + query_token[3] + " " + query_token[4]+"\n"<<endl;
+				cout << "\n"<<"Query:" + query_token[0] + " " + query_token[1] + " " + query_token[2] +" "+"\"" + query_token[3] + "\""+" "+"\"" +query_token[4]+"\""+"\n"<<endl;
 
 
 
@@ -248,28 +248,12 @@ int main(int argc, char *argv[])
 
 	}
 
-	
-
-
-
-
-
-
-
-	//Post-order Traversal of the tree,
-	//cout << "------------------------POST ORDER TRAVERSAL---------------------------------------------------" << endl;
-	//root->postOrderTraversalDelete(root,true);
-	//cout << "-------------------------END OF TRAVERSAL------------------------------------------------------" << endl;
-
-	//cout << "------------------------IN ORDER TRAVERSAL---------------------------------------------------" << endl;
-	//if (!root->inorderRangeQueryDisplay(root, "state", "A", "O"))
-	//{
-	//		cout << "No storm events found for the given range" << endl;
-	//}
-	//cout << "-------------------------END OF TRAVERSAL------------------------------------------------------" << endl;
 
 //Step 8: Remove the underlying events array, to free up the memory :  ///////////////////////////////////////////////////////////////////
 	delete[] events;
+
+//Step 9: Add that extra blank line to match the expected output.
+	cout << "\n\n";
 
 
 	

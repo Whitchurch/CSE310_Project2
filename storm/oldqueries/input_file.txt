@@ -1,0 +1,4 @@
+3
+range all month_name "June" "July"
+range 1952 state "A" "C"
+range 1951 month_name "January" "January"
