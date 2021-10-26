@@ -64,6 +64,18 @@ int Normalize_Scale(string cost)
 		{
 			units = 1000;
 		}
+		else if (cost.back() == 'M')
+		{
+			units = 1000000;
+		}
+		else if (cost.back() == 'B')
+		{
+			units = 1000000000;
+		}
+		else
+		{
+			cout << cost.back() << endl;
+		}
 
 		if (cost.length() == 1) //If only a single digit is passed without a unit of K
 		{

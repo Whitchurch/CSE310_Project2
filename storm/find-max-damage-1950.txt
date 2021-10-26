@@ -1,0 +1,2 @@
+1
+find max 1950 damage_property 10

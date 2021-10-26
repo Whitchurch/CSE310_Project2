@@ -1,0 +1,83 @@
+Query:range all state "WYOMING" WYOMING"
+
+
+        State: WYOMING
+        Event ID: 10162813
+        Year: 1950
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: UINTA
+
+        State: WYOMING
+        Event ID: 10162814
+        Year: 1950
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: NIOBRARA
+
+        State: WYOMING
+        Event ID: 10162815
+        Year: 1950
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: WESTON
+
+        State: WYOMING
+        Event ID: 10162816
+        Year: 1952
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: NIOBRARA
+
+        State: WYOMING
+        Event ID: 10162817
+        Year: 1953
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: WESTON
+
+        State: WYOMING
+        Event ID: 10162818
+        Year: 1953
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: SHERIDAN
+
+        State: WYOMING
+        Event ID: 10162819
+        Year: 1953
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: NIOBRARA
+
+        State: WYOMING
+        Event ID: 10162820
+        Year: 1953
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: CAMPBELL
+
+        State: WYOMING
+        Event ID: 10162821
+        Year: 1953
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: ALBANY
+
+        State: WYOMING
+        Event ID: 10162822
+        Year: 1953
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: GOSHEN
+
+        State: WYOMING
+        Event ID: 10162823
+        Year: 1953
+        Event Type: Tornado
+        County/Zone Type: C
+        County/Zone Name: LARAMIE
+		
+		
+		
+		
