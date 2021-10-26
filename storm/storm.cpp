@@ -7,6 +7,7 @@
 #include "defns.h"
 #include "treeNode_BST.h"
 #include "treeNode_BST_StormEvents.h"
+#include"heap_entry.h"
 #include "Helper_functions.h"
 
 using namespace std;
@@ -14,6 +15,8 @@ using namespace std;
 //Global variables
 storm_event *events;
 int LineCount = 0;
+
+
 
 int main(int argc, char *argv[])
 {
@@ -151,12 +154,18 @@ int main(int argc, char *argv[])
 				{
 
 					query_token[query_token_index] = inputQueries.substr(0, inputQueries.find(query_delimiter));
+
 					if (query_token_index == 3 || query_token_index == 4)
 					{
+						if (query_token[0] == "range")
+						{
 						//Remove the slashes in the 4th and 5th tokens,from the beginning and the end.
 						//Hard coding not interested in generalizing at the moment.
+					
 						query_token[query_token_index] = query_token[query_token_index].erase(0, 1);
 						query_token[query_token_index] = query_token[query_token_index].erase(query_token[query_token_index].length() - 1, 1);
+						}
+
 					}
 
 					inputQueries = inputQueries.erase(0, inputQueries.find(query_delimiter) + query_delimiter.length());
@@ -232,6 +241,21 @@ int main(int argc, char *argv[])
 
 					//Step 7: Do a post-order traversal to destroy/obliterate the BST for the current query: ////////////////////////////////////////////////
 					root->postOrderTraversalDelete(root, true);
+				}
+				else if (query_token[0] == "find")
+				{
+					//MaxHeapify trial
+					int a_1[] = { 1,8,6,5,3,7,4};
+					int arrayLength = sizeof(a_1) / sizeof(a_1[0]);
+					int *result;
+					result = buildMaxHeap(a_1, arrayLength );
+
+					//View the max-heap:
+					for (int i = 0; i < arrayLength; i++)
+					{
+						cout << a_1[i] << endl;
+					}
+	
 				}
 
 

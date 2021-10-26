@@ -48,6 +48,9 @@
     <ClCompile Include="treeNode_BST_StormEvents.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="heap_entry.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="treeNode_BST.h">
@@ -63,6 +66,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="heap_entry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
