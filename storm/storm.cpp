@@ -263,8 +263,8 @@ int main(int argc, char *argv[])
 							for (int eventIndex = 0; eventIndex < eventCount[year]; eventIndex++) //Go through all the events, in the current year and insert them into the BST. 
 							{
 								
-								//Step 7: Decide the BST tree construction, based on the field_name passed in: either month_name or state
-								if (query_token[2] == "damage_property")
+								//Step 9: just create a huge array of type struct, either of damage_property or damage_crop.
+								if (query_token[3] == "damage_property")
 								{
 									maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
 									maxHeap[eventIndex].damage_amount = annualStormArray[year].events[eventIndex].damage_property;
@@ -283,6 +283,11 @@ int main(int argc, char *argv[])
 									//root = root->buildBinarySearchTree(newNode, root, query_token[2]);
 								}
 							}
+
+							//Step 10: Build a Max- heap from the generic array:
+							maxHeap = heap_entry_Storm::buildMaxHeap_Storm(maxHeap, count);
+							
+
 						}
 					}
 

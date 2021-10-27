@@ -16,6 +16,6 @@ public: heap_entry_Storm(storm_event event, int damage_amount, int event_index);
 	static int returnLeft_Storm(int currentIndex);
 	static int returnRight_Storm(int currentIndex);
 
-	static int* maxHeapify_Storm(int inputArray[], int violatingNodeIndex, int heapSize);
-	static int* buildMaxHeap_Storm(int inputArray[], int heapSize);
+	static heap_entry_Storm* maxHeapify_Storm(heap_entry_Storm inputArray[], int violatingNodeIndex, int heapSize);
+	static heap_entry_Storm* buildMaxHeap_Storm(heap_entry_Storm inputArray[], int heapSize);
 };

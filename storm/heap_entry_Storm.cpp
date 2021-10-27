@@ -29,29 +29,81 @@ int heap_entry_Storm::returnRight_Storm(int currentIndex)
 
 
 
-int * heap_entry_Storm::maxHeapify_Storm(int inputArray[], int violatingNodeIndex, int heapSize)
+heap_entry_Storm * heap_entry_Storm::maxHeapify_Storm(heap_entry_Storm inputArray[], int violatingNodeIndex, int heapSize)
 {
-	int *result;
+	heap_entry_Storm *result;
 	//Get the left and right index values, below the violating node.
 	int leftIndex = heap_entry_Storm::returnLeft_Storm(violatingNodeIndex);
 	int rightIndex = heap_entry_Storm::returnRight_Storm(violatingNodeIndex);
 	int largest = 0; // setting the largest to 0, this needs to be run to make sure, setting to 0 does not break the code.
-	int tempStorage = 0;
+	heap_entry_Storm tempStorage;
 
 	//Decide if the leftIndex has the larger element.
-	if (leftIndex <= heapSize && inputArray[leftIndex] > inputArray[violatingNodeIndex])
+	if (leftIndex <= heapSize)
 	{
-		largest = leftIndex;
-	}
-	else
-	{
-		largest = violatingNodeIndex;
+		//If greater set the largest
+		if (inputArray[leftIndex].damage_amount > inputArray[violatingNodeIndex].damage_amount) //-Level:1
+		{
+			largest = leftIndex;
+		}
+		else if (inputArray[leftIndex].damage_amount  ==  inputArray[violatingNodeIndex].damage_amount) //if equal drill deeper, check they years
+		{
+			if (inputArray[leftIndex].year > inputArray[violatingNodeIndex].year) //- Level:2
+			{
+				largest = leftIndex;
+			}
+			else if (inputArray[leftIndex].year == inputArray[violatingNodeIndex].year)
+			{
+				if (inputArray[leftIndex].event_id > inputArray[violatingNodeIndex].event_id) //- Level:3
+				{
+					largest = leftIndex;
+				}
+				else
+				{
+					largest = violatingNodeIndex; //If less assign largest = violatingNodeIndex - Level:3
+				}
+			}
+			else
+			{
+				largest = violatingNodeIndex; //If less assign largest = violatingNodeIndex - Level:2
+			}
+			
+		}
+		else
+		{
+			largest = violatingNodeIndex; //If less assign largest = violatingNodeIndex - Level:1
+		}
+		
 	}
 
+	//else
+	//{
+	//	largest = violatingNodeIndex; //If less assign largest = violatingNodeIndex  - Level-1
+	//}
+
 	//Decide if the rightIndex has the larger element.
-	if (rightIndex <= heapSize && inputArray[rightIndex] > inputArray[largest])
+	if (rightIndex <= heapSize)
 	{
-		largest = rightIndex;
+		if (inputArray[rightIndex].damage_amount > inputArray[largest].damage_amount)
+		{
+			largest = rightIndex;
+		}
+		else if (inputArray[rightIndex].damage_amount == inputArray[largest].damage_amount)
+		{
+			if (inputArray[rightIndex].year > inputArray[largest].year)
+			{
+				largest = rightIndex;
+			}
+			else if (inputArray[rightIndex].year == inputArray[largest].year)
+			{
+				if (inputArray[rightIndex].event_id > inputArray[largest].event_id)
+				{
+					largest = rightIndex;
+				}
+			}
+		}
+
+		
 	}
 
 	//Only make the swap, it either the left or right indexes are bigger than the violating node index.
@@ -73,7 +125,7 @@ int * heap_entry_Storm::maxHeapify_Storm(int inputArray[], int violatingNodeInde
 	return result;
 }
 
-int * heap_entry_Storm::buildMaxHeap_Storm(int inputArray[], int heapSize)
+heap_entry_Storm * heap_entry_Storm::buildMaxHeap_Storm(heap_entry_Storm inputArray[], int heapSize)
 {
 	//Start at the first node, which is not a max-heap, to begin the max-heapify.
 	//Work your way from this point all the way to the root node, all the while
