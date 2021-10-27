@@ -252,7 +252,56 @@ int main(int argc, char *argv[])
 					if (query_token[1] == "max")
 					{
 						//Step 8: Check if the heap is for all years
-						if (query_token[2] != "all")
+						if (query_token[2] == "all")
+						{
+							int count = 0;
+
+							for (int year = 0; year < noOfYears; year++) //Go one year at a time
+							{
+									count += eventCount[year];
+							}
+
+							maxHeap = new heap_entry_Storm[count];
+
+							for (int year = 0; year < noOfYears; year++) //Go one year at a time
+							{
+								for (int eventIndex = 0; eventIndex < eventCount[year]; eventIndex++) //Go through all the events, in the current year and insert them into the BST. 
+								{
+									//Step 9: just create a huge array of type struct, either of damage_property or damage_crop.
+									if (query_token[3] == "damage_property")
+									{
+										maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
+										maxHeap[eventIndex].damage_amount = annualStormArray[year].events[eventIndex].damage_property;
+										maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;
+										maxHeap[eventIndex].event_index = eventIndex;
+										//heap_entry_Storm *newNode = new heap_entry_Storm(annualStormArray[year].events[eventIndex], annualStormArray[year].events[eventIndex].damage_property,eventIndex); //We Pass by value the events.
+										//root = root->buildBinarySearchTree(newNode, root, query_token[2]);
+									}
+									else
+									{
+										maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
+										maxHeap[eventIndex].damage_amount = annualStormArray[year].events[eventIndex].damage_crops;
+										maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;
+										maxHeap[eventIndex].event_index = eventIndex;
+										//heap_entry_Storm *newNode = new heap_entry_Storm(annualStormArray[year].events[eventIndex], annualStormArray[year].events[eventIndex].damage_crops, eventIndex); //We Pass by value the events.
+										//root = root->buildBinarySearchTree(newNode, root, query_token[2]);
+									}
+								}
+							}
+
+							//Step 10: Build a Max- heap from the generic array:
+							maxHeap = heap_entry_Storm::buildMaxHeap_Storm(maxHeap, count);
+
+							//Step 11: Perform Extract- Delete Operation
+							maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm(maxHeap, count, stoi(query_token[4]));
+
+							//Step 12: Delete and free the entire max-heap structure:
+							//delete Last element:
+							delete[] maxHeap;
+
+							
+						}
+						else if (query_token[2] != "all")
 						{
 							int year = stoi(query_token[2]); //Get the year.
 							year = year % year;

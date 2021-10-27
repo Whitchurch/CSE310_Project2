@@ -1,2 +1,2 @@
 1
-find max 1950 damage_property 10
+find max all damage_property 10
