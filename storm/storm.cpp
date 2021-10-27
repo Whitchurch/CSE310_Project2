@@ -5,8 +5,9 @@
 //#include<cstring>
 #include "Constants.h"
 #include "defns.h"
-#include "treeNode_BST.h"
+//#include "treeNode_BST.h"
 #include "treeNode_BST_StormEvents.h"
+#include"heap_entry_Storm.h"
 #include"heap_entry.h"
 #include "Helper_functions.h"
 
@@ -244,17 +245,58 @@ int main(int argc, char *argv[])
 				}
 				else if (query_token[0] == "find")
 				{
-					//MaxHeapify trial
-					int a_1[] = { 1,8,6,5,3,7,4};
-					int arrayLength = sizeof(a_1) / sizeof(a_1[0]);
-					int *result;
-					result = buildMaxHeap(a_1, arrayLength );
+					//Step 5: Create the heap for storing the map, to the underlying events array.
+					heap_entry_Storm *maxHeap = nullvalue;
 
-					//View the max-heap:
-					for (int i = 0; i < arrayLength; i++)
+					//Step 7: Check if we are creating a max/min heap.
+					if (query_token[1] == "max")
 					{
-						cout << a_1[i] << endl;
+						//Step 8: Check if the heap is for all years
+						if (query_token[2] != "all")
+						{
+							int year = stoi(query_token[2]); //Get the year.
+							year = year % year;
+
+							int count = eventCount[year];
+							maxHeap = new heap_entry_Storm[count];
+
+							for (int eventIndex = 0; eventIndex < eventCount[year]; eventIndex++) //Go through all the events, in the current year and insert them into the BST. 
+							{
+								
+								//Step 7: Decide the BST tree construction, based on the field_name passed in: either month_name or state
+								if (query_token[2] == "damage_property")
+								{
+									maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
+									maxHeap[eventIndex].damage_amount = annualStormArray[year].events[eventIndex].damage_property;
+									maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;
+									maxHeap[eventIndex].event_index = eventIndex;
+									//heap_entry_Storm *newNode = new heap_entry_Storm(annualStormArray[year].events[eventIndex], annualStormArray[year].events[eventIndex].damage_property,eventIndex); //We Pass by value the events.
+									//root = root->buildBinarySearchTree(newNode, root, query_token[2]);
+								}
+								else
+								{
+									maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
+									maxHeap[eventIndex].damage_amount = annualStormArray[year].events[eventIndex].damage_crops;
+									maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;
+									maxHeap[eventIndex].event_index = eventIndex;
+									//heap_entry_Storm *newNode = new heap_entry_Storm(annualStormArray[year].events[eventIndex], annualStormArray[year].events[eventIndex].damage_crops, eventIndex); //We Pass by value the events.
+									//root = root->buildBinarySearchTree(newNode, root, query_token[2]);
+								}
+							}
+						}
 					}
+
+					////MaxHeapify trial
+					//int a_1[] = { 1,8,6,5,3,7,4};
+					//int arrayLength = sizeof(a_1) / sizeof(a_1[0]);
+					//int *result;
+					//result = buildMaxHeap(a_1, arrayLength );
+
+					////View the max-heap:
+					//for (int i = 0; i < arrayLength; i++)
+					//{
+					//	cout << a_1[i] << endl;
+					//}
 	
 				}
 
