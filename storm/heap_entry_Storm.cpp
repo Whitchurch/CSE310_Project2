@@ -1,7 +1,9 @@
 #include "heap_entry_Storm.h"
 #include"defns.h"
 #include<math.h>
+#include<iostream>
 
+using namespace std;
 
 heap_entry_Storm::heap_entry_Storm()
 {
@@ -146,6 +148,36 @@ heap_entry_Storm * heap_entry_Storm::buildMaxHeap_Storm(heap_entry_Storm inputAr
 	}
 
 	return inputArray;
+}
+
+heap_entry_Storm * heap_entry_Storm::ExtractDeleteMaxHeap_Storm(heap_entry_Storm maxHeap[], int count, int itemstodisplay)
+{
+	if (itemstodisplay > count)
+	{
+		cout << "items exceed size of heap" << endl;
+	}
+	else
+	{
+		for (int items = 1; items <= itemstodisplay; items++)
+		{
+			//Display Max element:
+			cout << maxHeap[0].damage_amount << endl;
+			cout << maxHeap[0].event_id << endl;
+			cout << maxHeap[0].year << endl;
+
+			//Move Last element to root of the heap:
+			maxHeap[0] = maxHeap[count - items];
+
+			//Perform max-heapify, ignoring the count-1 element
+			maxHeap = heap_entry_Storm::maxHeapify_Storm(maxHeap, 0, count - (items + 1));
+
+		}
+	}
+	//Step 11: Display Max element -> Move last element to Root -> delete last element -> call Max-heapify on smaller heap:
+
+
+
+	return maxHeap;
 }
 
 

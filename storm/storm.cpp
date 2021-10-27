@@ -287,30 +287,8 @@ int main(int argc, char *argv[])
 							//Step 10: Build a Max- heap from the generic array:
 							maxHeap = heap_entry_Storm::buildMaxHeap_Storm(maxHeap, count);
 							
-							//Step 11: Display Max element -> Move last element to Root -> delete last element -> call Max-heapify on smaller heap:
-							
-							for (int items = 1; items <= 2; items++)
-							{
-								//Display Max element:
-								cout << maxHeap[0].damage_amount << endl;
-								cout << maxHeap[0].event_id << endl;
-								cout << maxHeap[0].year << endl;
-
-								//Move Last element to root of the heap:
-								maxHeap[0] = maxHeap[count - items];
-
-								//Perform max-heapify, ignoring the count-1 element
-								maxHeap = heap_entry_Storm::maxHeapify_Storm(maxHeap, 0, count - (items+1));
-
-							}
-
-							//////View the max-heap:
-							//for (int i = 0; i < count; i++)
-							//{
-							//	cout << maxHeap[i].damage_amount << endl;
-							//	cout << maxHeap[i].event_id << endl;
-							//	cout << "\n\n" << endl;
-							//}
+							//Step 11: Perform Extract- Delete Operation
+							maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm(maxHeap, count, stoi(query_token[4]));
 
 							//Step 12: Delete and free the entire max-heap structure:
 							//delete Last element:
