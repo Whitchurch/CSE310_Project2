@@ -35,7 +35,8 @@ heap_entry_Storm * heap_entry_Storm::maxHeapify_Storm(heap_entry_Storm inputArra
 	//Get the left and right index values, below the violating node.
 	int leftIndex = heap_entry_Storm::returnLeft_Storm(violatingNodeIndex);
 	int rightIndex = heap_entry_Storm::returnRight_Storm(violatingNodeIndex);
-	int largest = 0; // setting the largest to 0, this needs to be run to make sure, setting to 0 does not break the code.
+	int largest = -1; // setting the largest to 0, this needs to be run to make sure, setting to 0 does not break the code.
+	
 	heap_entry_Storm tempStorage;
 
 	//Decide if the leftIndex has the larger element.
@@ -110,14 +111,23 @@ heap_entry_Storm * heap_entry_Storm::maxHeapify_Storm(heap_entry_Storm inputArra
 	//This information has already been tracked in the larges variable:
 	if (largest != violatingNodeIndex)
 	{
-		tempStorage = inputArray[violatingNodeIndex];
-		inputArray[violatingNodeIndex] = inputArray[largest];
-		inputArray[largest] = tempStorage;
+		if (largest != -1) //There is truly a reason to swap:
+		{
+			tempStorage = inputArray[violatingNodeIndex];
+			inputArray[violatingNodeIndex] = inputArray[largest];
+			inputArray[largest] = tempStorage;
+		}
+		else
+		{
+			return inputArray;
+		}
+
 	}
 	else
 	{
 		return inputArray;
 	}
+
 
 	//Once the swap is done, we need to recurse down the heap, to ensure, lower sub-trees are still heaps.
 	result = maxHeapify_Storm(inputArray, largest, heapSize);
