@@ -152,9 +152,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="defns.cpp" />
+    <ClCompile Include="fatalityList.cpp" />
     <ClCompile Include="heap_entry.cpp" />
     <ClCompile Include="heap_entry_Storm.cpp" />
     <ClCompile Include="Helper_functions.cpp" />
+    <ClCompile Include="linkedlist.cpp" />
     <ClCompile Include="Scratchpad_of_DataStructures.cpp" />
     <ClCompile Include="storm.cpp" />
     <ClCompile Include="storm_old.cpp" />
@@ -164,9 +166,11 @@
   <ItemGroup>
     <ClInclude Include="Constants.h" />
     <ClInclude Include="defns.h" />
+    <ClInclude Include="fatalityList.h" />
     <ClInclude Include="heap_entry.h" />
     <ClInclude Include="heap_entry_Storm.h" />
     <ClInclude Include="Helper_functions.h" />
+    <ClInclude Include="linkedlist.h" />
     <ClInclude Include="treeNode_BST.h" />
     <ClInclude Include="treeNode_BST_StormEvents.h" />
   </ItemGroup>

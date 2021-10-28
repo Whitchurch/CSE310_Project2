@@ -54,6 +54,12 @@
     <ClCompile Include="heap_entry_Storm.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="fatalityList.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="linkedlist.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="treeNode_BST.h">
@@ -75,6 +81,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="heap_entry_Storm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fatalityList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="linkedlist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

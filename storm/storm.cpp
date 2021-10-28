@@ -8,7 +8,8 @@
 //#include "treeNode_BST.h"
 #include "treeNode_BST_StormEvents.h"
 #include"heap_entry_Storm.h"
-#include"heap_entry.h"
+//#include"heap_entry.h"
+#include "linkedlist.h"
 #include "Helper_functions.h"
 
 using namespace std;
@@ -251,8 +252,23 @@ int main(int argc, char *argv[])
 					//Step 7: Check if we are creating a max/min heap.
 					if (query_token[1] == "max")
 					{
-						//Step 8: Check if the heap is for all years
-						if (query_token[2] == "all")
+						if (query_token[2] == "fatality")
+						{
+							if (query_token[3] == "all")
+							{
+							}
+							else if (query_token[3] != "all")
+							{
+								cout << "Linked List implemention" << endl;
+								linkedlist *root = nullptr;
+								linkedlist *node = new linkedlist(2);
+								root = linkedlist::InsertNode(node, root);
+								
+							}
+						}
+
+						//Step 8a: Check if the heap is for all years
+						else if (query_token[2] == "all")
 						{
 							int count = 0;
 
@@ -345,6 +361,8 @@ int main(int argc, char *argv[])
 
 
 						}
+
+
 					}
 
 	
