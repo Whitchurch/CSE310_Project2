@@ -26,5 +26,13 @@ linkedlist * linkedlist::InsertNode(linkedlist * node, linkedlist * root)
 
 linkedlist * linkedlist::clearList(linkedlist * node)
 {
-	return nullptr;
+	linkedlist *nextnode;
+	while (node != nullptr)
+	{
+		nextnode = node->next;
+		delete node;
+		node = nextnode;
+	}
+
+	return node;
 }

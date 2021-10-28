@@ -263,7 +263,20 @@ int main(int argc, char *argv[])
 								linkedlist *root = nullptr;
 								linkedlist *node = new linkedlist(2);
 								root = linkedlist::InsertNode(node, root);
-								
+								linkedlist *node1 = new linkedlist(4);
+								root = linkedlist::InsertNode(node1, root);
+
+								linkedlist *next = root;
+								while (next != nullptr)
+								{
+									
+									cout << next->value << endl;
+									next = next->next;
+								}
+
+								//Delete the linkedlist items
+							    root = linkedlist::clearList(root);
+
 							}
 						}
 
