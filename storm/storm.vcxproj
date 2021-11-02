@@ -153,6 +153,8 @@
   <ItemGroup>
     <ClCompile Include="defns.cpp" />
     <ClCompile Include="fatalityList.cpp" />
+    <ClCompile Include="hashTableStructure.cpp" />
+    <ClCompile Include="hash_table_entry_inherited.cpp" />
     <ClCompile Include="heap_entry.cpp" />
     <ClCompile Include="heap_entry_Storm.cpp" />
     <ClCompile Include="Helper_functions.cpp" />
@@ -167,6 +169,8 @@
     <ClInclude Include="Constants.h" />
     <ClInclude Include="defns.h" />
     <ClInclude Include="fatalityList.h" />
+    <ClInclude Include="hashTableStructure.h" />
+    <ClInclude Include="hash_table_entry_inherited.h" />
     <ClInclude Include="heap_entry.h" />
     <ClInclude Include="heap_entry_Storm.h" />
     <ClInclude Include="Helper_functions.h" />

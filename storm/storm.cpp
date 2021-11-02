@@ -8,9 +8,11 @@
 //#include "treeNode_BST.h"
 #include "treeNode_BST_StormEvents.h"
 #include"heap_entry_Storm.h"
+#include "hash_table_entry_inherited.h"
 //#include"heap_entry.h"
 #include "linkedlist.h"
 #include "Helper_functions.h"
+#include "hashTableStructure.h"
 
 using namespace std;
 
@@ -59,10 +61,38 @@ int main(int argc, char *argv[])
 		fileInputStream.close();
 
 		annualStormArray[i].year = year;
-	    eventCount[i] = readLineCount - 1;
+		eventCount[i] = readLineCount - 1;
 		annualStormArray[i].events = events = new storm_event[readLineCount - 1]; // we subtract 1, since we don't need space for the column headings
-		
-		
+
+	}
+
+	//--------------------------------Setup for the Hash Table ---------------------------------------//
+	//Total eventCounts:
+	int HashTableSize = 0;
+	for (int i = 0; i < noOfYears; i++)
+	{
+		HashTableSize += eventCount[i];
+	}
+
+	//Allocate 3 times size to the nearest PRIME
+	HashTableSize = 3 * HashTableSize;
+
+	//Check and return the next biggest prime.
+	HashTableSize = returnNearestBiggerPrime(HashTableSize);
+
+
+	//Create a Hash Table of size equal to : Ceiling(3X(total years size))nearest prime!!
+	hashTableStructure *hashTable = new hashTableStructure[HashTableSize];
+
+
+	//-----------------------------Start reading the files and populating the Event Arrays, Hash Tables, Fatality linkedlist------//
+
+	for (int i = 0; i < noOfYears; i++)
+	{
+		int year = stoi(yearParam);
+		year = year + i;
+		string yearInput = to_string(year);
+		ifstream fileInputStream;
 		fileInputStream.open("details-" + yearInput + ".csv");
 		
 		string token[13];
@@ -118,6 +148,17 @@ int main(int argc, char *argv[])
 				events[LineCount - 1].damage_crops = Normalize_Scale(token[12]);
 
 			}
+
+			if (LineCount > 0)
+			{
+				//Applying Hashing to create a record inside the HashTable:
+				int key = events[LineCount - 1].event_id%HashTableSize;
+
+				//Use Key to hash into the table:
+				hashTable = hashTable->insertHashTableNode(key,hashTable,events[LineCount-1], (LineCount - 1));
+			}
+			
+			
 			LineCount++;
 
 
@@ -387,6 +428,8 @@ int main(int argc, char *argv[])
 
 
 	}
+
+//Step 8: Remove the chains from the Hash Table:
 
 
 //Step 8: Remove the underlying events array, to free up the memory :  ///////////////////////////////////////////////////////////////////

@@ -60,6 +60,12 @@
     <ClCompile Include="linkedlist.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="hash_table_entry_inherited.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="hashTableStructure.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="treeNode_BST.h">
@@ -87,6 +93,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="linkedlist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hash_table_entry_inherited.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hashTableStructure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

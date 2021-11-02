@@ -154,6 +154,30 @@ bool checkMonthLexographical(string month_name, string lowRange, string highRang
 	return result;
 
 }
+bool isTableSizePrime(int size)
+{
+	bool isPrime = true;
+	for (int i = 2; i <= sqrt(size); i++)
+	{
+		if (size%i == 0)
+		{
+			isPrime = false;
+			return isPrime;
+		}
+
+	}
+	return isPrime;
+}
+int returnNearestBiggerPrime(int size)
+{
+	//Test for prime, find the next biggest prime.
+	while (!isTableSizePrime(size))
+	{
+		size++;
+	}
+
+	return size;
+}
 bool checkMonth(string month_name,string lowRange,string highRange)
 {
 	int lowerBound = changeMonthToValue(lowRange);
