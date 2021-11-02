@@ -175,9 +175,9 @@ int main(int argc, char *argv[])
 //Step 4: Read the Fatalities file, and enter the fatalities into their respective events:
 
 	//Step - a: Read each line of the file. - Done.
-	//Step - b: Use the event_ID read to hash into the hashtable.
-	//Step - c: Use the year and index , as meta-data to index the corresponding event in the array.
-	//Step - d: Perform insertion of the fatality in sorted order. Smalledt to Largest.
+	//Step - b: Use the event_ID read to hash into the hashtable. - Done
+	//Step - c: Use the year and index , as meta-data to index the corresponding event in the storm array. - Done
+	//Step - d: Perform insertion of the fatality in sorted order. Smallest to Largest.
 
 	for (int i = 0; i < noOfYears; i++)
 	{
@@ -205,18 +205,23 @@ int main(int argc, char *argv[])
 					//Tokenize the lines read from the file:
 					token[i_token] = currentLineRead.substr(0, currentLineRead.find(delimiter));
 					currentLineRead = currentLineRead.erase(0, currentLineRead.find(delimiter) + delimiter.length());
-					
-					//Now use the Event_ID token to hash into the hashing Table:
-
-					hash_table_entry_inherited* result;
-					result = hashTable->findHashedValueInTable(hashTable, stoi(token[1]), HashTableSize);
-
-					//If result is not null, then an event exits:  So we need to index into it, to add in the fatalities:
-
-					
-
+										
 					i_token++;
 				}
+
+				//Now use the Event_ID token to hash into the hashing Table:
+				hash_table_entry_inherited* result;
+				result = hashTable->findHashedValueInTable(hashTable, stoi(token[1]), HashTableSize);
+
+				//If result is not null, then an event exits:  So we need to index into it, to add in the fatalities:
+				//Logic to index into the events array by year and index:
+				int Index_year = result->year%stoi(yearParam);
+				int Index_event = result->event_index;
+
+				//we now add the fatality to the storms database:
+				attachFatalityToTheUnderlyingDataBase(annualStormArray, Index_year, Index_event, token);
+				
+
 			}
 			LineCount++;
 		}

@@ -3,6 +3,7 @@
 #include"Constants.h"
 #include<iostream>
 #include<string>
+#include "fatalityList.h"
 
 
 using namespace std;
@@ -36,6 +37,7 @@ string Sept = "Sept";
 string Oct = "Oct";
 string Nov = "Nov";
 string Dec = "Dec";
+
 
 
 void Display_StormEvents_Head(storm_event *events)
@@ -178,6 +180,12 @@ int returnNearestBiggerPrime(int size)
 
 	return size;
 }
+void attachFatalityToTheUnderlyingDataBase(annual_storms * annualStormArray, int Index_year, int Index_event, string * token)
+{
+	fatalityList *item = new fatalityList(token);
+
+}
+
 bool checkMonth(string month_name,string lowRange,string highRange)
 {
 	int lowerBound = changeMonthToValue(lowRange);
