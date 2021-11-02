@@ -225,7 +225,7 @@ int main(int argc, char *argv[])
 
 //Step 5: Construct the Data Structure based on the query passed in: //////////////////////////////////////////////////////////////////////
 				//Data Structures are: Range == BST
-
+			
 				if (query_token[0] == "range")
 				{
 					//Step 5: Create the BST for storing the map, to the underlying events array.
@@ -420,6 +420,11 @@ int main(int argc, char *argv[])
 						}
 
 
+					}
+					else if (query_token[1] == "event")
+					{
+					//Perform a hash to locate the element. And also display the results.
+					hashTable->displayHashSearchResult(hashTable->findHashedValueInTable(hashTable, stoi(query_token[2]), HashTableSize), stoi(query_token[2]));
 					}
 
 	

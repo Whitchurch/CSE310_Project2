@@ -38,3 +38,35 @@ hashTableStructure * hashTableStructure::clearChainsHashTableNode(int totalTable
 
 	return hashTable;
 }
+
+
+
+hash_table_entry_inherited * hashTableStructure::findHashedValueInTable(hashTableStructure * hashTable, int valueToHash, int HashTableSize)
+{
+	int key = valueToHash%HashTableSize;
+	while (hashTable[key].item != nullptr)
+	{
+		if (valueToHash == hashTable[key].item->event_id) //If the item is found, return the event.
+		{
+			return hashTable[key].item;
+		}
+		hashTable[key].item = hashTable[key].item->next;
+	}
+	
+	return nullptr;
+}
+
+void hashTableStructure::displayHashSearchResult(hash_table_entry_inherited * eventFound, int valueToHash)
+{
+	if (eventFound != nullptr)
+	{
+		cout << eventFound->event_id << endl;
+		cout << eventFound->year << endl;
+		cout << eventFound->event_index << endl;
+
+	}
+	else
+	{
+		cout << "Storm event"<< valueToHash <<"not found" << endl;
+	}
+}
