@@ -174,7 +174,54 @@ int main(int argc, char *argv[])
 
 //Step 4: Read the Fatalities file, and enter the fatalities into their respective events:
 
+	//Step - a: Read each line of the file. - Done.
+	//Step - b: Use the event_ID read to hash into the hashtable.
+	//Step - c: Use the year and index , as meta-data to index the corresponding event in the array.
+	//Step - d: Perform insertion of the fatality in sorted order. Smalledt to Largest.
 
+	for (int i = 0; i < noOfYears; i++)
+	{
+		string token[8];
+		LineCount = 0;
+
+		int year = stoi(yearParam);
+		year = year + i;
+		string yearInput = to_string(year);
+		ifstream fileInputStream;
+		fileInputStream.open("fatalities-" + yearInput + ".csv");
+
+		while (fileInputStream.good())
+		{
+			string currentLineRead;
+			getline(fileInputStream, currentLineRead);
+
+			if (LineCount > 0) //This condition skips the first line, with the headings and stars recording from the second line
+			{
+				int i_token = 0;
+				string delimiter = ",";
+
+				while (i_token < 8)
+				{
+					//Tokenize the lines read from the file:
+					token[i_token] = currentLineRead.substr(0, currentLineRead.find(delimiter));
+					currentLineRead = currentLineRead.erase(0, currentLineRead.find(delimiter) + delimiter.length());
+					
+					//Now use the Event_ID token to hash into the hashing Table:
+
+					hash_table_entry_inherited* result;
+					result = hashTable->findHashedValueInTable(hashTable, stoi(token[1]), HashTableSize);
+
+					//If result is not null, then an event exits:  So we need to index into it, to add in the fatalities:
+
+					
+
+					i_token++;
+				}
+			}
+			LineCount++;
+		}
+		fileInputStream.close();
+	}
 
 //Step 4: Get the user input queries: ////////////////////////////////////////////////////////////////////////////////////////////////////////
 	while (getline(cin, inputQueries))

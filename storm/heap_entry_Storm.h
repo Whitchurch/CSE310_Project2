@@ -2,7 +2,7 @@
 #include "defns.h"
 using namespace std;
 
-class heap_entry_Storm
+class heap_entry_Storm:heap_entry
 {
 public:
 	int event_id;

@@ -5,7 +5,7 @@
 using namespace std;
 //Constant definition:
 //const int nullvalue = 0;
-class treeNode_BST_StormEvents
+class treeNode_BST_StormEvents:bst
 {
 	//Keeping the members public for ease of access.
 	//I may move these to private and implement a getter/setter in the future to make the code cleaner.

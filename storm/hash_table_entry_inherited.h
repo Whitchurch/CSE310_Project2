@@ -1,7 +1,8 @@
-#include "defns.h"
+
 
 #pragma once
-class hash_table_entry_inherited
+#include "defns.h"
+class hash_table_entry_inherited:hash_table_entry
 {
 public:
 
