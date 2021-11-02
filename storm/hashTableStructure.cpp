@@ -22,3 +22,19 @@ hashTableStructure * hashTableStructure::insertHashTableNode(int key, hashTableS
 
 	return hashTable;
 }
+
+hashTableStructure * hashTableStructure::clearChainsHashTableNode(int totalTableSize, hashTableStructure * hashTable)
+{
+	for (int i = 0; i < totalTableSize; i++)
+	{
+		hash_table_entry_inherited *nextnode;
+		while (hashTable[i].item != nullptr)
+		{
+			nextnode = hashTable[i].item->next;
+			delete hashTable[i].item;
+			hashTable[i].item = nextnode;
+		}
+	}
+
+	return hashTable;
+}

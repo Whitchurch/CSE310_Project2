@@ -172,6 +172,9 @@ int main(int argc, char *argv[])
 	bool stringFirstLine = false;
 	int noOfQueries = 0; //Read total query number
 
+//Step 4: Read the Fatalities file, and enter the fatalities into their respective events:
+
+
 
 //Step 4: Get the user input queries: ////////////////////////////////////////////////////////////////////////////////////////////////////////
 	while (getline(cin, inputQueries))
@@ -430,7 +433,8 @@ int main(int argc, char *argv[])
 	}
 
 //Step 8: Remove the chains from the Hash Table:
-
+	hashTable = hashTable->clearChainsHashTableNode(HashTableSize, hashTable);
+	delete[] hashTable;
 
 //Step 8: Remove the underlying events array, to free up the memory :  ///////////////////////////////////////////////////////////////////
 	delete[] events;
