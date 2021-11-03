@@ -11,5 +11,6 @@ bool checkMonthLexographical(string month_name, string lowRange, string highRang
 bool isTableSizePrime(int size);
 int returnNearestBiggerPrime(int size);
 void attachFatalityToTheUnderlyingDataBase(annual_storms *annualStormArray, int Index_year, int Index_event, string *token);
+void deleteFatalityToUnderlyingDatabase(annual_storms *annualStormArray, int Index_year, int eventCountforYear);
 
 

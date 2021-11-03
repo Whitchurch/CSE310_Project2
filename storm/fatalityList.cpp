@@ -11,6 +11,7 @@ fatalityList::fatalityList()
 	this->fatality_sex = '\0';
 	this->fatality_location[FAT_LOC] = '\0';
 	this->next = nullptr;
+
 	
 	
 }

@@ -193,7 +193,7 @@ void attachFatalityToTheUnderlyingDataBase(annual_storms * annualStormArray, int
 			{
 				item->next = nextitem->next;
 				nextitem->next = item;
-
+				annualStormArray[Index_year].events[Index_event].f = nextitem;
 
 			}
 
@@ -203,7 +203,22 @@ void attachFatalityToTheUnderlyingDataBase(annual_storms * annualStormArray, int
 		if (nextitem == nullptr) //If the list is empty add the  item directly
 		{
 			nextitem = item;
+			annualStormArray[Index_year].events[Index_event].f= nextitem;
 		}
+}
+
+void deleteFatalityToUnderlyingDatabase(annual_storms *annualStormArray, int Index_year, int eventCountforYear)
+{
+	for (int i = 0; i < eventCountforYear; i++)
+	{
+		fatality_event *nextnode;
+		while (annualStormArray[Index_year].events[i].f!= nullptr)
+		{
+			nextnode = annualStormArray[Index_year].events[i].f->next;
+			delete annualStormArray[Index_year].events[i].f;
+			annualStormArray[Index_year].events[i].f = nextnode;
+		}
+	}
 }
 
 bool checkMonth(string month_name,string lowRange,string highRange)

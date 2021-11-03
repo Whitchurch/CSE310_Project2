@@ -493,6 +493,11 @@ int main(int argc, char *argv[])
 
 	}
 
+//Step 8: Remove the linkedlist from events:
+	for (int year = 0; year < noOfYears; year++)
+	{
+			deleteFatalityToUnderlyingDatabase(annualStormArray, year, eventCount[year]);
+	}
 //Step 8: Remove the chains from the Hash Table:
 	hashTable = hashTable->clearChainsHashTableNode(HashTableSize, hashTable);
 	delete[] hashTable;
