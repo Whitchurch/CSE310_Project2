@@ -502,8 +502,15 @@ int main(int argc, char *argv[])
 	hashTable = hashTable->clearChainsHashTableNode(HashTableSize, hashTable);
 	delete[] hashTable;
 
+
+
 //Step 8: Remove the underlying events array, to free up the memory :  ///////////////////////////////////////////////////////////////////
-	delete[] events;
+	for (int year = 0; year < noOfYears; year++)
+	{
+		delete[] annualStormArray[year].events;
+	}
+//Step 8: Now remove the annualStormsArray:
+	delete[] annualStormArray;
 
 //Step 9: Add that extra blank line to match the expected output.
 	cout << "\n\n";
