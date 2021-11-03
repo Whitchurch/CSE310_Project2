@@ -184,6 +184,26 @@ void attachFatalityToTheUnderlyingDataBase(annual_storms * annualStormArray, int
 {
 	fatalityList *item = new fatalityList(token);
 
+	fatality_event *head = annualStormArray[Index_year].events[Index_event].f;
+	fatality_event *nextitem = annualStormArray[Index_year].events[Index_event].f;
+		while (nextitem != nullptr)
+		{
+
+			if (item->fatality_id > nextitem->fatality_id) //Check if something inbetween needs to be where we insert
+			{
+				item->next = nextitem->next;
+				nextitem->next = item;
+
+
+			}
+
+			nextitem = nextitem->next;
+		}
+	
+		if (nextitem == nullptr) //If the list is empty add the  item directly
+		{
+			nextitem = item;
+		}
 }
 
 bool checkMonth(string month_name,string lowRange,string highRange)

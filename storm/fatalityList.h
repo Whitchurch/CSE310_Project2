@@ -3,7 +3,7 @@
 #include<string>
 using namespace std;
 
-class fatalityList:fatality_event
+class fatalityList:public fatality_event
 {
 public:
 	fatalityList();

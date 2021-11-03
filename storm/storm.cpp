@@ -146,7 +146,7 @@ int main(int argc, char *argv[])
 				events[LineCount - 1].deaths_indirect = stoi(token[10]);
 				events[LineCount - 1].damage_property = Normalize_Scale(token[11]);
 				events[LineCount - 1].damage_crops = Normalize_Scale(token[12]);
-
+				events[LineCount - 1].f = nullptr;
 			}
 
 			if (LineCount > 0)
@@ -209,17 +209,21 @@ int main(int argc, char *argv[])
 					i_token++;
 				}
 
-				//Now use the Event_ID token to hash into the hashing Table:
-				hash_table_entry_inherited* result;
-				result = hashTable->findHashedValueInTable(hashTable, stoi(token[1]), HashTableSize);
+				if (!token[0].empty()) // I had to put this for cases of empty line.
+				{
+					//Now use the Event_ID token to hash into the hashing Table:
+					hash_table_entry_inherited* result;
+					result = hashTable->findHashedValueInTable(hashTable, stoi(token[1]), HashTableSize);
 
-				//If result is not null, then an event exits:  So we need to index into it, to add in the fatalities:
-				//Logic to index into the events array by year and index:
-				int Index_year = result->year%stoi(yearParam);
-				int Index_event = result->event_index;
+					//If result is not null, then an event exits:  So we need to index into it, to add in the fatalities:
+					//Logic to index into the events array by year and index:
+					int Index_year = result->year%stoi(yearParam);
+					int Index_event = result->event_index;
 
-				//we now add the fatality to the storms database:
-				attachFatalityToTheUnderlyingDataBase(annualStormArray, Index_year, Index_event, token);
+					//we now add the fatality to the storms database:
+					attachFatalityToTheUnderlyingDataBase(annualStormArray, Index_year, Index_event, token);
+				}
+
 				
 
 			}

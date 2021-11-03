@@ -12,6 +12,7 @@ fatalityList::fatalityList()
 	this->fatality_location[FAT_LOC] = '\0';
 	this->next = nullptr;
 	
+	
 }
 
 fatalityList::fatalityList(string * token)
