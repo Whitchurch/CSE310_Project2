@@ -247,7 +247,7 @@ int main(int argc, char *argv[])
 			stringFirstLine = true; // Set to true to begin processing incoming queries
 			
 			//OUTPUT LINE 1:
-			std::cout << noOfQueries<<endl;
+			std::cout << noOfQueries <<"\n"<<endl;
 		}
 		else if (stringFirstLine == true)  //Check gating bool, before allowing query processing
 		{
@@ -284,11 +284,11 @@ int main(int argc, char *argv[])
 				{
 					if (query_token[1] == "event")
 					{
-						cout << "\n" << "Query: " + query_token[0] + " " + query_token[1] + " " + query_token[2]  + "\n" << endl;
+						cout << "Query: " + query_token[0] + " " + query_token[1] + " " + query_token[2]  + "\n" << endl;
 					}
-					else
+					else if(query_token[1] == "max")
 					{
-
+						cout << "Query: " + query_token[0] + " " + query_token[1] + " " + query_token[2] + " " + query_token[3]+" "+ query_token[4] +"\n" << endl;
 					}
 					
 				}
@@ -404,7 +404,7 @@ int main(int argc, char *argv[])
 								maxHeap = heap_entry_Storm::buildMaxHeap_Storm(maxHeap, count);
 
 								//Step 11: Perform Extract- Delete Operation
-								maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm(maxHeap, count, stoi(query_token[4]));
+								maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm(maxHeap, count, stoi(query_token[4]), annualStormArray, yearParam);
 
 								//Step 12: Delete and free the entire max-heap structure:
 								//delete Last element:
@@ -436,7 +436,7 @@ int main(int argc, char *argv[])
 								maxHeap = heap_entry_Storm::buildMaxHeap_Storm(maxHeap, count);
 
 								//Step 11: Perform Extract- Delete Operation
-								maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm(maxHeap, count, stoi(query_token[4]));
+								maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm(maxHeap, count, stoi(query_token[4]), annualStormArray, yearParam);
 
 								//Step 12: Delete and free the entire max-heap structure:
 								//delete Last element:
@@ -488,7 +488,7 @@ int main(int argc, char *argv[])
 							maxHeap = heap_entry_Storm::buildMaxHeap_Storm(maxHeap, count);
 
 							//Step 11: Perform Extract- Delete Operation
-							maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm(maxHeap, count, stoi(query_token[4]));
+							maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm(maxHeap, count, stoi(query_token[4]), annualStormArray, yearParam);
 
 							//Step 12: Delete and free the entire max-heap structure:
 							//delete Last element:
@@ -532,7 +532,7 @@ int main(int argc, char *argv[])
 							maxHeap = heap_entry_Storm::buildMaxHeap_Storm(maxHeap, count);
 							
 							//Step 11: Perform Extract- Delete Operation
-							maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm(maxHeap, count, stoi(query_token[4]));
+							maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm(maxHeap, count, stoi(query_token[4]),annualStormArray,yearParam);
 
 							//Step 12: Delete and free the entire max-heap structure:
 							//delete Last element:
@@ -581,7 +581,7 @@ int main(int argc, char *argv[])
 	delete[] annualStormArray;
 
 //Step 9: Add that extra blank line to match the expected output.
-	cout << "\n\n";
+	cout << "\n";
 
 
 	

@@ -1,5 +1,6 @@
 #pragma once
 #include "defns.h"
+#include<string>
 using namespace std;
 
 class heap_entry_Storm:heap_entry
@@ -18,5 +19,5 @@ public: heap_entry_Storm(storm_event event, int damage_amount, int event_index);
 
 	static heap_entry_Storm* maxHeapify_Storm(heap_entry_Storm inputArray[], int violatingNodeIndex, int heapSize);
 	static heap_entry_Storm* buildMaxHeap_Storm(heap_entry_Storm inputArray[], int heapSize);
-	static heap_entry_Storm * ExtractDeleteMaxHeap_Storm(heap_entry_Storm maxHeap[], int count, int itemstodisplay);
+	static heap_entry_Storm * ExtractDeleteMaxHeap_Storm(heap_entry_Storm maxHeap[], int count, int itemstodisplay, annual_storms *annualStormArray, string yearParam);
 };

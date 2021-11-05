@@ -2,6 +2,7 @@
 #include"defns.h"
 #include<math.h>
 #include<iostream>
+#include<string>
 
 using namespace std;
 
@@ -150,8 +151,10 @@ heap_entry_Storm * heap_entry_Storm::buildMaxHeap_Storm(heap_entry_Storm inputAr
 	return inputArray;
 }
 
-heap_entry_Storm * heap_entry_Storm::ExtractDeleteMaxHeap_Storm(heap_entry_Storm maxHeap[], int count, int itemstodisplay)
+heap_entry_Storm * heap_entry_Storm::ExtractDeleteMaxHeap_Storm(heap_entry_Storm maxHeap[], int count, int itemstodisplay, annual_storms *annualStormArray,string yearParam)
 {
+
+
 	if (itemstodisplay > count)
 	{
 		cout << "items exceed size of heap" << endl;
@@ -160,10 +163,21 @@ heap_entry_Storm * heap_entry_Storm::ExtractDeleteMaxHeap_Storm(heap_entry_Storm
 	{
 		for (int items = 1; items <= itemstodisplay; items++)
 		{
+			//Event ID : 10120419; Event Type : Tornado; Damage Amount : $2500000
+
 			//Display Max element:
-			cout << maxHeap[0].damage_amount << endl;
-			cout << maxHeap[0].event_id << endl;
-			cout << maxHeap[0].year << endl;
+			cout << "Event ID: " << maxHeap[0].event_id << "; ";
+
+			//Access the storm array to get the Event Type:
+			int base_year = stoi(yearParam);
+			int yearindex = maxHeap[0].year%base_year;
+
+
+			cout << "Event Type: " << annualStormArray[yearindex].events[maxHeap[0].event_index].event_type << "; ";
+			cout << "Damage Amount: "<<"$"<<maxHeap[0].damage_amount<<"\n"<<endl;
+			//cout << maxHeap[0].event_id << endl;
+			//cout << maxHeap[0].year << endl;
+			
 
 			//Move Last element to root of the heap:
 			maxHeap[0] = maxHeap[count - items];
