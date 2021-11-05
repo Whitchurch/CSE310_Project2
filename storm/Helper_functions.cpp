@@ -194,6 +194,18 @@ void attachFatalityToTheUnderlyingDataBase(annual_storms * annualStormArray, int
 				item->next = nextitem->next;
 				nextitem->next = item;
 				annualStormArray[Index_year].events[Index_event].f = nextitem;
+				
+				//Write logic to record direct/indirect deaths
+								//Write logic to record direct/indirect deaths
+				if (nextitem->fatality_type == 'D')
+				{
+					annualStormArray[Index_year].events[Index_event].deaths_direct += 1;
+				}
+				else if (nextitem->fatality_type == 'I')
+				{
+					annualStormArray[Index_year].events[Index_event].deaths_indirect += 1;
+				}
+				
 
 			}
 
@@ -204,6 +216,18 @@ void attachFatalityToTheUnderlyingDataBase(annual_storms * annualStormArray, int
 		{
 			nextitem = item;
 			annualStormArray[Index_year].events[Index_event].f= nextitem;
+
+			//Write logic to record direct/indirect deaths
+
+			if (nextitem->fatality_type == 'D')
+			{
+				annualStormArray[Index_year].events[Index_event].deaths_direct += 1;
+			}
+			else if (nextitem->fatality_type == 'I')
+			{
+				annualStormArray[Index_year].events[Index_event].deaths_indirect += 1;
+			}
+
 		}
 }
 

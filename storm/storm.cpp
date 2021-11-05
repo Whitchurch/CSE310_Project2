@@ -356,26 +356,71 @@ int main(int argc, char *argv[])
 						{
 							if (query_token[3] == "all")
 							{
+							
+								int count = 0;
+
+								for (int year = 0; year < noOfYears; year++) //Go one year at a time
+								{
+									count += eventCount[year];
+								}
+
+								maxHeap = new heap_entry_Storm[count];
+
+								for (int year = 0; year < noOfYears; year++) //Go one year at a time
+								{
+									for (int eventIndex = 0; eventIndex < eventCount[year]; eventIndex++) //Go through all the events, in the current year and insert them into the Max-Heap. 
+									{
+										maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
+										maxHeap[eventIndex].damage_amount = (annualStormArray[year].events[eventIndex].deaths_indirect) + (annualStormArray[year].events[eventIndex].deaths_direct);
+										maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;
+										maxHeap[eventIndex].event_index = eventIndex;
+										//heap_entry_Storm *newNode = new heap_entry_Storm(annualStormArray[year].events[eventIndex], annualStormArray[year].events[eventIndex].damage_crops, eventIndex); //We Pass by value the events.
+										//root = root->buildBinarySearchTree(newNode, root, query_token[2]);
+									}
+								}
+
+								//Step 10: Build a Max- heap from the generic array:
+								maxHeap = heap_entry_Storm::buildMaxHeap_Storm(maxHeap, count);
+
+								//Step 11: Perform Extract- Delete Operation
+								maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm(maxHeap, count, stoi(query_token[4]));
+
+								//Step 12: Delete and free the entire max-heap structure:
+								//delete Last element:
+								delete[] maxHeap;
+							
 							}
 							else if (query_token[3] != "all")
 							{
-								cout << "Linked List implemention" << endl;
-								linkedlist *root = nullptr;
-								linkedlist *node = new linkedlist(2);
-								root = linkedlist::InsertNode(node, root);
-								linkedlist *node1 = new linkedlist(4);
-								root = linkedlist::InsertNode(node1, root);
+								//Create the max-heap:
+								int year = stoi(query_token[3]); //Get the year.
+								year = year % year;
 
-								linkedlist *next = root;
-								while (next != nullptr)
+								int count = eventCount[year];
+								maxHeap = new heap_entry_Storm[count];
+
+
+								for (int eventIndex = 0; eventIndex < eventCount[year]; eventIndex++) //Go through all the events, in the current year and insert them into the Max-Heap.  
 								{
+										maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
+										maxHeap[eventIndex].damage_amount = (annualStormArray[year].events[eventIndex].deaths_indirect)+(annualStormArray[year].events[eventIndex].deaths_direct);
+										maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;
+										maxHeap[eventIndex].event_index = eventIndex;
+										//heap_entry_Storm *newNode = new heap_entry_Storm(annualStormArray[year].events[eventIndex], annualStormArray[year].events[eventIndex].damage_crops, eventIndex); //We Pass by value the events.
+										//root = root->buildBinarySearchTree(newNode, root, query_token[2]);
 									
-									cout << next->value << endl;
-									next = next->next;
 								}
 
-								//Delete the linkedlist items
-							    root = linkedlist::clearList(root);
+								//Step 10: Build a Max- heap from the generic array:
+								maxHeap = heap_entry_Storm::buildMaxHeap_Storm(maxHeap, count);
+
+								//Step 11: Perform Extract- Delete Operation
+								maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm(maxHeap, count, stoi(query_token[4]));
+
+								//Step 12: Delete and free the entire max-heap structure:
+								//delete Last element:
+								delete[] maxHeap;
+
 
 							}
 						}

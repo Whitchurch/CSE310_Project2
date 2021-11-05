@@ -56,6 +56,8 @@ hash_table_entry_inherited * hashTableStructure::findHashedValueInTable(hashTabl
 	return nullptr;
 }
 
+
+
 void hashTableStructure::displayHashSearchResult(hash_table_entry_inherited * eventFound, int valueToHash)
 {
 	if (eventFound != nullptr)

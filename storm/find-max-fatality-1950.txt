@@ -1,2 +1,2 @@
 1
-find event 9981922
+find max fatality 1950 10
