@@ -170,6 +170,29 @@ bool isTableSizePrime(int size)
 	}
 	return isPrime;
 }
+
+bool TestForPrime(int val)
+{
+	int limit, factor = 2;
+
+	limit = (long)(sqrtf((float)val) + 0.5f);
+	while ((factor <= limit) && (val % factor))
+		factor++;
+
+	return(factor > limit);
+}
+
+int returnNearestBiggerPrime_1(int size)
+{
+	//Test for prime, find the next biggest prime.
+	while (!TestForPrime(size))
+	{
+		size++;
+	}
+
+	return size;
+}
+
 int returnNearestBiggerPrime(int size)
 {
 	//Test for prime, find the next biggest prime.
@@ -188,6 +211,7 @@ void attachFatalityToTheUnderlyingDataBase(annual_storms * annualStormArray, int
 	fatality_event *nextitem = annualStormArray[Index_year].events[Index_event].f;
 		while (nextitem != nullptr)
 		{
+			nextitem = item;
 
 			if (item->fatality_id > nextitem->fatality_id) //Check if something inbetween needs to be where we insert
 			{

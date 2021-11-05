@@ -13,7 +13,7 @@ public:
 	static hashTableStructure* insertHashTableNode(int key, hashTableStructure *hashTable, storm_event event, int itemindex);
 	static hashTableStructure* clearChainsHashTableNode(int totalTableSize, hashTableStructure * hashTable);
 	static hash_table_entry_inherited* findHashedValueInTable(hashTableStructure *hashTable, int valueToHash, int HashTableSize);
-	static void displayHashSearchResult(hash_table_entry_inherited* eventFound, int valueToHash);
+	static void displayHashSearchResult(hash_table_entry_inherited* eventFound, int valueToHash, annual_storms *annualStormArray, string yearParam);
 
 };
 

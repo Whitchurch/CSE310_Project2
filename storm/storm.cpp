@@ -78,8 +78,8 @@ int main(int argc, char *argv[])
 	HashTableSize = 3 * HashTableSize;
 
 	//Check and return the next biggest prime.
-	HashTableSize = returnNearestBiggerPrime(HashTableSize);
-
+	HashTableSize = returnNearestBiggerPrime_1(HashTableSize);
+	//HashTableSize = TestForPrime(HashTableSize)
 
 	//Create a Hash Table of size equal to : Ceiling(3X(total years size))nearest prime!!
 	hashTableStructure *hashTable = new hashTableStructure[HashTableSize];
@@ -123,43 +123,44 @@ int main(int argc, char *argv[])
 				//events[LineCount - 1].event_index = LineCount - 1;
 
 				//Enter the extracted tokens into their respective fields:
-				events[LineCount - 1].event_id = stoi(token[0]);
-				strcpy_s(events[LineCount - 1].state, token[1].c_str());
+				annualStormArray[i].events[LineCount - 1].event_id = stoi(token[0]);
+				strcpy_s(annualStormArray[i].events[LineCount - 1].state, token[1].c_str());
 				//events[LineCount - 1].state = token[1];
 
-				events[LineCount - 1].year = stoi(token[2]);
-				strcpy_s(events[LineCount - 1].month_name, token[3].c_str());
+				annualStormArray[i].events[LineCount - 1].year = stoi(token[2]);
+				strcpy_s(annualStormArray[i].events[LineCount - 1].month_name, token[3].c_str());
 				//events[LineCount - 1].month_name = token[3];
 
-				strcpy_s(events[LineCount - 1].event_type, token[4].c_str());
+				strcpy_s(annualStormArray[i].events[LineCount - 1].event_type, token[4].c_str());
 				//events[LineCount - 1].event_type = token[4];
 
-				events[LineCount - 1].cz_type = token[5][0];
+				annualStormArray[i].events[LineCount - 1].cz_type = token[5][0];
 				//events[LineCount - 1].cz_type = token[5];
 
-				strcpy_s(events[LineCount - 1].cz_name, token[6].c_str());
+				strcpy_s(annualStormArray[i].events[LineCount - 1].cz_name, token[6].c_str());
 				//events[LineCount - 1].cz_name = token[6];
 
-				events[LineCount - 1].injuries_direct = stoi(token[7]);
-				events[LineCount - 1].injuries_indirect = stoi(token[8]);
-				events[LineCount - 1].deaths_direct = stoi(token[9]);
-				events[LineCount - 1].deaths_indirect = stoi(token[10]);
-				events[LineCount - 1].damage_property = Normalize_Scale(token[11]);
-				events[LineCount - 1].damage_crops = Normalize_Scale(token[12]);
-				events[LineCount - 1].f = nullptr;
+				annualStormArray[i].events[LineCount - 1].injuries_direct = stoi(token[7]);
+				annualStormArray[i].events[LineCount - 1].injuries_indirect = stoi(token[8]);
+				annualStormArray[i].events[LineCount - 1].deaths_direct = stoi(token[9]);
+				annualStormArray[i].events[LineCount - 1].deaths_indirect = stoi(token[10]);
+				annualStormArray[i].events[LineCount - 1].damage_property = Normalize_Scale(token[11]);
+				annualStormArray[i].events[LineCount - 1].damage_crops = Normalize_Scale(token[12]);
+				annualStormArray[i].events[LineCount - 1].f = nullptr;
 			}
 
 			if (LineCount > 0)
 			{
 				//Applying Hashing to create a record inside the HashTable:
-				int key = events[LineCount - 1].event_id%HashTableSize;
+				int key = annualStormArray[i].events[LineCount - 1].event_id%HashTableSize;
 
 				//Use Key to hash into the table:
-				hashTable = hashTable->insertHashTableNode(key,hashTable,events[LineCount-1], (LineCount - 1));
+				hashTable = hashTable->insertHashTableNode(key,hashTable, annualStormArray[i].events[LineCount-1], (LineCount - 1));
+		
 			}
 			
-			
 			LineCount++;
+
 
 
 		}
@@ -215,13 +216,17 @@ int main(int argc, char *argv[])
 					hash_table_entry_inherited* result;
 					result = hashTable->findHashedValueInTable(hashTable, stoi(token[1]), HashTableSize);
 
-					//If result is not null, then an event exits:  So we need to index into it, to add in the fatalities:
-					//Logic to index into the events array by year and index:
-					int Index_year = result->year%stoi(yearParam);
-					int Index_event = result->event_index;
+					if (result != nullptr)
+					{
+						//If result is not null, then an event exits:  So we need to index into it, to add in the fatalities:
+						//Logic to index into the events array by year and index:
+						int Index_year = result->year%stoi(yearParam);
+						int Index_event = result->event_index;
 
-					//we now add the fatality to the storms database:
-					attachFatalityToTheUnderlyingDataBase(annualStormArray, Index_year, Index_event, token);
+						//we now add the fatality to the storms database:
+						attachFatalityToTheUnderlyingDataBase(annualStormArray, Index_year, Index_event, token);
+					}
+
 				}
 
 				
@@ -275,7 +280,23 @@ int main(int argc, char *argv[])
 				}
 
 				//OUTPUT LINE 2:
-				cout << "\n"<<"Query:" + query_token[0] + " " + query_token[1] + " " + query_token[2] +" "+"\"" + query_token[3] + "\""+" "+"\"" +query_token[4]+"\""+"\n"<<endl;
+				if (query_token[0] == "find")
+				{
+					if (query_token[1] == "event")
+					{
+						cout << "\n" << "Query: " + query_token[0] + " " + query_token[1] + " " + query_token[2]  + "\n" << endl;
+					}
+					else
+					{
+
+					}
+					
+				}
+				else
+				{
+					cout << "\n" << "Query:" + query_token[0] + " " + query_token[1] + " " + query_token[2] + " " + "\"" + query_token[3] + "\"" + " " + "\"" + query_token[4] + "\"" + "\n" << endl;
+				}
+
 
 
 
@@ -524,8 +545,10 @@ int main(int argc, char *argv[])
 					}
 					else if (query_token[1] == "event")
 					{
+
+					
 					//Perform a hash to locate the element. And also display the results.
-					hashTable->displayHashSearchResult(hashTable->findHashedValueInTable(hashTable, stoi(query_token[2]), HashTableSize), stoi(query_token[2]));
+					hashTable->displayHashSearchResult(hashTable->findHashedValueInTable(hashTable, stoi(query_token[2]), HashTableSize), stoi(query_token[2]),annualStormArray,yearParam);
 					}
 
 	
