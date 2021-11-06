@@ -207,68 +207,71 @@ void attachFatalityToTheUnderlyingDataBase(annual_storms * annualStormArray, int
 {
 	fatalityList *item = new fatalityList(token);
 
-	fatality_event *temp = nullptr;
+	fatality_event *prev = nullptr;
+	fatality_event *current = nullptr;
 	fatality_event *olditem = annualStormArray[Index_year].events[Index_event].f;
-	temp = olditem;
-	while (temp != nullptr)
+	current = olditem;
+	while (current != nullptr)
 		{
 			
-
-			if (item->fatality_id > olditem->fatality_id) //Check if something inbetween needs to be where we insert
+		if (prev != nullptr)
+		{
+			if (prev->fatality_id < item->fatality_id && item->fatality_id < current->fatality_id) //Check if  new item lies between previous and current item in linkedlist
 			{
-				
-				if (temp->next == nullptr)
+				item->next = current; //Make item point to current;
+				prev->next = item; //make prev point to item
+				annualStormArray[Index_year].events[Index_event].f = olditem;
+				return;
+
+			}
+			else
+			{
+				prev = current;
+				current = current->next;
+				if (current == nullptr)
 				{
-					temp->next = item;
+					item->next = current; //Make item point to current;
+					prev->next = item; //make prev point to item
+					annualStormArray[Index_year].events[Index_event].f = olditem;
+					return;
+				}
+			}
+		}
+		else
+		{
+			if (item->fatality_id < current->fatality_id) //Check if new item less than current item
+			{
+
+				item->next = current;
+				annualStormArray[Index_year].events[Index_event].f = item;
+				return;
+
+			}
+			else //If new item bigger than current item. 
+			{
+				if (current->next == nullptr)
+				{
+
+					current->next = item;
 					annualStormArray[Index_year].events[Index_event].f = olditem;
 					return;
 				}
 				else
 				{
-					temp = temp->next;
+					prev = current;
+					current = current->next;
 				}
-
-			
-				////Write logic to record direct/indirect deaths
-				//				//Write logic to record direct/indirect deaths
-				//if (nextitem->fatality_type == 'D')
-				//{
-				//	annualStormArray[Index_year].events[Index_event].deaths_direct += 1;
-				//}
-				//else if (nextitem->fatality_type == 'I')
-				//{
-				//	annualStormArray[Index_year].events[Index_event].deaths_indirect += 1;
-				//}
-				//
-
 			}
-			else if (item->fatality_id < olditem->fatality_id)
-			{
-				item->next = temp;
-				temp = item;
-				annualStormArray[Index_year].events[Index_event].f = temp;
-				return;
-			}
-
-			//olditem = olditem->next;
 		}
+
+
+	}
 	
 		if (olditem == nullptr) //If the list is empty add the  item directly
 		{
 			olditem = item;
 			annualStormArray[Index_year].events[Index_event].f= olditem;
-
-			//Write logic to record direct/indirect deaths
-
-			//if (nextitem->fatality_type == 'D')
-			//{
-			//	annualStormArray[Index_year].events[Index_event].deaths_direct += 1;
-			//}
-			//else if (nextitem->fatality_type == 'I')
-			//{
-			//	annualStormArray[Index_year].events[Index_event].deaths_indirect += 1;
-			//}
-
+			return;
 		}
 }
 

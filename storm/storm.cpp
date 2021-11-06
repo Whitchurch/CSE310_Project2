@@ -240,6 +240,7 @@ int main(int argc, char *argv[])
 				
 
 			}
+			//cout << LineCount << endl;
 			LineCount++;
 		}
 		fileInputStream.close();
