@@ -1,7 +1,107 @@
-1
+10
+
+Query: find max 1950 damage_property 10
+
+Event ID: 10120419; Event Type: Tornado; Damage Amount: $2500000
+
+Event ID: 10086810; Event Type: Tornado; Damage Amount: $2500000
+
+Event ID: 10073786; Event Type: Tornado; Damage Amount: $2500000
+
+Event ID: 10063615; Event Type: Tornado; Damage Amount: $2500000
+
+Event ID: 10028673; Event Type: Tornado; Damage Amount: $2500000
+
+Event ID: 10009719; Event Type: Tornado; Damage Amount: $2500000
+
+Event ID: 10009718; Event Type: Tornado; Damage Amount: $2500000
+
+Event ID: 10146806; Event Type: Tornado; Damage Amount: $250000
+
+Event ID: 10146804; Event Type: Tornado; Damage Amount: $250000
+
+Event ID: 10146802; Event Type: Tornado; Damage Amount: $250000
+
+Query: find max 1950 damage_crops 3
+
+Event ID: 10162815; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10162814; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10162813; Event Type: Tornado; Damage Amount: $0
+
+Query: find max 1951 damage_property 2
+
+Event ID: 10052055; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10120425; Event Type: Tornado; Damage Amount: $2500000
 
 Query: find max 1951 damage_crops 1
 
-Event ID: 10162815; Event Type: Tornado; Damage Amount: $0
+Event ID: 10153063; Event Type: Tornado; Damage Amount: $0
+
+Query: find max 1952 damage_property 1
+
+Event ID: 10063636; Event Type: Tornado; Damage Amount: $25000000
+
+Query: find max 1952 damage_crops 3
+
+Event ID: 10162816; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10153066; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10153065; Event Type: Tornado; Damage Amount: $0
+
+Query: find max 1953 damage_property 1
+
+Event ID: 10039200; Event Type: Tornado; Damage Amount: $250000000
+
+Query: find max 1953 damage_crops 1
+
+Event ID: 10162823; Event Type: Tornado; Damage Amount: $0
+
+Query: find max all damage_property 10
+
+Event ID: 10039200; Event Type: Tornado; Damage Amount: $250000000
+
+Event ID: 10121804; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10047316; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10039423; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10039422; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10039421; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10009733; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10009732; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10001457; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10001454; Event Type: Tornado; Damage Amount: $25000000
+
+Query: find max all damage_crops 10
+
+Event ID: 10162823; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10162822; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10162821; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10162820; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10162819; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10162818; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10162817; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10153903; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10153902; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10153072; Event Type: Tornado; Damage Amount: $0
 
 

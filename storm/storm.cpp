@@ -498,8 +498,14 @@ int main(int argc, char *argv[])
 						}
 						else if (query_token[2] != "all")
 						{
+
+							int baseyear = stoi(yearParam);
+						
+
 							int year = stoi(query_token[2]); //Get the year.
-							year = year % year;
+							year = year % baseyear;
+
+
 
 							int count = eventCount[year];
 							maxHeap = new heap_entry_Storm[count];
