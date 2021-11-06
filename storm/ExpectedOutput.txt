@@ -1,0 +1,41 @@
+Query: find max fatality all 5
+
+Fatality ID: 1005314
+Event ID: 10039421
+Fatality Type: D
+Fatality Date: 06/08/1953 19:30:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005304
+Event ID: 10121804
+Fatality Type: D
+Fatality Date: 05/11/1953 16:10:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005315
+Event ID: 10039200
+Fatality Type: D
+Fatality Date: 06/09/1953 14:25:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005244
+Event ID: 9983015
+Fatality Type: D
+Fatality Date: 03/21/1952 16:50:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005323
+Event ID: 10047316
+Fatality Type: D
+Fatality Date: 12/05/1953 17:45:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 

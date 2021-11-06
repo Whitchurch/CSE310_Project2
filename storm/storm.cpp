@@ -263,28 +263,131 @@ int main(int argc, char *argv[])
 				int query_token_index = 0;
 				string query_delimiter = " ";
 				string query_token[5];
-
-				//Read in ant tokenize.
-				while (query_token_index < 5)
+				int endPositionTrack = 0;
+				query_token[query_token_index] = inputQueries.substr(0, inputQueries.find(query_delimiter));
+				if (query_token[0] == "find")
 				{
-
-					query_token[query_token_index] = inputQueries.substr(0, inputQueries.find(query_delimiter));
-
-					if (query_token_index == 3 || query_token_index == 4)
+					//Read in ant tokenize.
+					while (query_token_index < 5)
 					{
-						if (query_token[0] == "range")
+
+						query_token[query_token_index] = inputQueries.substr(0, inputQueries.find(query_delimiter));
+
+						if (query_token_index == 3 || query_token_index == 4)
 						{
-						//Remove the slashes in the 4th and 5th tokens,from the beginning and the end.
-						//Hard coding not interested in generalizing at the moment.
-					
-						query_token[query_token_index] = query_token[query_token_index].erase(0, 1);
-						query_token[query_token_index] = query_token[query_token_index].erase(query_token[query_token_index].length() - 1, 1);
+							if (query_token[0] == "range")
+							{
+								//Remove the slashes in the 4th and 5th tokens,from the beginning and the end.
+								//Hard coding not interested in generalizing at the moment.
+
+								query_token[query_token_index] = query_token[query_token_index].erase(0, 1);
+								query_token[query_token_index] = query_token[query_token_index].erase(query_token[query_token_index].length() - 1, 1);
+							}
+
+						}
+
+						inputQueries = inputQueries.erase(0, inputQueries.find(query_delimiter) + query_delimiter.length());
+						query_token_index++;
+					}
+				}
+				else
+				{
+					while (query_token_index < 5)
+					{
+						if (query_token_index < 3)
+						{
+							query_token[query_token_index] = inputQueries.substr(0, inputQueries.find(query_delimiter));
+						}
+						else if (query_token_index == 3)
+						{
+
+							int start_position_quotes = 0; //zero by default, assuming inputs will always be correct, as per class discussions.
+							int end_position_quotes = 0; // this needs to be figured out
+							int current_position = 0;
+
+							for (current_position = 0; current_position < inputQueries.length(); current_position++)
+							{
+
+								if (inputQueries[current_position] == '\"')
+								{
+									if (start_position_quotes == 0)
+									{
+										start_position_quotes++; // increment to next character in the string sequence, thereby skipping first double quote
+									}
+									else if (end_position_quotes == 0)
+									{
+										end_position_quotes = current_position - 1; // backtrack py currentpos-1, to skip last double quotes
+									}
+
+								}
+
+								if (end_position_quotes != 0)
+								{
+									endPositionTrack = end_position_quotes + 3;
+									break;
+								}
+							}
+
+
+
+							query_token[query_token_index] = inputQueries.substr(start_position_quotes, end_position_quotes);
+
+						}
+						else if (query_token_index == 4)
+						{
+							int start_position_quotes = 0; //zero by default, assuming inputs will always be correct, as per class discussions.
+							int end_position_quotes = 0; // this needs to be figured out
+							int current_position = 0;
+
+							for (current_position = 0; current_position < inputQueries.length(); current_position++)
+							{
+
+								if (inputQueries[current_position] == '\"')
+								{
+									if (start_position_quotes == 0)
+									{
+										start_position_quotes++; // increment to next character in the string sequence, thereby skipping first double quote
+									}
+									else if (end_position_quotes == 0)
+									{
+										end_position_quotes = current_position - 1; // backtrack py currentpos-1, to skip last double quotes
+									}
+
+								}
+
+								if (end_position_quotes != 0)
+								{
+									endPositionTrack = end_position_quotes + 3;
+									break;
+								}
+							}
+
+
+
+
+							query_token[query_token_index] = inputQueries.substr(start_position_quotes, end_position_quotes);
+							char probe = query_token[query_token_index].back();
+							if (probe == '\r')
+							{
+								query_token[query_token_index] = query_token[query_token_index].erase(query_token[query_token_index].length() - 2, 2);
+							}
+
+						}
+
+						if (query_token_index < 3)
+						{
+							inputQueries = inputQueries.erase(0, inputQueries.find(query_delimiter) + query_delimiter.length());
+							query_token_index++;
+						}
+						else
+						{
+
+							inputQueries = inputQueries.erase(0, endPositionTrack);
+							query_token_index++;
+							endPositionTrack = 0;
 						}
 
 					}
-
-					inputQueries = inputQueries.erase(0, inputQueries.find(query_delimiter) + query_delimiter.length());
-					query_token_index++;
 				}
 
 				//OUTPUT LINE 2:
@@ -300,9 +403,9 @@ int main(int argc, char *argv[])
 					}
 					
 				}
-				else
+				else 
 				{
-					cout << "\n" << "Query:" + query_token[0] + " " + query_token[1] + " " + query_token[2] + " " + "\"" + query_token[3] + "\"" + " " + "\"" + query_token[4] + "\"" + "\n" << endl;
+					cout  << "Query: " + query_token[0] + " " + query_token[1] + " " + query_token[2] + " " + "\"" + query_token[3] + "\"" + " " + "\"" + query_token[4] + "\""  << endl;
 				}
 
 
@@ -399,6 +502,11 @@ int main(int argc, char *argv[])
 								{
 									for (int eventIndex = 0; eventIndex < eventCount[year]; eventIndex++) //Go through all the events, in the current year and insert them into the Max-Heap. 
 									{
+										//if (annualStormArray[year].events[eventIndex].event_id == 9983015)
+										//{
+										//	cout << "stop here" << endl;
+										//}
+										maxHeap[eventIndex] = heap_entry_Storm();
 										maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
 										maxHeap[eventIndex].damage_amount = (annualStormArray[year].events[eventIndex].deaths_indirect) + (annualStormArray[year].events[eventIndex].deaths_direct);
 										maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;
@@ -433,6 +541,7 @@ int main(int argc, char *argv[])
 
 								for (int eventIndex = 0; eventIndex < eventCount[year]; eventIndex++) //Go through all the events, in the current year and insert them into the Max-Heap.  
 								{
+										maxHeap[eventIndex] = heap_entry_Storm();
 										maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
 										maxHeap[eventIndex].damage_amount = (annualStormArray[year].events[eventIndex].deaths_indirect)+(annualStormArray[year].events[eventIndex].deaths_direct);
 										maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;
@@ -475,6 +584,7 @@ int main(int argc, char *argv[])
 									//Step 9: just create a huge array of type struct, either of damage_property or damage_crop.
 									if (query_token[3] == "damage_property")
 									{
+										maxHeap[eventIndex] =  heap_entry_Storm();
 										maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
 										maxHeap[eventIndex].damage_amount = annualStormArray[year].events[eventIndex].damage_property;
 										maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;
@@ -484,6 +594,7 @@ int main(int argc, char *argv[])
 									}
 									else
 									{
+										maxHeap[eventIndex] = heap_entry_Storm();
 										maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
 										maxHeap[eventIndex].damage_amount = annualStormArray[year].events[eventIndex].damage_crops;
 										maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;
@@ -524,6 +635,7 @@ int main(int argc, char *argv[])
 								//Step 9: just create a huge array of type struct, either of damage_property or damage_crop.
 								if (query_token[3] == "damage_property")
 								{
+									maxHeap[eventIndex] = heap_entry_Storm();
 									maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
 									maxHeap[eventIndex].damage_amount = annualStormArray[year].events[eventIndex].damage_property;
 									maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;
@@ -533,6 +645,7 @@ int main(int argc, char *argv[])
 								}
 								else
 								{
+									maxHeap[eventIndex] = heap_entry_Storm();
 									maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
 									maxHeap[eventIndex].damage_amount = annualStormArray[year].events[eventIndex].damage_crops;
 									maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;

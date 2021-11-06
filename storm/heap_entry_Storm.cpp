@@ -8,6 +8,10 @@ using namespace std;
 
 heap_entry_Storm::heap_entry_Storm()
 {
+	this->event_id = 0;
+	this->event_index = 0;
+	this->damage_amount = 0;
+	this->year = 0;
 }
 
 //Constructor, it follows the same struct pattern no changes.
@@ -42,9 +46,11 @@ heap_entry_Storm * heap_entry_Storm::maxHeapify_Storm(heap_entry_Storm inputArra
 	
 	heap_entry_Storm tempStorage;
 
+
 	//Decide if the leftIndex has the larger element.
 	if (leftIndex <= heapSize)
 	{
+
 		//If greater set the largest
 		if (inputArray[leftIndex].damage_amount > inputArray[violatingNodeIndex].damage_amount) //-Level:1
 		{
@@ -88,6 +94,8 @@ heap_entry_Storm * heap_entry_Storm::maxHeapify_Storm(heap_entry_Storm inputArra
 	//Decide if the rightIndex has the larger element.
 	if (rightIndex <= heapSize)
 	{
+
+		//cout << inputArray[rightIndex].damage_amount << endl;
 		if (inputArray[rightIndex].damage_amount > inputArray[largest].damage_amount)
 		{
 			largest = rightIndex;

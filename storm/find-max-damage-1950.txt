@@ -1,11 +1,11 @@
 10
-find event 10096229
-find event 10073787
-find event 9986148
-find event 10120421
-find event 10009721
-find event 9982822
-find event 10110973
-find event 10047294
-find event 01234567
-find event 98765432
+find max 1950 damage_property 10
+find max 1950 damage_crops 3
+find max 1951 damage_property 2
+find max 1951 damage_crops 1
+find max 1952 damage_property 1
+find max 1952 damage_crops 3
+find max 1953 damage_property 1
+find max 1953 damage_crops 1
+find max all damage_property 10
+find max all damage_crops 10

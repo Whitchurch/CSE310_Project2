@@ -199,12 +199,12 @@ void treeNode_BST_StormEvents::DisplayCurrentNode(treeNode_BST_StormEvents * roo
 		//cz_name : MILLER
 		
 		cout << "\n";
-		cout << "        Month Name: "<<root->month_name << endl;
-		cout << "        Event ID: "<<root->event_id << endl;
-		cout << "        Year: "<<root->Year << endl;
-		cout << "        Event Type: "<<root->event_type << endl;
-		cout << "        County/Zone Type: "<<root->cz_type << endl;
-		cout << "        County/Zone Name: "<<root->cz_name << endl;
+		cout << "Month Name: "<<root->month_name << endl;
+		cout << "Event ID: "<<root->event_id << endl;
+		cout << "Year: "<<root->Year << endl;
+		cout << "Event Type: "<<root->event_type << endl;
+		cout << "County/Zone Type: "<<root->cz_type << endl;
+		cout << "County/Zone Name: "<<root->cz_name << endl;
 		
 	}
 
@@ -219,12 +219,12 @@ void treeNode_BST_StormEvents::DisplayCurrentNode(treeNode_BST_StormEvents * roo
 		//cz_name : TALLAPOOSA
 
 		cout << "\n";
-		cout << "        State: "<<root->State << endl;
-		cout << "        Event ID: " << root->event_id << endl;
-		cout << "        Year: " << root->Year << endl;
-		cout << "        Event Type: " << root->event_type << endl;
-		cout << "        County/Zone Type: " << root->cz_type << endl;
-		cout << "        County/Zone Name: " << root->cz_name << endl;
+		cout << "State: "<<root->State << endl;
+		cout << "Event ID: " << root->event_id << endl;
+		cout << "Year: " << root->Year << endl;
+		cout << "Event Type: " << root->event_type << endl;
+		cout << "County/Zone Type: " << root->cz_type << endl;
+		cout << "County/Zone Name: " << root->cz_name << endl;
 	}
 
 }
