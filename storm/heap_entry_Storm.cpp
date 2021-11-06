@@ -175,9 +175,56 @@ heap_entry_Storm * heap_entry_Storm::ExtractDeleteMaxHeap_Storm(heap_entry_Storm
 
 			cout << "Event Type: " << annualStormArray[yearindex].events[maxHeap[0].event_index].event_type << "; ";
 			cout << "Damage Amount: "<<"$"<<maxHeap[0].damage_amount<<"\n"<<endl;
-			//cout << maxHeap[0].event_id << endl;
-			//cout << maxHeap[0].year << endl;
 			
+
+			//Move Last element to root of the heap:
+			maxHeap[0] = maxHeap[count - items];
+
+			//Perform max-heapify, ignoring the count-1 element
+			maxHeap = heap_entry_Storm::maxHeapify_Storm(maxHeap, 0, count - (items + 1));
+
+		}
+	}
+	//Step 11: Display Max element -> Move last element to Root -> delete last element -> call Max-heapify on smaller heap:
+
+
+
+	return maxHeap;
+}
+
+//Created another Extract/delete function, since I was running out of time.
+//Better approach is to create a function to display fatality or Damage data, based on a flag/parameter
+heap_entry_Storm * heap_entry_Storm::ExtractDeleteMaxHeap_Storm_fatality(heap_entry_Storm maxHeap[], int count, int itemstodisplay, annual_storms * annualStormArray, string yearParam)
+{
+
+
+	if (itemstodisplay > count)
+	{
+		cout << "items exceed size of heap" << endl;
+	}
+	else
+	{
+		for (int items = 1; items <= itemstodisplay; items++)
+		{
+			//Fatality ID: 1005206
+			//Event ID: 10126027
+			//Fatality Type: D
+			//Fatality Date: 02 / 13 / 1950 02 : 00 : 00
+			//Fatality Age:
+			//Fatality Sex:
+			//Fatality Location:
+
+			//Display Max element:
+			cout << "Event ID: " << maxHeap[0].event_id <<endl;
+
+			//Access the storm array to get the Event Type:
+			//int base_year = stoi(yearParam);
+			//int yearindex = maxHeap[0].year%base_year;
+
+
+			//cout << "Event Type: " << annualStormArray[yearindex].events[maxHeap[0].event_index].event_type << "; ";
+			//cout << "Damage Amount: " << "$" << maxHeap[0].damage_amount << "\n" << endl;
+
 
 			//Move Last element to root of the heap:
 			maxHeap[0] = maxHeap[count - items];

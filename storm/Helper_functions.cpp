@@ -207,50 +207,67 @@ void attachFatalityToTheUnderlyingDataBase(annual_storms * annualStormArray, int
 {
 	fatalityList *item = new fatalityList(token);
 
-	fatality_event *head = annualStormArray[Index_year].events[Index_event].f;
-	fatality_event *nextitem = annualStormArray[Index_year].events[Index_event].f;
-		while (nextitem != nullptr)
+	fatality_event *temp = nullptr;
+	fatality_event *olditem = annualStormArray[Index_year].events[Index_event].f;
+	temp = olditem;
+	while (temp != nullptr)
 		{
-			nextitem = item;
+			
 
-			if (item->fatality_id > nextitem->fatality_id) //Check if something inbetween needs to be where we insert
+			if (item->fatality_id > olditem->fatality_id) //Check if something inbetween needs to be where we insert
 			{
-				item->next = nextitem->next;
-				nextitem->next = item;
-				annualStormArray[Index_year].events[Index_event].f = nextitem;
 				
-				//Write logic to record direct/indirect deaths
-								//Write logic to record direct/indirect deaths
-				if (nextitem->fatality_type == 'D')
+				if (temp->next == nullptr)
 				{
-					annualStormArray[Index_year].events[Index_event].deaths_direct += 1;
+					temp->next = item;
+					annualStormArray[Index_year].events[Index_event].f = olditem;
+					return;
 				}
-				else if (nextitem->fatality_type == 'I')
+				else
 				{
-					annualStormArray[Index_year].events[Index_event].deaths_indirect += 1;
+					temp = temp->next;
 				}
-				
+
+			
+				////Write logic to record direct/indirect deaths
+				//				//Write logic to record direct/indirect deaths
+				//if (nextitem->fatality_type == 'D')
+				//{
+				//	annualStormArray[Index_year].events[Index_event].deaths_direct += 1;
+				//}
+				//else if (nextitem->fatality_type == 'I')
+				//{
+				//	annualStormArray[Index_year].events[Index_event].deaths_indirect += 1;
+				//}
+				//
 
 			}
+			else if (item->fatality_id < olditem->fatality_id)
+			{
+				item->next = temp;
+				temp = item;
+				annualStormArray[Index_year].events[Index_event].f = temp;
+				return;
+			}
 
-			nextitem = nextitem->next;
+			//olditem = olditem->next;
 		}
 	
-		if (nextitem == nullptr) //If the list is empty add the  item directly
+		if (olditem == nullptr) //If the list is empty add the  item directly
 		{
-			nextitem = item;
-			annualStormArray[Index_year].events[Index_event].f= nextitem;
+			olditem = item;
+			annualStormArray[Index_year].events[Index_event].f= olditem;
 
 			//Write logic to record direct/indirect deaths
 
-			if (nextitem->fatality_type == 'D')
-			{
-				annualStormArray[Index_year].events[Index_event].deaths_direct += 1;
-			}
-			else if (nextitem->fatality_type == 'I')
-			{
-				annualStormArray[Index_year].events[Index_event].deaths_indirect += 1;
-			}
+			//if (nextitem->fatality_type == 'D')
+			//{
+			//	annualStormArray[Index_year].events[Index_event].deaths_direct += 1;
+			//}
+			//else if (nextitem->fatality_type == 'I')
+			//{
+			//	annualStormArray[Index_year].events[Index_event].deaths_indirect += 1;
+			//}
 
 		}
 }

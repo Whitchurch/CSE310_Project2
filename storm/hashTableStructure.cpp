@@ -99,7 +99,26 @@ void hashTableStructure::displayHashSearchResult(hash_table_entry_inherited * ev
 		cout << "Deaths Indirect: " << annualStormArray[yearindex].events[eventFound->event_index].deaths_indirect << endl;
 		cout << "Damage Property: " << "$"<<annualStormArray[yearindex].events[eventFound->event_index].damage_property << endl;
 		cout << "Damage Crops: " << "$"<<annualStormArray[yearindex].events[eventFound->event_index].damage_crops <<"\n"<< endl;
-		cout << "\tNo fatalities" << endl;
+		if (annualStormArray[yearindex].events[eventFound->event_index].f == nullptr)
+		{
+			cout << "\tNo fatalities" << endl;
+		}
+		else
+		{
+			fatality_event *nextnode = annualStormArray[yearindex].events[eventFound->event_index].f;
+			while (nextnode!= nullptr)
+			{
+				cout << "\tFatality ID: " << nextnode->fatality_id<<endl;
+				cout << "\tFatality Type: "<<nextnode->fatality_type << endl;
+				cout << "\tFatality Date: " <<nextnode->fatality_date <<endl;
+				cout << "\tFatality Age: " << nextnode->fatality_age<<endl;
+				cout << "\tFatality Sex: " << nextnode->fatality_sex<<endl;
+				cout << "\tFatality Location: " << nextnode->fatality_location<<endl;
+
+				nextnode = nextnode->next;
+			}
+		}
+		
 
 	}
 	else

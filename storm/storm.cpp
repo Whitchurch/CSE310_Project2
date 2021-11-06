@@ -108,6 +108,8 @@ int main(int argc, char *argv[])
 
 			if (LineCount > 0) //This condition skips the first line, with the headings and stars recording from the second line
 			{
+
+
 				int i_token = 0;
 				string delimiter = ",";
 
@@ -124,7 +126,11 @@ int main(int argc, char *argv[])
 
 				//Enter the extracted tokens into their respective fields:
 				annualStormArray[i].events[LineCount - 1].event_id = stoi(token[0]);
-				strcpy_s(annualStormArray[i].events[LineCount - 1].state, token[1].c_str());
+				//strcpy_s(annualStormArray[i].events[LineCount - 1].state, token[1].c_str());
+
+				strncpy(annualStormArray[i].events[LineCount - 1].state, token[1].c_str(), STATE_LEN - 1);
+				annualStormArray[i].events[LineCount - 1].state[STATE_LEN - 1] = '\0';
+
 				//events[LineCount - 1].state = token[1];
 
 				annualStormArray[i].events[LineCount - 1].year = stoi(token[2]);
@@ -137,7 +143,9 @@ int main(int argc, char *argv[])
 				annualStormArray[i].events[LineCount - 1].cz_type = token[5][0];
 				//events[LineCount - 1].cz_type = token[5];
 
-				strcpy_s(annualStormArray[i].events[LineCount - 1].cz_name, token[6].c_str());
+				//strcpy_s(annualStormArray[i].events[LineCount - 1].cz_name, token[6].c_str());
+				strncpy(annualStormArray[i].events[LineCount - 1].cz_name, token[6].c_str(), COUNTY_LEN - 1);
+				annualStormArray[i].events[LineCount - 1].cz_name[COUNTY_LEN - 1] = '\0';
 				//events[LineCount - 1].cz_name = token[6];
 
 				annualStormArray[i].events[LineCount - 1].injuries_direct = stoi(token[7]);
@@ -404,7 +412,7 @@ int main(int argc, char *argv[])
 								maxHeap = heap_entry_Storm::buildMaxHeap_Storm(maxHeap, count);
 
 								//Step 11: Perform Extract- Delete Operation
-								maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm(maxHeap, count, stoi(query_token[4]), annualStormArray, yearParam);
+								maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm_fatality(maxHeap, count, stoi(query_token[4]), annualStormArray, yearParam);
 
 								//Step 12: Delete and free the entire max-heap structure:
 								//delete Last element:
@@ -414,8 +422,10 @@ int main(int argc, char *argv[])
 							else if (query_token[3] != "all")
 							{
 								//Create the max-heap:
+								int baseyear = stoi(yearParam);
 								int year = stoi(query_token[3]); //Get the year.
-								year = year % year;
+								year = year % baseyear;
+
 
 								int count = eventCount[year];
 								maxHeap = new heap_entry_Storm[count];
@@ -436,7 +446,7 @@ int main(int argc, char *argv[])
 								maxHeap = heap_entry_Storm::buildMaxHeap_Storm(maxHeap, count);
 
 								//Step 11: Perform Extract- Delete Operation
-								maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm(maxHeap, count, stoi(query_token[4]), annualStormArray, yearParam);
+								maxHeap = heap_entry_Storm::ExtractDeleteMaxHeap_Storm_fatality(maxHeap, count, stoi(query_token[4]), annualStormArray, yearParam);
 
 								//Step 12: Delete and free the entire max-heap structure:
 								//delete Last element:
@@ -500,8 +510,6 @@ int main(int argc, char *argv[])
 						{
 
 							int baseyear = stoi(yearParam);
-						
-
 							int year = stoi(query_token[2]); //Get the year.
 							year = year % baseyear;
 
