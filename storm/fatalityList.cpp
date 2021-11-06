@@ -34,10 +34,19 @@ fatalityList::fatalityList(string * token)
 	}
 	else
 	{
-		this->fatality_age = 0;
+		this->fatality_age = -1;
 	}
 	
-	this->fatality_sex = token[5][0];
+	if (!token[5].empty())
+	{
+		this->fatality_sex = token[5][0];
+	}
+	else
+	{
+		this->fatality_sex = '\0';
+	}
+
+	
 
 	strncpy(this->fatality_location, token[6].c_str(), sizeof(this->fatality_location));
 	this->fatality_location[FAT_LOC - 1] = '\0';

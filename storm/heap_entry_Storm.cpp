@@ -214,8 +214,43 @@ heap_entry_Storm * heap_entry_Storm::ExtractDeleteMaxHeap_Storm_fatality(heap_en
 			//Fatality Sex:
 			//Fatality Location:
 
+			//Access the storm array to get the Event Type:
+			int base_year = stoi(yearParam);
+			int yearindex = maxHeap[0].year%base_year;
+			fatality_event *indexptr = annualStormArray[yearindex].events[maxHeap[0].event_index].f;
 			//Display Max element:
-			cout << "Event ID: " << maxHeap[0].event_id <<endl;
+			while (indexptr != nullptr)
+			{
+				cout << "Fatality ID: " << indexptr->fatality_id << endl;
+				cout << "Event ID: " << maxHeap[0].event_id << endl;
+				cout << "Fatality Type: " << indexptr->fatality_type << endl;
+				cout << "Fatality Date: " << indexptr->fatality_date << endl;
+				if (indexptr->fatality_age == -1)
+				{
+					cout << "Fatality Age: " <<  endl;
+				}
+				else
+				{
+					cout << "Fatality Age: " << indexptr->fatality_age << endl;
+					
+				}
+
+				if (indexptr->fatality_sex == '\0')
+				{
+					cout << "Fatality Sex: " << endl;
+				}
+				else
+				{
+					cout << "Fatality Sex: " << indexptr->fatality_sex << endl;
+
+				}
+
+				
+				cout << "Fatality Location: " << indexptr->fatality_location <<"\n" << endl;
+
+				indexptr = indexptr->next;
+			}
+
 
 			//Access the storm array to get the Event Type:
 			//int base_year = stoi(yearParam);

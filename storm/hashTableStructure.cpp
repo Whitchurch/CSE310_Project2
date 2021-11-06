@@ -100,7 +100,7 @@ void hashTableStructure::displayHashSearchResult(hash_table_entry_inherited * ev
 		//Insert the logic for displaying  blank if blank(tagged by -1) is encountered:
 		if (annualStormArray[yearindex].events[eventFound->event_index].damage_property == -1)
 		{
-			cout << "Damage Property: " << "$"<<" "<< endl;
+			cout << "Damage Property: " << "$"<< endl;
 		}
 		else
 		{
@@ -109,7 +109,7 @@ void hashTableStructure::displayHashSearchResult(hash_table_entry_inherited * ev
 
 		if (annualStormArray[yearindex].events[eventFound->event_index].damage_crops == -1)
 		{
-			cout << "Damage Crops: " << "$" <<" "<< "\n" << endl;
+			cout << "Damage Crops: " << "$" << "\n" << endl;
 		}
 		else
 		{
@@ -119,7 +119,7 @@ void hashTableStructure::displayHashSearchResult(hash_table_entry_inherited * ev
 		
 		if (annualStormArray[yearindex].events[eventFound->event_index].f == nullptr)
 		{
-			cout << "\tNo fatalities" << endl;
+			cout << "\tNo fatalities"<<"\n"<< endl;
 		}
 		else
 		{
@@ -131,7 +131,7 @@ void hashTableStructure::displayHashSearchResult(hash_table_entry_inherited * ev
 				cout << "\tFatality Date: " <<nextnode->fatality_date <<endl;
 				cout << "\tFatality Age: " << nextnode->fatality_age<<endl;
 				cout << "\tFatality Sex: " << nextnode->fatality_sex<<endl;
-				cout << "\tFatality Location: " << nextnode->fatality_location<<endl;
+				cout << "\tFatality Location: " << nextnode->fatality_location<<"\n"<<endl;
 
 				nextnode = nextnode->next;
 			}
@@ -141,6 +141,6 @@ void hashTableStructure::displayHashSearchResult(hash_table_entry_inherited * ev
 	}
 	else
 	{
-		cout << "Storm event "<< valueToHash <<" not found" << endl;
+		cout << "Storm event "<< valueToHash <<" not found"<<"\n" << endl;
 	}
 }

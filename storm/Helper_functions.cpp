@@ -78,9 +78,13 @@ int Normalize_Scale_PropertyDamage(string cost)
 		{
 			units = 1000000000;
 		}
+		else if (cost.back() == 'T')
+		{
+			units = 1000000000000;
+		}
 		else
 		{
-			cout << cost.back() << endl;
+			cout << "Unhandled units" << endl;
 		}
 
 		if (cost.length() == 1) //If only a single digit is passed without a unit of K
@@ -126,9 +130,13 @@ int Normalize_Scale(string cost)
 		{
 			units = 1000000000;
 		}
+		else if (cost.back() == 'T')
+		{
+			units = 1000000000000;
+		}
 		else
 		{
-			cout << cost.back() << endl;
+			cout << "Unhandled units" << endl;
 		}
 
 		if (cost.length() == 1) //If only a single digit is passed without a unit of K

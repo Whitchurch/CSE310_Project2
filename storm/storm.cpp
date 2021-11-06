@@ -170,7 +170,6 @@ int main(int argc, char *argv[])
 			LineCount++;
 
 
-
 		}
 
 		fileInputStream.close();
@@ -596,7 +595,7 @@ int main(int argc, char *argv[])
 	delete[] annualStormArray;
 
 //Step 9: Add that extra blank line to match the expected output.
-	cout << "\n";
+	//cout << "\n";
 
 
 	
