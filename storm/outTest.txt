@@ -14,7 +14,7 @@ Injuries Direct: 0
 Injuries Indirect: 0
 Deaths Direct: 4
 Deaths Indirect: 0
-Damage Property: $0
+Damage Property: $ 
 Damage Crops: $0
 
 	Fatality ID: 1001571
@@ -54,7 +54,7 @@ Injuries Direct: 0
 Injuries Indirect: 0
 Deaths Direct: 6
 Deaths Indirect: 0
-Damage Property: $0
+Damage Property: $ 
 Damage Crops: $0
 
 	Fatality ID: 1001575

@@ -49,6 +49,58 @@ void Display_StormEvents_Head(storm_event *events)
 	}
 }
 
+int Normalize_Scale_PropertyDamage(string cost)
+{
+	int units = 0;
+	int numberOnly = 0;
+
+	if (cost.empty())
+	{
+		return -1;
+	}
+	else if (cost == "0")
+	{
+		return 0;
+	}
+	else
+	{
+		//We can extract the last character to find out what we are multiplying against.
+		//K implies we multiply with 1000.
+		if (cost.back() == 'K')
+		{
+			units = 1000;
+		}
+		else if (cost.back() == 'M')
+		{
+			units = 1000000;
+		}
+		else if (cost.back() == 'B')
+		{
+			units = 1000000000;
+		}
+		else
+		{
+			cout << cost.back() << endl;
+		}
+
+		if (cost.length() == 1) //If only a single digit is passed without a unit of K
+		{
+			numberOnly = stod(cost);
+			return numberOnly;
+		}
+		else
+		{
+			int length = cost.length();
+			cost = cost.substr(0, length - 1);
+			numberOnly = stod(cost)*units;
+			return numberOnly;
+		}
+
+	}
+
+
+}
+
 int Normalize_Scale(string cost)
 {
 	int units = 0;

@@ -152,7 +152,7 @@ int main(int argc, char *argv[])
 				annualStormArray[i].events[LineCount - 1].injuries_indirect = stoi(token[8]);
 				annualStormArray[i].events[LineCount - 1].deaths_direct = stoi(token[9]);
 				annualStormArray[i].events[LineCount - 1].deaths_indirect = stoi(token[10]);
-				annualStormArray[i].events[LineCount - 1].damage_property = Normalize_Scale(token[11]);
+				annualStormArray[i].events[LineCount - 1].damage_property = Normalize_Scale_PropertyDamage(token[11]);
 				annualStormArray[i].events[LineCount - 1].damage_crops = Normalize_Scale(token[12]);
 				annualStormArray[i].events[LineCount - 1].f = nullptr;
 			}

@@ -97,8 +97,26 @@ void hashTableStructure::displayHashSearchResult(hash_table_entry_inherited * ev
 		cout << "Injuries Indirect: " << annualStormArray[yearindex].events[eventFound->event_index].injuries_indirect << endl;
 		cout << "Deaths Direct: " << annualStormArray[yearindex].events[eventFound->event_index].deaths_direct << endl;
 		cout << "Deaths Indirect: " << annualStormArray[yearindex].events[eventFound->event_index].deaths_indirect << endl;
-		cout << "Damage Property: " << "$"<<annualStormArray[yearindex].events[eventFound->event_index].damage_property << endl;
-		cout << "Damage Crops: " << "$"<<annualStormArray[yearindex].events[eventFound->event_index].damage_crops <<"\n"<< endl;
+		//Insert the logic for displaying  blank if blank(tagged by -1) is encountered:
+		if (annualStormArray[yearindex].events[eventFound->event_index].damage_property == -1)
+		{
+			cout << "Damage Property: " << "$"<<" "<< endl;
+		}
+		else
+		{
+			cout << "Damage Property: " << "$" << annualStormArray[yearindex].events[eventFound->event_index].damage_property << endl;
+		}
+
+		if (annualStormArray[yearindex].events[eventFound->event_index].damage_crops == -1)
+		{
+			cout << "Damage Crops: " << "$" <<" "<< "\n" << endl;
+		}
+		else
+		{
+			cout << "Damage Crops: " << "$" << annualStormArray[yearindex].events[eventFound->event_index].damage_crops << "\n" << endl;
+		}
+	
+		
 		if (annualStormArray[yearindex].events[eventFound->event_index].f == nullptr)
 		{
 			cout << "\tNo fatalities" << endl;
