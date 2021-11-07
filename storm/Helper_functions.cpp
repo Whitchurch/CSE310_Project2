@@ -110,7 +110,11 @@ int Normalize_Scale(string cost)
 	int units = 0;
 	int numberOnly = 0;
 
-	if (cost.empty()||cost == "0")
+	if (cost.empty())
+	{
+		return -1;
+	}
+	else if (cost == "0")
 	{
 		return 0;
 	}
