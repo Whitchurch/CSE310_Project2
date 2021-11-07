@@ -1,8 +1,11 @@
-7
-range 1951 month_name "January" "January"
-range 1952 state "AA" "CZ"
-range all month_name "June" "November"
-range all state "ARIZONA" "NORTH CAROLINA"
-range 1953 month_name "April" "May"
-range 1950 state "PA" "PZ"
-range all state "WYOMING" "WYOMING"
+10
+find event 10096229
+find event 10073787
+find event 9986148
+find event 10120421
+find event 10009721
+find event 9982822
+find event 10110973
+find event 10047294
+find event 01234567
+find event 98765432
