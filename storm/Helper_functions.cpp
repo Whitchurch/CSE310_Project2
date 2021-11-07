@@ -112,7 +112,7 @@ int Normalize_Scale(string cost)
 
 	if (cost.empty())
 	{
-		return -1;
+		return 0;
 	}
 	else if (cost == "0")
 	{

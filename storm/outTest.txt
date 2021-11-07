@@ -1,154 +1,106 @@
 10
 
-Query: find event 10096229
+Query: find max 1950 damage_property 10
 
-Event ID: 10096229
-State: OKLAHOMA
-Year: 1950
-Month Name: May
-Event Type: Tornado
-County/Zone Type: C
-County/Zone Name: PAYNE
-Injuries Direct: 0
-Injuries Indirect: 0
-Deaths Direct: 0
-Deaths Indirect: 0
-Damage Property: $2500
-Damage Crops: $0
+Event ID: 10120419; Event Type: Tornado; Damage Amount: $2500000
 
-	No fatalities
+Event ID: 10086810; Event Type: Tornado; Damage Amount: $2500000
 
-Query: find event 10073787
+Event ID: 10073786; Event Type: Tornado; Damage Amount: $2500000
 
-Event ID: 10073787
-State: NEBRASKA
-Year: 1950
-Month Name: September
-Event Type: Tornado
-County/Zone Type: C
-County/Zone Name: LANCASTER
-Injuries Direct: 0
-Injuries Indirect: 0
-Deaths Direct: 0
-Deaths Indirect: 0
-Damage Property: $2500
-Damage Crops: $0
+Event ID: 10063615; Event Type: Tornado; Damage Amount: $2500000
 
-	No fatalities
+Event ID: 10028673; Event Type: Tornado; Damage Amount: $2500000
 
-Query: find event 9986148
+Event ID: 10009719; Event Type: Tornado; Damage Amount: $2500000
 
-Event ID: 9986148
-State: CONNECTICUT
-Year: 1950
-Month Name: July
-Event Type: Tornado
-County/Zone Type: C
-County/Zone Name: MIDDLESEX
-Injuries Direct: 0
-Injuries Indirect: 0
-Deaths Direct: 0
-Deaths Indirect: 0
-Damage Property: $2500
-Damage Crops: $0
+Event ID: 10009718; Event Type: Tornado; Damage Amount: $2500000
 
-	No fatalities
+Event ID: 10146806; Event Type: Tornado; Damage Amount: $250000
 
-Query: find event 10120421
+Event ID: 10146804; Event Type: Tornado; Damage Amount: $250000
 
-Event ID: 10120421
-State: TEXAS
-Year: 1951
-Month Name: March
-Event Type: Tornado
-County/Zone Type: C
-County/Zone Name: HOUSTON
-Injuries Direct: 0
-Injuries Indirect: 0
-Deaths Direct: 0
-Deaths Indirect: 0
-Damage Property: $2500
-Damage Crops: $0
+Event ID: 10146802; Event Type: Tornado; Damage Amount: $250000
 
-	No fatalities
+Query: find max 1950 damage_crops 3
 
-Query: find event 10009721
+Event ID: 10162815; Event Type: Tornado; Damage Amount: $0
 
-Event ID: 10009721
-State: ILLINOIS
-Year: 1951
-Month Name: June
-Event Type: Tornado
-County/Zone Type: C
-County/Zone Name: LOGAN
-Injuries Direct: 35
-Injuries Indirect: 0
-Deaths Direct: 0
-Deaths Indirect: 0
-Damage Property: $2500000
-Damage Crops: $0
+Event ID: 10162814; Event Type: Tornado; Damage Amount: $0
 
-	No fatalities
+Event ID: 10162813; Event Type: Tornado; Damage Amount: $0
 
-Query: find event 9982822
+Query: find max 1951 damage_property 2
 
-Event ID: 9982822
-State: ARIZONA
-Year: 1952
-Month Name: November
-Event Type: Tornado
-County/Zone Type: C
-County/Zone Name: YAVAPAI
-Injuries Direct: 0
-Injuries Indirect: 0
-Deaths Direct: 0
-Deaths Indirect: 0
-Damage Property: $0
-Damage Crops: $0
+Event ID: 10052055; Event Type: Tornado; Damage Amount: $25000000
 
-	No fatalities
+Event ID: 10120425; Event Type: Tornado; Damage Amount: $2500000
 
-Query: find event 10110973
+Query: find max 1951 damage_crops 1
 
-Event ID: 10110973
-State: SOUTH DAKOTA
-Year: 1953
-Month Name: June
-Event Type: Tornado
-County/Zone Type: C
-County/Zone Name: DAVISON
-Injuries Direct: 0
-Injuries Indirect: 0
-Deaths Direct: 0
-Deaths Indirect: 0
-Damage Property: $25000
-Damage Crops: $0
+Event ID: 10153063; Event Type: Tornado; Damage Amount: $0
 
-	No fatalities
+Query: find max 1952 damage_property 1
 
-Query: find event 10047294
+Event ID: 10063636; Event Type: Tornado; Damage Amount: $25000000
 
-Event ID: 10047294
-State: MISSISSIPPI
-Year: 1953
-Month Name: February
-Event Type: Tornado
-County/Zone Type: C
-County/Zone Name: WASHINGTON
-Injuries Direct: 2
-Injuries Indirect: 0
-Deaths Direct: 0
-Deaths Indirect: 0
-Damage Property: $25000
-Damage Crops: $0
+Query: find max 1952 damage_crops 3
 
-	No fatalities
+Event ID: 10162816; Event Type: Tornado; Damage Amount: $0
 
-Query: find event 01234567
+Event ID: 10153066; Event Type: Tornado; Damage Amount: $0
 
-Storm event 1234567 not found
+Event ID: 10153065; Event Type: Tornado; Damage Amount: $0
 
-Query: find event 98765432
+Query: find max 1953 damage_property 1
 
-Storm event 98765432 not found
+Event ID: 10039200; Event Type: Tornado; Damage Amount: $250000000
+
+Query: find max 1953 damage_crops 1
+
+Event ID: 10162823; Event Type: Tornado; Damage Amount: $0
+
+Query: find max all damage_property 10
+
+Event ID: 10039200; Event Type: Tornado; Damage Amount: $250000000
+
+Event ID: 10121804; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10047316; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10039423; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10039422; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10039421; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10009733; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10009732; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10001457; Event Type: Tornado; Damage Amount: $25000000
+
+Event ID: 10001454; Event Type: Tornado; Damage Amount: $25000000
+
+Query: find max all damage_crops 10
+
+Event ID: 10162823; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10162822; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10162821; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10162820; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10162819; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10162818; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10162817; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10153903; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10153902; Event Type: Tornado; Damage Amount: $0
+
+Event ID: 10153072; Event Type: Tornado; Damage Amount: $0
 
