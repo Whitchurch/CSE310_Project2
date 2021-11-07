@@ -1,0 +1,215 @@
+5
+
+Query: find event 5569819
+
+Event ID: 5569819
+State: PENNSYLVANIA
+Year: 1996
+Month Name: January
+Event Type: Flash Flood
+County/Zone Type: C
+County/Zone Name: JUNIATA
+Injuries Direct: 0
+Injuries Indirect: 0
+Deaths Direct: 4
+Deaths Indirect: 0
+Damage Property: $
+Damage Crops: $
+
+	Fatality ID: 1001571
+	Fatality Type: D
+	Fatality Date: 1/19/96 12:00
+	Fatality Age: 34
+	Fatality Sex: F
+	Fatality Location: Vehicle/Towed Trailer
+
+	Fatality ID: 1001572
+	Fatality Type: D
+	Fatality Date: 1/19/96 12:00
+	Fatality Age: 35
+	Fatality Sex: F
+	Fatality Location: Vehicle/Towed Trailer
+
+	Fatality ID: 1001573
+	Fatality Type: D
+	Fatality Date: 1/19/96 12:00
+	Fatality Age: 38
+	Fatality Sex: M
+	Fatality Location: Vehicle/Towed Trailer
+
+	Fatality ID: 1001574
+	Fatality Type: D
+	Fatality Date: 1/19/96 12:00
+	Fatality Age: 8
+	Fatality Sex: M
+	Fatality Location: Vehicle/Towed Trailer
+
+Query: find event 5569986
+
+Event ID: 5569986
+State: PENNSYLVANIA
+Year: 1996
+Month Name: January
+Event Type: Flash Flood
+County/Zone Type: C
+County/Zone Name: LYCOMING
+Injuries Direct: 0
+Injuries Indirect: 0
+Deaths Direct: 6
+Deaths Indirect: 0
+Damage Property: $
+Damage Crops: $
+
+	Fatality ID: 1001575
+	Fatality Type: D
+	Fatality Date: 1/19/96 12:00
+	Fatality Age: 77
+	Fatality Sex: M
+	Fatality Location: Vehicle/Towed Trailer
+
+	Fatality ID: 1001576
+	Fatality Type: D
+	Fatality Date: 1/19/96 12:00
+	Fatality Age: 75
+	Fatality Sex: F
+	Fatality Location: Vehicle/Towed Trailer
+
+	Fatality ID: 1001577
+	Fatality Type: D
+	Fatality Date: 1/19/96 12:00
+	Fatality Age: 68
+	Fatality Sex: M
+	Fatality Location: Vehicle/Towed Trailer
+
+	Fatality ID: 1001578
+	Fatality Type: D
+	Fatality Date: 1/19/96 12:00
+	Fatality Age: 38
+	Fatality Sex: F
+	Fatality Location: Mobile/Trailer Home
+
+	Fatality ID: 1001579
+	Fatality Type: D
+	Fatality Date: 1/19/96 12:00
+	Fatality Age: 54
+	Fatality Sex: M
+	Fatality Location: Mobile/Trailer Home
+
+	Fatality ID: 1001580
+	Fatality Type: D
+	Fatality Date: 1/19/96 12:00
+	Fatality Age: 59
+	Fatality Sex: F
+	Fatality Location: Vehicle/Towed Trailer
+
+Query: find event 5580207
+
+Event ID: 5580207
+State: NORTH CAROLINA
+Year: 1996
+Month Name: February
+Event Type: Winter Storm
+County/Zone Type: Z
+County/Zone Name: BEAUFORT
+Injuries Direct: 12
+Injuries Indirect: 0
+Deaths Direct: 2
+Deaths Indirect: 0
+Damage Property: $45000
+Damage Crops: $
+
+	Fatality ID: 1001627
+	Fatality Type: D
+	Fatality Date: 2/4/96 12:00
+	Fatality Age: 38
+	Fatality Sex: F
+	Fatality Location: Mobile/Trailer Home
+
+	Fatality ID: 1001628
+	Fatality Type: D
+	Fatality Date: 2/4/96 12:00
+	Fatality Age: 10
+	Fatality Sex: M
+	Fatality Location: Mobile/Trailer Home
+
+Query: find event 5543481
+
+Event ID: 5543481
+State: ARKANSAS
+Year: 1996
+Month Name: April
+Event Type: Tornado
+County/Zone Type: C
+County/Zone Name: STONE
+Injuries Direct: 5
+Injuries Indirect: 0
+Deaths Direct: 5
+Deaths Indirect: 0
+Damage Property: $2500000
+Damage Crops: $
+
+	Fatality ID: 1001320
+	Fatality Type: D
+	Fatality Date: 4/14/96 12:00
+	Fatality Age: 71
+	Fatality Sex: M
+	Fatality Location: Mobile/Trailer Home
+
+	Fatality ID: 1001321
+	Fatality Type: D
+	Fatality Date: 4/14/96 12:00
+	Fatality Age: 64
+	Fatality Sex: F
+	Fatality Location: Mobile/Trailer Home
+
+	Fatality ID: 1001322
+	Fatality Type: D
+	Fatality Date: 4/14/96 12:00
+	Fatality Age: 65
+	Fatality Sex: M
+	Fatality Location: Mobile/Trailer Home
+
+	Fatality ID: 1001323
+	Fatality Type: D
+	Fatality Date: 4/14/96 12:00
+	Fatality Age: 65
+	Fatality Sex: F
+	Fatality Location: Mobile/Trailer Home
+
+	Fatality ID: 1001324
+	Fatality Type: D
+	Fatality Date: 4/14/96 12:00
+	Fatality Age: 53
+	Fatality Sex: F
+	Fatality Location: Permanent Home
+
+Query: find event 5570278
+
+Event ID: 5570278
+State: PUERTO RICO
+Year: 1996
+Month Name: November
+Event Type: Coastal Flood
+County/Zone Type: C
+County/Zone Name: ARECIBO
+Injuries Direct: 0
+Injuries Indirect: 0
+Deaths Direct: 2
+Deaths Indirect: 0
+Damage Property: $30000
+Damage Crops: $
+
+	Fatality ID: 1001586
+	Fatality Type: D
+	Fatality Date: 11/17/96 12:00
+	Fatality Age: 57
+	Fatality Sex: M
+	Fatality Location: Boat
+
+	Fatality ID: 1001587
+	Fatality Type: D
+	Fatality Date: 11/17/96 12:00
+	Fatality Age: 36
+	Fatality Sex: M
+	Fatality Location: Boat
+

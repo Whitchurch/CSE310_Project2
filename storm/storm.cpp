@@ -497,6 +497,7 @@ int main(int argc, char *argv[])
 								}
 
 								maxHeap = new heap_entry_Storm[count];
+								int acrossYears = 0;
 
 								for (int year = 0; year < noOfYears; year++) //Go one year at a time
 								{
@@ -506,11 +507,13 @@ int main(int argc, char *argv[])
 										//{
 										//	cout << "stop here" << endl;
 										//}
-										maxHeap[eventIndex] = heap_entry_Storm();
-										maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
-										maxHeap[eventIndex].damage_amount = (annualStormArray[year].events[eventIndex].deaths_indirect) + (annualStormArray[year].events[eventIndex].deaths_direct);
-										maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;
-										maxHeap[eventIndex].event_index = eventIndex;
+										
+										maxHeap[acrossYears] = heap_entry_Storm();
+										maxHeap[acrossYears].event_id = annualStormArray[year].events[eventIndex].event_id;
+										maxHeap[acrossYears].damage_amount = (annualStormArray[year].events[eventIndex].deaths_indirect) + (annualStormArray[year].events[eventIndex].deaths_direct);
+										maxHeap[acrossYears].year = annualStormArray[year].events[eventIndex].year;
+										maxHeap[acrossYears].event_index = eventIndex;
+										acrossYears++;
 										//heap_entry_Storm *newNode = new heap_entry_Storm(annualStormArray[year].events[eventIndex], annualStormArray[year].events[eventIndex].damage_crops, eventIndex); //We Pass by value the events.
 										//root = root->buildBinarySearchTree(newNode, root, query_token[2]);
 									}
@@ -576,6 +579,7 @@ int main(int argc, char *argv[])
 							}
 
 							maxHeap = new heap_entry_Storm[count];
+							int acrossYears = 0;
 
 							for (int year = 0; year < noOfYears; year++) //Go one year at a time
 							{
@@ -584,21 +588,23 @@ int main(int argc, char *argv[])
 									//Step 9: just create a huge array of type struct, either of damage_property or damage_crop.
 									if (query_token[3] == "damage_property")
 									{
-										maxHeap[eventIndex] =  heap_entry_Storm();
-										maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
-										maxHeap[eventIndex].damage_amount = annualStormArray[year].events[eventIndex].damage_property;
-										maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;
-										maxHeap[eventIndex].event_index = eventIndex;
+										maxHeap[acrossYears] =  heap_entry_Storm();
+										maxHeap[acrossYears].event_id = annualStormArray[year].events[eventIndex].event_id;
+										maxHeap[acrossYears].damage_amount = annualStormArray[year].events[eventIndex].damage_property;
+										maxHeap[acrossYears].year = annualStormArray[year].events[eventIndex].year;
+										maxHeap[acrossYears].event_index = eventIndex;
+										acrossYears++;
 										//heap_entry_Storm *newNode = new heap_entry_Storm(annualStormArray[year].events[eventIndex], annualStormArray[year].events[eventIndex].damage_property,eventIndex); //We Pass by value the events.
 										//root = root->buildBinarySearchTree(newNode, root, query_token[2]);
 									}
 									else
 									{
-										maxHeap[eventIndex] = heap_entry_Storm();
-										maxHeap[eventIndex].event_id = annualStormArray[year].events[eventIndex].event_id;
-										maxHeap[eventIndex].damage_amount = annualStormArray[year].events[eventIndex].damage_crops;
-										maxHeap[eventIndex].year = annualStormArray[year].events[eventIndex].year;
-										maxHeap[eventIndex].event_index = eventIndex;
+										maxHeap[acrossYears] = heap_entry_Storm();
+										maxHeap[acrossYears].event_id = annualStormArray[year].events[eventIndex].event_id;
+										maxHeap[acrossYears].damage_amount = annualStormArray[year].events[eventIndex].damage_crops;
+										maxHeap[acrossYears].year = annualStormArray[year].events[eventIndex].year;
+										maxHeap[acrossYears].event_index = eventIndex;
+										acrossYears++;
 										//heap_entry_Storm *newNode = new heap_entry_Storm(annualStormArray[year].events[eventIndex], annualStormArray[year].events[eventIndex].damage_crops, eventIndex); //We Pass by value the events.
 										//root = root->buildBinarySearchTree(newNode, root, query_token[2]);
 									}

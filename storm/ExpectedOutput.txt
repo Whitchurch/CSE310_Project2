@@ -1,3 +1,5 @@
+1
+
 Query: find max fatality all 5
 
 Fatality ID: 1005314

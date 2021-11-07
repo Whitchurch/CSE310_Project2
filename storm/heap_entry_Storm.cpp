@@ -155,7 +155,6 @@ heap_entry_Storm * heap_entry_Storm::buildMaxHeap_Storm(heap_entry_Storm inputAr
 	{
 		maxHeapify_Storm(inputArray, violatingNodeIndex, heapSize - 1);
 	}
-
 	return inputArray;
 }
 

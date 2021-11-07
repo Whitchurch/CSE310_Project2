@@ -1,0 +1,196 @@
+5
+
+Query: find max fatality 1950 10
+
+Fatality ID: 1005206
+Event ID: 10126027
+Fatality Type: D
+Fatality Date: 02/13/1950 02:00:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005205
+Event ID: 10032628
+Fatality Type: D
+Fatality Date: 02/12/1950 14:20:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005204
+Event ID: 10032626
+Fatality Type: D
+Fatality Date: 02/12/1950 14:00:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005212
+Event ID: 10120411
+Fatality Type: D
+Fatality Date: 04/28/1950 18:00:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005211
+Event ID: 10096223
+Fatality Type: D
+Fatality Date: 04/28/1950 19:05:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005207
+Event ID: 10032627
+Fatality Type: D
+Fatality Date: 02/12/1950 14:20:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005203
+Event ID: 10032625
+Fatality Type: D
+Fatality Date: 02/12/1950 14:00:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005202
+Event ID: 10120410
+Fatality Type: D
+Fatality Date: 02/12/1950 12:00:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005199
+Event ID: 10049525
+Fatality Type: D
+Fatality Date: 02/12/1950 12:00:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005218
+Event ID: 10146804
+Fatality Type: D
+Fatality Date: 06/25/1950 21:00:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Query: find max fatality 1951 2
+
+Fatality ID: 1005234
+Event ID: 10146812
+Fatality Type: D
+Fatality Date: 09/26/1951 16:08:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005232
+Event ID: 10052055
+Fatality Type: D
+Fatality Date: 07/20/1951 21:00:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Query: find max fatality 1952 1
+
+Fatality ID: 1005244
+Event ID: 9983015
+Fatality Type: D
+Fatality Date: 03/21/1952 16:50:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Query: find max fatality 1953 5
+
+Fatality ID: 1005314
+Event ID: 10039421
+Fatality Type: D
+Fatality Date: 06/08/1953 19:30:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005304
+Event ID: 10121804
+Fatality Type: D
+Fatality Date: 05/11/1953 16:10:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005315
+Event ID: 10039200
+Fatality Type: D
+Fatality Date: 06/09/1953 14:25:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005323
+Event ID: 10047316
+Fatality Type: D
+Fatality Date: 12/05/1953 17:45:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005291
+Event ID: 10001457
+Fatality Type: D
+Fatality Date: 04/30/1953 16:13:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Query: find max fatality all 5
+
+Fatality ID: 1005314
+Event ID: 10039421
+Fatality Type: D
+Fatality Date: 06/08/1953 19:30:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005304
+Event ID: 10121804
+Fatality Type: D
+Fatality Date: 05/11/1953 16:10:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005315
+Event ID: 10039200
+Fatality Type: D
+Fatality Date: 06/09/1953 14:25:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005244
+Event ID: 9983015
+Fatality Type: D
+Fatality Date: 03/21/1952 16:50:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
+Fatality ID: 1005323
+Event ID: 10047316
+Fatality Type: D
+Fatality Date: 12/05/1953 17:45:00
+Fatality Age: 
+Fatality Sex: 
+Fatality Location: 
+
